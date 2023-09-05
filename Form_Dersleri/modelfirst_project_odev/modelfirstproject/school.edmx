@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="school.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="schoolStoreContainer">
+    <EntitySet Name="studentSet" EntityType="school.Store.studentSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="teacherSet" EntityType="school.Store.teacherSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="teacherstudent" Association="school.Store.teacherstudent">
+      <End Role="teacher" EntitySet="teacherSet" />
+      <End Role="student" EntitySet="studentSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="studentSet">
+    <Key>
+      <PropertyRef Name="studentID" />
+    </Key>
+    <Property Name="studentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="studentNameSurname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="studentAge" Type="int" Nullable="false" />
+    <Property Name="studentPhone" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="studentAdres" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="teacherID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="teacherSet">
+    <Key>
+      <PropertyRef Name="teacherID" />
+    </Key>
+    <Property Name="teacherID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="teacherNameSurname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="teacherWage" Type="decimal" Nullable="false" />
+    <Property Name="teacherBranch" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="teacherMail" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="teacherstudent">
+    <End Role="teacher" Type="school.Store.teacherSet" Multiplicity="1" />
+    <End Role="student" Type="school.Store.studentSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="teacher">
+        <PropertyRef Name="teacherID" />
+      </Principal>
+      <Dependent Role="student">
+        <PropertyRef Name="teacherID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="school" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="schoolContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="studentSet" EntityType="school.student" />
+          <EntitySet Name="teacherSet" EntityType="school.teacher" />
+          <AssociationSet Name="teacherstudent" Association="school.teacherstudent">
+            <End Role="teacher" EntitySet="teacherSet" />
+            <End Role="student" EntitySet="studentSet" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="student">
+          <Key>
+            <PropertyRef Name="studentID" />
+          </Key>
+          <Property Name="studentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="studentNameSurname" Type="String" Nullable="false" />
+          <Property Name="studentAge" Type="Int32" Nullable="false" />
+          <Property Name="studentPhone" Type="String" Nullable="false" />
+          <Property Name="studentAdres" Type="String" Nullable="false" />
+          <Property Name="teacherID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="teacher">
+          <Key>
+            <PropertyRef Name="teacherID" />
+          </Key>
+          <Property Name="teacherID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="teacherNameSurname" Type="String" Nullable="false" />
+          <Property Name="teacherWage" Type="Decimal" Nullable="false" />
+          <Property Name="teacherBranch" Type="String" Nullable="false" />
+          <Property Name="teacherMail" Type="String" Nullable="false" />
+        </EntityType>
+        <Association Name="teacherstudent">
+          <End Type="school.teacher" Role="teacher" Multiplicity="1" />
+          <End Type="school.student" Role="student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="teacher">
+              <PropertyRef Name="teacherID" />
+            </Principal>
+            <Dependent Role="student">
+              <PropertyRef Name="teacherID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="schoolStoreContainer" CdmEntityContainer="schoolContainer">
+    <EntitySetMapping Name="studentSet">
+      <EntityTypeMapping TypeName="IsTypeOf(school.student)">
+        <MappingFragment StoreEntitySet="studentSet">
+          <ScalarProperty Name="studentID" ColumnName="studentID" />
+          <ScalarProperty Name="studentNameSurname" ColumnName="studentNameSurname" />
+          <ScalarProperty Name="studentAge" ColumnName="studentAge" />
+          <ScalarProperty Name="studentPhone" ColumnName="studentPhone" />
+          <ScalarProperty Name="studentAdres" ColumnName="studentAdres" />
+          <ScalarProperty Name="teacherID" ColumnName="teacherID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="teacherSet">
+      <EntityTypeMapping TypeName="IsTypeOf(school.teacher)">
+        <MappingFragment StoreEntitySet="teacherSet">
+          <ScalarProperty Name="teacherID" ColumnName="teacherID" />
+          <ScalarProperty Name="teacherNameSurname" ColumnName="teacherNameSurname" />
+          <ScalarProperty Name="teacherWage" ColumnName="teacherWage" />
+          <ScalarProperty Name="teacherBranch" ColumnName="teacherBranch" />
+          <ScalarProperty Name="teacherMail" ColumnName="teacherMail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

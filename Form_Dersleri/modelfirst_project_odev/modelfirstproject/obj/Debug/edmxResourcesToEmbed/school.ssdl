@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="school.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="schoolStoreContainer">
+    <EntitySet Name="studentSet" EntityType="school.Store.studentSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="teacherSet" EntityType="school.Store.teacherSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="teacherstudent" Association="school.Store.teacherstudent">
+      <End Role="teacher" EntitySet="teacherSet" />
+      <End Role="student" EntitySet="studentSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="studentSet">
+    <Key>
+      <PropertyRef Name="studentID" />
+    </Key>
+    <Property Name="studentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="studentNameSurname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="studentAge" Type="int" Nullable="false" />
+    <Property Name="studentPhone" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="studentAdres" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="teacherID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="teacherSet">
+    <Key>
+      <PropertyRef Name="teacherID" />
+    </Key>
+    <Property Name="teacherID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="teacherNameSurname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="teacherWage" Type="decimal" Nullable="false" />
+    <Property Name="teacherBranch" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="teacherMail" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="teacherstudent">
+    <End Role="teacher" Type="school.Store.teacherSet" Multiplicity="1" />
+    <End Role="student" Type="school.Store.studentSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="teacher">
+        <PropertyRef Name="teacherID" />
+      </Principal>
+      <Dependent Role="student">
+        <PropertyRef Name="teacherID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

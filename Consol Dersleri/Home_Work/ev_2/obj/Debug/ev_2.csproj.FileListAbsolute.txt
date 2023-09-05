@@ -1,0 +1,8 @@
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\ev_2\bin\Debug\ev_2.exe.config
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\ev_2\bin\Debug\ev_2.exe
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\ev_2\bin\Debug\ev_2.pdb
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\ev_2\obj\Debug\ev_2.csproj.AssemblyReference.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\ev_2\obj\Debug\ev_2.csproj.SuggestedBindingRedirects.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\ev_2\obj\Debug\ev_2.csproj.CoreCompileInputs.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\ev_2\obj\Debug\ev_2.exe
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\ev_2\obj\Debug\ev_2.pdb

@@ -1,0 +1,11 @@
+C:\Users\S_BEGENJOV\Desktop\wissen\xmlProject\xmlProject\bin\Debug\xmlProject.exe.config
+C:\Users\S_BEGENJOV\Desktop\wissen\xmlProject\xmlProject\bin\Debug\xmlProject.exe
+C:\Users\S_BEGENJOV\Desktop\wissen\xmlProject\xmlProject\bin\Debug\xmlProject.pdb
+C:\Users\S_BEGENJOV\Desktop\wissen\xmlProject\xmlProject\obj\Debug\xmlProject.csproj.AssemblyReference.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\xmlProject\xmlProject\obj\Debug\xmlProject.csproj.SuggestedBindingRedirects.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\xmlProject\xmlProject\obj\Debug\xmlProject.Form1.resources
+C:\Users\S_BEGENJOV\Desktop\wissen\xmlProject\xmlProject\obj\Debug\xmlProject.Properties.Resources.resources
+C:\Users\S_BEGENJOV\Desktop\wissen\xmlProject\xmlProject\obj\Debug\xmlProject.csproj.GenerateResource.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\xmlProject\xmlProject\obj\Debug\xmlProject.csproj.CoreCompileInputs.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\xmlProject\xmlProject\obj\Debug\xmlProject.exe
+C:\Users\S_BEGENJOV\Desktop\wissen\xmlProject\xmlProject\obj\Debug\xmlProject.pdb

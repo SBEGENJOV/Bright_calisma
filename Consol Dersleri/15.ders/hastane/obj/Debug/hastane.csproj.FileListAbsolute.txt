@@ -1,0 +1,8 @@
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ders_14\hastane\bin\Debug\hastane.exe.config
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ders_14\hastane\bin\Debug\hastane.exe
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ders_14\hastane\bin\Debug\hastane.pdb
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ders_14\hastane\obj\Debug\hastane.csproj.AssemblyReference.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ders_14\hastane\obj\Debug\hastane.csproj.SuggestedBindingRedirects.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ders_14\hastane\obj\Debug\hastane.csproj.CoreCompileInputs.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ders_14\hastane\obj\Debug\hastane.exe
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ders_14\hastane\obj\Debug\hastane.pdb

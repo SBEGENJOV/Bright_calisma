@@ -1,0 +1,8 @@
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\ev_odev_class\bin\Debug\ev_odev_class.exe.config
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\ev_odev_class\bin\Debug\ev_odev_class.exe
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\ev_odev_class\bin\Debug\ev_odev_class.pdb
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\ev_odev_class\obj\Debug\ev_odev_class.csproj.AssemblyReference.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\ev_odev_class\obj\Debug\ev_odev_class.csproj.SuggestedBindingRedirects.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\ev_odev_class\obj\Debug\ev_odev_class.csproj.CoreCompileInputs.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\ev_odev_class\obj\Debug\ev_odev_class.exe
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\ev_odev_class\obj\Debug\ev_odev_class.pdb

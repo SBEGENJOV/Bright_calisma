@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ornek_web_örnekleri.props" />
+</Project>

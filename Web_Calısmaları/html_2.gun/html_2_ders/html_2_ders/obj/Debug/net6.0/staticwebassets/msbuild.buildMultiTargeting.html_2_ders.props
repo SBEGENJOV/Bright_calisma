@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\html_2_ders.props" />
+</Project>

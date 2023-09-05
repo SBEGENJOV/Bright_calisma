@@ -1,0 +1,8 @@
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\5.ders\5.ders\bin\Debug\5.ders.exe.config
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\5.ders\5.ders\bin\Debug\5.ders.exe
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\5.ders\5.ders\bin\Debug\5.ders.pdb
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\5.ders\5.ders\obj\Debug\5.ders.csproj.AssemblyReference.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\5.ders\5.ders\obj\Debug\5.ders.csproj.SuggestedBindingRedirects.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\5.ders\5.ders\obj\Debug\5.ders.csproj.CoreCompileInputs.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\5.ders\5.ders\obj\Debug\5.ders.exe
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\5.ders\5.ders\obj\Debug\5.ders.pdb

@@ -1,0 +1,8 @@
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\4.Ders\proje_9\bin\Debug\proje_9.exe.config
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\4.Ders\proje_9\bin\Debug\proje_9.exe
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\4.Ders\proje_9\bin\Debug\proje_9.pdb
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\4.Ders\proje_9\obj\Debug\proje_9.csproj.AssemblyReference.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\4.Ders\proje_9\obj\Debug\proje_9.csproj.SuggestedBindingRedirects.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\4.Ders\proje_9\obj\Debug\proje_9.csproj.CoreCompileInputs.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\4.Ders\proje_9\obj\Debug\proje_9.exe
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\4.Ders\proje_9\obj\Debug\proje_9.pdb

@@ -1,0 +1,13 @@
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\CRMPROJECT_1\CRMPROJECT_1\bin\Debug\CRMPROJECT_1.exe.config
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\CRMPROJECT_1\CRMPROJECT_1\bin\Debug\CRMPROJECT_1.exe
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\CRMPROJECT_1\CRMPROJECT_1\bin\Debug\CRMPROJECT_1.pdb
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\CRMPROJECT_1\CRMPROJECT_1\obj\Debug\CRMPROJECT_1.csproj.AssemblyReference.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\CRMPROJECT_1\CRMPROJECT_1\obj\Debug\CRMPROJECT_1.csproj.SuggestedBindingRedirects.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\CRMPROJECT_1\CRMPROJECT_1\obj\Debug\CRMPROJECT_1.Form1.resources
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\CRMPROJECT_1\CRMPROJECT_1\obj\Debug\CRMPROJECT_1.Properties.Resources.resources
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\CRMPROJECT_1\CRMPROJECT_1\obj\Debug\CRMPROJECT_1.csproj.GenerateResource.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\CRMPROJECT_1\CRMPROJECT_1\obj\Debug\CRMPROJECT_1.csproj.CoreCompileInputs.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\CRMPROJECT_1\CRMPROJECT_1\obj\Debug\CRMPROJECT_1.exe
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\CRMPROJECT_1\CRMPROJECT_1\obj\Debug\CRMPROJECT_1.pdb
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\CRMPROJECT_1\CRMPROJECT_1\obj\Debug\CRMPROJECT_1.CostumerPage.resources
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\CRMPROJECT_1\CRMPROJECT_1\obj\Debug\CRMPROJECT_1.ServicePage.resources

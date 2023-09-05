@@ -1,0 +1,8 @@
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\8.ders(Cumartesi)\proje_8\bin\Debug\proje_8.exe.config
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\8.ders(Cumartesi)\proje_8\bin\Debug\proje_8.exe
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\8.ders(Cumartesi)\proje_8\bin\Debug\proje_8.pdb
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\8.ders(Cumartesi)\proje_8\obj\Debug\proje_8.csproj.AssemblyReference.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\8.ders(Cumartesi)\proje_8\obj\Debug\proje_8.csproj.SuggestedBindingRedirects.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\8.ders(Cumartesi)\proje_8\obj\Debug\proje_8.csproj.CoreCompileInputs.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\8.ders(Cumartesi)\proje_8\obj\Debug\proje_8.exe
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\8.ders(Cumartesi)\proje_8\obj\Debug\proje_8.pdb

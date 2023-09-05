@@ -1,0 +1,8 @@
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\ev_metotlar4\bin\Debug\ev_metotlar4.exe.config
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\ev_metotlar4\bin\Debug\ev_metotlar4.exe
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\ev_metotlar4\bin\Debug\ev_metotlar4.pdb
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\ev_metotlar4\obj\Debug\ev_metotlar4.csproj.AssemblyReference.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\ev_metotlar4\obj\Debug\ev_metotlar4.csproj.SuggestedBindingRedirects.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\ev_metotlar4\obj\Debug\ev_metotlar4.csproj.CoreCompileInputs.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\ev_metotlar4\obj\Debug\ev_metotlar4.exe
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\ev_metotlar4\obj\Debug\ev_metotlar4.pdb

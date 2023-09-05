@@ -1,0 +1,8 @@
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\ev_calisma_furkan_hocam\bin\Debug\ev_calisma_furkan_hocam.exe.config
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\ev_calisma_furkan_hocam\bin\Debug\ev_calisma_furkan_hocam.exe
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\ev_calisma_furkan_hocam\bin\Debug\ev_calisma_furkan_hocam.pdb
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\ev_calisma_furkan_hocam\obj\Debug\ev_calisma_furkan_hocam.csproj.AssemblyReference.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\ev_calisma_furkan_hocam\obj\Debug\ev_calisma_furkan_hocam.csproj.SuggestedBindingRedirects.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\ev_calisma_furkan_hocam\obj\Debug\ev_calisma_furkan_hocam.csproj.CoreCompileInputs.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\ev_calisma_furkan_hocam\obj\Debug\ev_calisma_furkan_hocam.exe
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\ev_calisma_furkan_hocam\obj\Debug\ev_calisma_furkan_hocam.pdb

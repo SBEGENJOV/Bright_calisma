@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="school" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="schoolContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="studentSet" EntityType="school.student" />
+    <EntitySet Name="teacherSet" EntityType="school.teacher" />
+    <AssociationSet Name="teacherstudent" Association="school.teacherstudent">
+      <End Role="teacher" EntitySet="teacherSet" />
+      <End Role="student" EntitySet="studentSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="student">
+    <Key>
+      <PropertyRef Name="studentID" />
+    </Key>
+    <Property Name="studentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="studentNameSurname" Type="String" Nullable="false" />
+    <Property Name="studentAge" Type="Int32" Nullable="false" />
+    <Property Name="studentPhone" Type="String" Nullable="false" />
+    <Property Name="studentAdres" Type="String" Nullable="false" />
+    <Property Name="teacherID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="teacher">
+    <Key>
+      <PropertyRef Name="teacherID" />
+    </Key>
+    <Property Name="teacherID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="teacherNameSurname" Type="String" Nullable="false" />
+    <Property Name="teacherWage" Type="Decimal" Nullable="false" />
+    <Property Name="teacherBranch" Type="String" Nullable="false" />
+    <Property Name="teacherMail" Type="String" Nullable="false" />
+  </EntityType>
+  <Association Name="teacherstudent">
+    <End Type="school.teacher" Role="teacher" Multiplicity="1" />
+    <End Type="school.student" Role="student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="teacher">
+        <PropertyRef Name="teacherID" />
+      </Principal>
+      <Dependent Role="student">
+        <PropertyRef Name="teacherID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

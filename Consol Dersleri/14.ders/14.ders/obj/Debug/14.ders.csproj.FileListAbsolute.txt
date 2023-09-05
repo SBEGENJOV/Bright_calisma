@@ -1,0 +1,8 @@
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\14.ders\14.ders\bin\Debug\14.ders.exe.config
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\14.ders\14.ders\bin\Debug\14.ders.exe
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\14.ders\14.ders\bin\Debug\14.ders.pdb
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\14.ders\14.ders\obj\Debug\14.ders.csproj.AssemblyReference.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\14.ders\14.ders\obj\Debug\14.ders.csproj.SuggestedBindingRedirects.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\14.ders\14.ders\obj\Debug\14.ders.csproj.CoreCompileInputs.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\14.ders\14.ders\obj\Debug\14.ders.exe
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\14.ders\14.ders\obj\Debug\14.ders.pdb

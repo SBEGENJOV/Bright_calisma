@@ -1,0 +1,17 @@
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\uygulama_2\uygulama_2\bin\Debug\uygulama_2.exe.config
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\uygulama_2\uygulama_2\bin\Debug\uygulama_2.exe
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\uygulama_2\uygulama_2\bin\Debug\uygulama_2.pdb
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\uygulama_2\uygulama_2\obj\Debug\uygulama_2.csproj.AssemblyReference.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\uygulama_2\uygulama_2\obj\Debug\uygulama_2.csproj.SuggestedBindingRedirects.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\uygulama_2\uygulama_2\obj\Debug\uygulama_2.Form1.resources
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\uygulama_2\uygulama_2\obj\Debug\uygulama_2.Form2.resources
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\uygulama_2\uygulama_2\obj\Debug\uygulama_2.Properties.Resources.resources
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\uygulama_2\uygulama_2\obj\Debug\uygulama_2.talep.resources
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\uygulama_2\uygulama_2\obj\Debug\uygulama_2.talepEkranı.resources
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\uygulama_2\uygulama_2\obj\Debug\uygulama_2.csproj.GenerateResource.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\uygulama_2\uygulama_2\obj\Debug\uygulama_2.csproj.CoreCompileInputs.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\uygulama_2\uygulama_2\obj\Debug\uygulama_2.exe
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\uygulama_2\uygulama_2\obj\Debug\uygulama_2.pdb
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\uygulama_2\uygulama_2\obj\Debug\uygulama_2.seyitManav.resources
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\uygulama_2\uygulama_2\obj\Debug\uygulama_2.anilManav.resources
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\ev_calısma\uygulama_2\uygulama_2\obj\Debug\uygulama_2.furkanManav.resources

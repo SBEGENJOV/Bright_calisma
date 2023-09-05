@@ -1,0 +1,8 @@
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\4.Ders\4.Ders\bin\Debug\4.Ders.exe.config
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\4.Ders\4.Ders\bin\Debug\4.Ders.exe
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\4.Ders\4.Ders\bin\Debug\4.Ders.pdb
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\4.Ders\4.Ders\obj\Debug\4.Ders.csproj.AssemblyReference.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\4.Ders\4.Ders\obj\Debug\4.Ders.csproj.SuggestedBindingRedirects.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\4.Ders\4.Ders\obj\Debug\4.Ders.csproj.CoreCompileInputs.cache
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\4.Ders\4.Ders\obj\Debug\4.Ders.exe
+C:\Users\S_BEGENJOV\Desktop\wissen\Consol\4.Ders\4.Ders\obj\Debug\4.Ders.pdb
