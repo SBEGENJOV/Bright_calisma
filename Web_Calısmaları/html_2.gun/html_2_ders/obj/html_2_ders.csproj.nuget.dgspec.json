@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\S_BEGENJOV\\Desktop\\wissen\\web örnekleri\\ornek_web_örnekleri 2\\html_2_ders\\html_2_ders\\html_2_ders.csproj": {}
+    "C:\\Users\\S_BEGENJOV\\Documents\\GitHub\\Bright_calisma\\Web_Calısmaları\\html_2.gun\\html_2_ders\\html_2_ders.csproj": {}
   },
   "projects": {
-    "C:\\Users\\S_BEGENJOV\\Desktop\\wissen\\web örnekleri\\ornek_web_örnekleri 2\\html_2_ders\\html_2_ders\\html_2_ders.csproj": {
+    "C:\\Users\\S_BEGENJOV\\Documents\\GitHub\\Bright_calisma\\Web_Calısmaları\\html_2.gun\\html_2_ders\\html_2_ders.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\S_BEGENJOV\\Desktop\\wissen\\web örnekleri\\ornek_web_örnekleri 2\\html_2_ders\\html_2_ders\\html_2_ders.csproj",
+        "projectUniqueName": "C:\\Users\\S_BEGENJOV\\Documents\\GitHub\\Bright_calisma\\Web_Calısmaları\\html_2.gun\\html_2_ders\\html_2_ders.csproj",
         "projectName": "html_2_ders",
-        "projectPath": "C:\\Users\\S_BEGENJOV\\Desktop\\wissen\\web örnekleri\\ornek_web_örnekleri 2\\html_2_ders\\html_2_ders\\html_2_ders.csproj",
+        "projectPath": "C:\\Users\\S_BEGENJOV\\Documents\\GitHub\\Bright_calisma\\Web_Calısmaları\\html_2.gun\\html_2_ders\\html_2_ders.csproj",
         "packagesPath": "C:\\Users\\S_BEGENJOV\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\S_BEGENJOV\\Desktop\\wissen\\web örnekleri\\ornek_web_örnekleri 2\\html_2_ders\\html_2_ders\\obj\\",
+        "outputPath": "C:\\Users\\S_BEGENJOV\\Documents\\GitHub\\Bright_calisma\\Web_Calısmaları\\html_2.gun\\html_2_ders\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages",

@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\S_BEGENJOV\\Desktop\\wissen\\web örnekleri\\ornek_web_örnekleri\\ornek_web_örnekleri\\ornek_web_örnekleri.csproj",
+      "projectUniqueName": "C:\\Users\\S_BEGENJOV\\Documents\\GitHub\\Bright_calisma\\Web_Calısmaları\\html_1.gun\\ornek_web_örnekleri\\ornek_web_örnekleri.csproj",
       "projectName": "ornek_web_örnekleri",
-      "projectPath": "C:\\Users\\S_BEGENJOV\\Desktop\\wissen\\web örnekleri\\ornek_web_örnekleri\\ornek_web_örnekleri\\ornek_web_örnekleri.csproj",
+      "projectPath": "C:\\Users\\S_BEGENJOV\\Documents\\GitHub\\Bright_calisma\\Web_Calısmaları\\html_1.gun\\ornek_web_örnekleri\\ornek_web_örnekleri.csproj",
       "packagesPath": "C:\\Users\\S_BEGENJOV\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\S_BEGENJOV\\Desktop\\wissen\\web örnekleri\\ornek_web_örnekleri\\ornek_web_örnekleri\\obj\\",
+      "outputPath": "C:\\Users\\S_BEGENJOV\\Documents\\GitHub\\Bright_calisma\\Web_Calısmaları\\html_1.gun\\ornek_web_örnekleri\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages",
