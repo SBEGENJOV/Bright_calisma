@@ -1,0 +1,123 @@
+﻿div{
+    width:1200px;
+    height:auto;
+    margin:0 auto;
+}
+.header{
+    width:1200px;
+    height:150px;
+    background-color:grey;
+}
+.logo img{
+    width:200px;
+    height:125px;
+    margin-left:10px;
+    margin-top:10px;
+    border-radius:10px;
+    float:left;
+}
+.menu{
+    float:left;
+    width:500px;
+    height:75px;
+    margin-top:30px;
+    margin-left:20px;
+}
+    .menu ul  li {
+        list-style-type:none;
+        float: left;
+        padding:10px;
+        font-size:20px;
+        line-height:10px;
+    }
+.menu ul li a {
+     text-decoration: none;
+     color: white;
+     }
+.menu ul li a:hover{
+    color:crimson;
+}
+.icon{
+    width:100px;
+    height:50px;
+    float:left;
+    margin-right:10px;
+    margin-left:50px;
+    margin-top:10px;
+}
+.icon img{
+    width:35px;
+    height:40px;
+    float:left;
+    padding:5px;
+}
+.giris h1{
+    color:red;
+    text-transform:uppercase;
+    font-size:30px;
+    margin-top:50px;
+}
+.slider{
+    width:1200px;
+    height:400px;
+}
+.slider img{
+    width:1200px;
+    height:400px;
+    margin-top:10px;
+}
+.section{
+    height:350px;
+    width:1200px;
+    border-radius:10px;
+    background-color:coral;
+    margin-top:15px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.sec1 {
+    float: left;
+    height: 300px;
+    width: 250px;
+    margin-left: 80px;
+    margin-top: 10px;
+    background-color: blueviolet;
+    border-radius:20px;
+}
+.sec3 {
+    float: left;
+    height: 300px;
+    width: 400px;
+    margin-left: 80px;
+    margin-top: 10px;
+    background-color: blueviolet;
+    border-radius: 20px;
+}
+.sec2 {
+    background-color: blueviolet;
+    border-radius: 20px;
+    float: left;
+    height: 300px;
+    width: 250px;
+    margin-left: 80px;
+    margin-top: 10px;
+}
+.sec2 p{
+    font-size:15px;
+    padding-top:10px;
+    color:aliceblue;
+}
+.footer{
+    margin-top:20px;
+    width:1200px;
+    height:100px;
+    background-color:cornsilk;
+}
+.footer h3{
+    color:darkgoldenrod;
+    padding-top:10px;
+    padding-left:10px;
+}
+body {
+    background-image: url(https://konyayeniguncom.teimg.com/crop/1280x720/konyayenigun-com/uploads/2023/07/ali-cabbar-sarki-sozleri-nedir-emir-can-igrek-16082308-188-amp.webp)
+}
