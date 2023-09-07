@@ -3,7 +3,13 @@
 <head>
     <meta charset="utf-8" />
     <title>Ali Cabbar</title>
-    <link rel="stylesheet" type="text/css" href="style.css"/>  <!--harici css dosya ekleme-->
+    <link rel="stylesheet" type="text/css" href="style.css" />  <!--harici css dosya ekleme-->
+    <!-- Insert to your webpage before the </head> -->
+    <script src="sliderengine/jquery.js"></script>
+    <script src="sliderengine/amazingslider.js"></script>
+    <link rel="stylesheet" type="text/css" href="sliderengine/amazingslider-1.css">
+    <script src="sliderengine/initslider-1.js"></script>
+    <!-- End of head section HTML codes -->
 </head>
 <body>
 
@@ -26,8 +32,25 @@
             </div> <!--icon kapanış-->
         </div> <!--header kapanış-->
         <div class="slider">
-            <div class="sliderresim">
-                <img src="image/pexels-brett-sayles-1869322.jpg" alt="Alternate Text" />
+            <div class="amazingslider-wrapper" id="amazingslider-wrapper-1" style="display:block;position:relative;max-width:1200px;margin:0px auto 56px;">
+                <div class="amazingslider" id="amazingslider-1" style="display:block;position:relative;margin:0 auto;">
+                    <ul class="amazingslider-slides" style="display:none;">
+                        <li>
+                            <img src="images/pexels-brett-sayles-1869322.jpg"/>
+                        </li>
+                        <li>
+                            <img src="images/pexels-fauxels-3183132.jpg"/>
+                        </li>
+                        <li>
+                            <img src="images/pexels-john-petalcurin-2115256.jpg"/>
+                        </li>
+                    </ul>
+                    <ul class="amazingslider-thumbnails" style="display:none;">
+                        <li><img src="images/pexels-brett-sayles-1869322-tn.jpg"/></li>
+                        <li><img src="images/pexels-fauxels-3183132-tn.jpg"/></li>
+                        <li><img src="images/pexels-john-petalcurin-2115256-tn.jpg" /></li>
+                    </ul>
+                </div>
             </div>
         </div> <!--slider kapanış-->
         <div class="giris">

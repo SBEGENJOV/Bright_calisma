@@ -68,6 +68,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css_div.html" />
+    <Content Include="images\pexels-brett-sayles-1869322-tn.jpg" />
+    <Content Include="images\pexels-brett-sayles-1869322.jpg" />
+    <Content Include="images\pexels-fauxels-3183132-tn.jpg" />
+    <Content Include="images\pexels-fauxels-3183132.jpg" />
+    <Content Include="images\pexels-john-petalcurin-2115256-tn.jpg" />
+    <Content Include="images\pexels-john-petalcurin-2115256.jpg" />
     <Content Include="image\indir.png" />
     <Content Include="image\instagram.png" />
     <Content Include="image\pexels-brett-sayles-1869322.jpg" />
@@ -75,6 +81,36 @@
     <Content Include="image\pexels-john-petalcurin-2115256.jpg" />
     <Content Include="image\twitter.png" />
     <Content Include="index.html" />
+    <Content Include="sliderengine\amazingslider-1.css" />
+    <Content Include="sliderengine\amazingslider.js" />
+    <Content Include="sliderengine\arrows-32-32-0.png" />
+    <Content Include="sliderengine\bottomshadow-110-95-0.png" />
+    <Content Include="sliderengine\bullet-24-24-0.png" />
+    <Content Include="sliderengine\carouselarrows-32-32-0.png" />
+    <Content Include="sliderengine\froogaloop2.min.js" />
+    <Content Include="sliderengine\html5boxplayer.swf" />
+    <Content Include="sliderengine\html5boxplayer_fullscreen.png" />
+    <Content Include="sliderengine\html5boxplayer_hd.png" />
+    <Content Include="sliderengine\html5boxplayer_playpause.png" />
+    <Content Include="sliderengine\html5boxplayer_playvideo.png" />
+    <Content Include="sliderengine\html5boxplayer_volume.png" />
+    <Content Include="sliderengine\initslider-1.js" />
+    <Content Include="sliderengine\jquery.js" />
+    <Content Include="sliderengine\lightbox-close.png" />
+    <Content Include="sliderengine\lightbox-loading.gif" />
+    <Content Include="sliderengine\lightbox-navnext.png" />
+    <Content Include="sliderengine\lightbox-navprev.png" />
+    <Content Include="sliderengine\lightbox-next.png" />
+    <Content Include="sliderengine\lightbox-pause.png" />
+    <Content Include="sliderengine\lightbox-play.png" />
+    <Content Include="sliderengine\lightbox-playvideo.png" />
+    <Content Include="sliderengine\lightbox-prev.png" />
+    <Content Include="sliderengine\navarrows-28-28-0.png" />
+    <Content Include="sliderengine\navbuttonbgimage-28-28-0.png" />
+    <Content Include="sliderengine\navplaypause-28-28-0.png" />
+    <Content Include="sliderengine\play-32-32-0.png" />
+    <Content Include="sliderengine\playvideo-64-64-0.png" />
+    <Content Include="sliderengine\previewarrow-16-8-0.png" />
     <Content Include="style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
