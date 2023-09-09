@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Index2";
+}
+
+<h2>Index2</h2>
+@{
+    string[] ogrenciler = {"beyza","esma","elif","nihal"};
+    int eleman = 0;
+}
+
+<ul>
+    @foreach (string isim in ogrenciler)
+    {
+        <li>isimler: @isim</li>
+    }
+</ul>

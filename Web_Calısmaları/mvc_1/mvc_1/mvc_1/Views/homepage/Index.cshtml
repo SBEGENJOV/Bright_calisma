@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@*viev içerisindeki html sayfalarında c# yazmamız saglayan komuta razor viev engine denir. @ifadesi ile kodları yazarız.*@ 
+
+<h1>Değişken tanımla ve yazdır</h1>
+@{ 
+    string adsoyad = " Seyit Begenjov" ,meslek=" Öğretmen", hedef=" Yazılımcı";
+    int maas =  10000;
+}
+<ul>
+    <li>Ad Soyad:@adsoyad</li>
+    <li>Meslek:@meslek</li>
+    <li>Hedef:@hedef</li>
+    <li>Maaş:@maas</li>
+</ul>
