@@ -12,7 +12,6 @@
 }
 .ust img{
     float:left;
-
 }
 .mail {
     margin-left: 5%;
@@ -79,6 +78,11 @@
     font-size: 17px;
     text-decoration: none;
 }
+.menu ul li a:hover{
+    color:red;
+    font-size:50px;
+}
+
     .menu ul li a {
         color: royalblue;
         text-decoration: none;
@@ -96,13 +100,15 @@
     width: 60%;
     height: 40px;
     font-family: 'Vladimir Script';
+    border-radius:10px;
 }
 .search-button {
     width: 30%;
     height: 45px;
     font-family: 'Vladimir Script';
+    border-radius: 10px;
 }
-.slider {
+.slider { 
     margin-bottom: -15px;
     border-radius: 10px;
     background-color: #004e8d;
@@ -143,7 +149,7 @@
     color: white;
     font-family: Big John;
     font-size: 20px;
-    border-color: white;
+    border-color: greenyellow;
 }
 .sec2 {
     float: left;
@@ -160,7 +166,7 @@
     color: #ffffff;
     font-family: Big John;
     font-size: 20px;
-    border-color: white;
+    border-color: greenyellow;
 }
 .sec3 {
     float: left;
@@ -175,7 +181,7 @@
     border: solid;
     background-color: deepskyblue;
     color: white;
-    border-color:white;
+    border-color: greenyellow;
     font-family: Big John;
     font-size: 20px;
 }
@@ -203,12 +209,14 @@
     width: 30%;
     height: 220px;
     float: right;
-    text-align:center;
+    text-align: center;
     border: solid;
+    border-color: greenyellow;
     background-color: #004e8d;
     border-radius: 10px;
     color: white;
     margin-top: 10px;
+    margin-right: 25px;
 }
 .sol {
     width: 30%;
@@ -216,10 +224,12 @@
     float: left;
     text-align: center;
     border: solid;
+    border-color: greenyellow;
     background-color: #004e8d;
     border-radius: 10px;
     color: white;
     margin-top: 10px;
+    margin-left:20px;
 }
 .sag img {
     margin-top: 10px;
@@ -227,7 +237,35 @@
     height: 100px;
 }
 .sol img {
-    margin-top:10px;
+    margin-top: 10px;
     width: 20%;
     height: 100px;
+}
+.orta {
+    border-radius: 10px;
+    width: 30%;
+    height: 220px;
+    background-color: mediumseagreen;
+    margin-left: 44px;
+    margin-top: 5px;
+    float: left;
+    border: solid;
+    color:white;
+    border-color: #004e8d;
+    text-align: center;
+}
+.orta iframe{
+    margin-top:1%;
+    border:solid;
+    border-radius:10px;
+    width:95%;
+    height:165px;
+}
+.footer {
+    margin-top:10px;
+    width:100%;
+    height:240px;
+    border: solid;
+    border-color: #004e8d;
+    border-radius:10px;
 }

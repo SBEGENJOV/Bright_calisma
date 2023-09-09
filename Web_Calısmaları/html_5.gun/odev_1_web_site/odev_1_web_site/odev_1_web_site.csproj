@@ -76,10 +76,12 @@
     <Content Include="images\TEMA İLE BERABER YÜRÜTTÜGÜMÜZ %281700 x 600 px%29 %281%29.png" />
     <Content Include="image\call.png" />
     <Content Include="image\cevre-bilim-2.jpg" />
+    <Content Include="image\DFSD.png" />
     <Content Include="image\icon-2.png" />
     <Content Include="image\icon-3.png" />
     <Content Include="image\icon-4.png" />
     <Content Include="image\multimedia.png" />
+    <Content Include="image\ÇBK Bina yeni.png" />
     <Content Include="image\ÇBK Logo 2 %281%29.png" />
     <Content Include="image\ÇBK Logo 2.png" />
     <Content Include="index.html" />
