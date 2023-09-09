@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div class="nav">
+
+        <ul>
+            <li><a href="@Url.Action("index3","Home")"> Ana Sayfa</a></li>
+            <li><a href="@Url.Action("index2","Home")"> Hakkımızda</a></li>
+            <li><a href="@Url.Action("index1","Home")"> Galeri</a></li>
+        </ul>
+
+    </div>
+    <div>
+        sliderim gelecek
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+    <div>
+        &copy;Seyit Begenjov, Tüm hakları saklıdır.
+    </div>
+</body>
+</html>
