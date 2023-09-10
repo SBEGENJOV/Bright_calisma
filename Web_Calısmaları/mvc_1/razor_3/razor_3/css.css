@@ -438,3 +438,25 @@
     border:solid;
     border-radius:10px;
 }
+.basin iframe {
+    margin-left:8%;
+    margin-right:8%;
+}
+.Iresim img{
+    margin-top:2%;
+    width:40%;
+    height:40%;
+}
+.opI {
+    background-image: url('image/çbk logo 2 (1).png');
+    opacity: 0.2; /* Arka plan opaklık değeri */
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.bilgi{
+    width:40%;
+    height:10%;
+    margin-left:45%;
+}

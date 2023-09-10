@@ -110,6 +110,7 @@
     <Content Include="image\icon-3.png" />
     <Content Include="image\icon-4.png" />
     <Content Include="image\karin ataoğlu icin görsel %281%29.jpeg" />
+    <Content Include="image\kayit-ol-1.jpg" />
     <Content Include="image\lise_1 %281%29.jpg" />
     <Content Include="image\multimedia.png" />
     <Content Include="image\ortaokul_1.jpeg" />
@@ -164,6 +165,7 @@
     <Content Include="Views\Default\About.cshtml" />
     <Content Include="Views\Default\Campus.cshtml" />
     <Content Include="Views\Default\Basin.cshtml" />
+    <Content Include="Views\Default\Iletisim.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

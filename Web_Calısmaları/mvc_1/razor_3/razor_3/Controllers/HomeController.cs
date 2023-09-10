@@ -25,5 +25,9 @@ namespace razor_3.Controllers
         {
             return View();
         }
+        public ActionResult Iletisim()
+        {
+            return View();
+        }
     }
 }
