@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -35,18 +36,19 @@ namespace modelfirstproject
 
         private void button3_Click(object sender, EventArgs e)
         {
+            int sid = Convert.ToInt32(textBox1.Tag);
             student std = new student();
-            std.studentNameSurname = textBox1.Text;
-            std.studentAge = int.Parse(textBox2.Text);
-            std.studentPhone = textBox3.Text;
-            std.studentAdres = textBox4.Text;
-            std.teacherID = Convert.ToInt32(comboBox1.Text);
-
-            container.studentSet.Add(std);
-            container.SaveChanges();
-            dataGridView1.DataSource=container.studentSet.ToList() ;
-
-
+            var student = container.studentSet.FirstOrDefault(s => s.studentID ==sid);
+            if (student!=null)
+            {
+                std.studentNameSurname = textBox1.Text;
+                std.studentAge = int.Parse(textBox2.Text);
+                std.studentPhone = textBox3.Text;
+                std.studentAdres = textBox4.Text;
+                std.teacherID = Convert.ToInt32(comboBox1.Text);
+                container.SaveChanges();
+                dataGridView1.DataSource = container.studentSet.ToList();
+            }
             foreach(Control item in Controls)
             {
                 if (item is TextBox)
@@ -54,6 +56,17 @@ namespace modelfirstproject
                     item.Text = "";
                 }
             }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow satir = dataGridView1.CurrentRow;
+            textBox1.Tag = satir.Cells["studentID"].Value;
+            textBox1.Text = satir.Cells["studentNameSurname"].Value.ToString();
+            textBox2.Text = satir.Cells["studentAge"].Value.ToString();
+            textBox3.Text = satir.Cells["studentPhone"].Value.ToString();
+            textBox4.Text = satir.Cells["studentAdres"].Value.ToString();
+            comboBox1.Text = satir.Cells["teacherID"].Value.ToString();
         }
     }
 }

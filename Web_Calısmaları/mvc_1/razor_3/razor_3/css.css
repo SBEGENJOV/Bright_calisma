@@ -456,8 +456,12 @@
     height: 50%;
 }
 .yaz p {
-    width: auto;
-    height: auto;
-    padding-left:50%;
-    font-size:230%;
+    width: 55%;
+    height: 15%;
+    padding-left: 50%;
+    padding-right:1%;
+    font-size: 230%;
+
+    overflow: hidden;
+    white-space: nowrap;
 }

@@ -138,5 +138,15 @@ namespace modalfirst_ornek
                 conn.SaveChanges();
             }
         }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = conn.customerSet.Where(x => x.customerID == Form1.deger).ToList();
+        }
     }
 }
