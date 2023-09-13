@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="PersonelSet" EntityType="Model1.Personel" />
+    <EntitySet Name="UrunSet" EntityType="Model1.Urun" />
+    <AssociationSet Name="PersonelUrun" Association="Model1.PersonelUrun">
+      <End Role="Personel" EntitySet="PersonelSet" />
+      <End Role="Urun" EntitySet="UrunSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Personel">
+    <Key>
+      <PropertyRef Name="PersonelNo" />
+    </Key>
+    <Property Name="PersonelNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AdSoyad" Type="String" Nullable="false" />
+    <Property Name="Yas" Type="Int32" Nullable="false" />
+    <Property Name="Telefon" Type="String" Nullable="false" />
+    <Property Name="Adres" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Urun">
+    <Key>
+      <PropertyRef Name="UrunNo" />
+    </Key>
+    <Property Name="UrunNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UrunAdi" Type="String" Nullable="false" />
+    <Property Name="Fiyat" Type="Int32" Nullable="false" />
+    <Property Name="Marka" Type="String" Nullable="false" />
+    <Property Name="Model" Type="String" Nullable="false" />
+    <Property Name="PersonelNo" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="PersonelUrun">
+    <End Type="Model1.Personel" Role="Personel" Multiplicity="1" />
+    <End Type="Model1.Urun" Role="Urun" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personel">
+        <PropertyRef Name="PersonelNo" />
+      </Principal>
+      <Dependent Role="Urun">
+        <PropertyRef Name="PersonelNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
