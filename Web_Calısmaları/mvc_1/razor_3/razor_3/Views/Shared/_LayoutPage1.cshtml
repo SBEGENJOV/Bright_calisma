@@ -27,19 +27,18 @@
             <ul>
                 <li>0 212 795 05 60</li>
             </ul>
-            <p>Kayıt Ol</p>
+            <p><a href="/Default/Iletisim">Kayıt Ol</a></p>
         </div>
         <div class="header">
             <div class="logo">
-                <a href="#"><img src="~/image/ÇBK Logo 2 (1).png" /></a>
+                <a href="@Url.Action("Index","Default")"><img src="~/image/ÇBK Logo 2 (1).png" /></a>
             </div> <!--logo kapanış-->
-
             <div class="menu">
                 <ul>
-                    <li><a href="index.html"> Ana Sayfa</a></li>
-                    <li><a href="index.html"> Hakkımızda</a></li>
-                    <li><a href="index.html"> Kampusler</a></li>
-                    <li><a href="index.html"> Basında biz</a></li>
+                    <li><a href="@Url.Action("Index","Default")"> Ana Sayfa</a></li>
+                    <li><a href="@Url.Action("About","Default")"> Hakkımızda</a></li>
+                    <li><a href="@Url.Action("Campus","Default")"> Kampusler</a></li>
+                    <li><a href="@Url.Action("Basin","Default")"> Basında biz</a></li>
                 </ul>
                 <form>
                     <input type="text" name="search" class="search-box" placeholder="Arama yapın...">

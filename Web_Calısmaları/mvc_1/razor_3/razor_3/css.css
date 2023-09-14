@@ -293,6 +293,8 @@
     }
 
 .footer {
+    display: flex;
+    justify-content: flex-start;
     margin-top: 10px;
     width: 100%;
     height: 240px;
@@ -449,19 +451,67 @@
     position: fixed;
     width: 100%;
     height: 100%;
+    
     z-index: -1;
 }
-.Iresim img {
-    width: 40%;
-    height: 50%;
+.iletisim {
+    float: left;
 }
-.yaz p {
-    width: 55%;
-    height: 15%;
-    padding-left: 50%;
-    padding-right:1%;
-    font-size: 230%;
-
-    overflow: hidden;
-    white-space: nowrap;
+a {
+    text-decoration: none; /* Alt çizgiyi kaldır */
+}
+.Iresim img {
+    width: 30%;
+    height: 40%;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    float: left;
+}
+.Iresim p {
+    margin-left: 40%;
+    margin-right: 10%;
+    background-image: linear-gradient(180deg,#73c0f0,#414dcc);
+    padding-top: 1%;
+    font-size: 200%;
+    text-align: center;
+    color: white;
+    border: solid;
+    border-radius: 10px;
+    padding-bottom: 1%;
+}
+.Iresim table {
+    background-image: linear-gradient(180deg,#73c0f0,#414dcc);
+    color: white;
+    border: solid;
+    border-radius: 10px;
+    margin-left: 9.5%;
+    padding-right: 5%;
+    font-size: 150%;
+    float: left;
+    border-collapse: separate;
+    border-spacing: 15px;
+}
+.dugme1 {
+    font-size: 16px; /* Başlangıç font boyutu */
+    padding: 10px 20px; /* Düğme içeriği ile etrafındaki boşluk */
+    border-radius: 5px; /* Köşeleri yuvarlat */
+    cursor: pointer; /* Fare imlecini göstermek için el göstergesi */
+    transition: transform 0.3s;
+    margin-left: 100%;
+    margin-top: 50%;
+}
+.dugme2 {
+    font-size: 16px; /* Başlangıç font boyutu */
+    padding: 10px 20px; /* Düğme içeriği ile etrafındaki boşluk */
+    border-radius: 5px; /* Köşeleri yuvarlat */
+    cursor: pointer; /* Fare imlecini göstermek için el göstergesi */
+    transition: transform 0.3s;
+    margin-left: 100%;
+    margin-top: 20%;
+}
+.dugme2:hover{
+transform: scale(1.2); /* Düğmeyi 1.2 kat büyüt */
+}
+.dugme1:hover {
+transform: scale(1.2); /* Düğmeyi 1.2 kat büyüt */
 }

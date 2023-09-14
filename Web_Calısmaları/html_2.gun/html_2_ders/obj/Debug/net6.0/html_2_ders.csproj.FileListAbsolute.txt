@@ -24,3 +24,12 @@ C:\Users\S_BEGENJOV\Desktop\wissen\web örnekleri\ornek_web_örnekleri 2\html_2_
 C:\Users\S_BEGENJOV\Desktop\wissen\web örnekleri\ornek_web_örnekleri 2\html_2_ders\html_2_ders\obj\Debug\net6.0\html_2_ders.pdb
 C:\Users\S_BEGENJOV\Desktop\wissen\web örnekleri\ornek_web_örnekleri 2\html_2_ders\html_2_ders\obj\Debug\net6.0\html_2_ders.genruntimeconfig.cache
 C:\Users\S_BEGENJOV\Desktop\wissen\web örnekleri\ornek_web_örnekleri 2\html_2_ders\html_2_ders\obj\Debug\net6.0\ref\html_2_ders.dll
+C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\Web_Calısmaları\html_2.gun\html_2_ders\obj\Debug\net6.0\html_2_ders.csproj.AssemblyReference.cache
+C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\Web_Calısmaları\html_2.gun\html_2_ders\obj\Debug\net6.0\html_2_ders.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\Web_Calısmaları\html_2.gun\html_2_ders\obj\Debug\net6.0\html_2_ders.AssemblyInfoInputs.cache
+C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\Web_Calısmaları\html_2.gun\html_2_ders\obj\Debug\net6.0\html_2_ders.AssemblyInfo.cs
+C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\Web_Calısmaları\html_2.gun\html_2_ders\obj\Debug\net6.0\html_2_ders.csproj.CoreCompileInputs.cache
+C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\Web_Calısmaları\html_2.gun\html_2_ders\obj\Debug\net6.0\html_2_ders.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\Web_Calısmaları\html_2.gun\html_2_ders\obj\Debug\net6.0\html_2_ders.dll
+C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\Web_Calısmaları\html_2.gun\html_2_ders\obj\Debug\net6.0\refint\html_2_ders.dll
+C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\Web_Calısmaları\html_2.gun\html_2_ders\obj\Debug\net6.0\html_2_ders.pdb

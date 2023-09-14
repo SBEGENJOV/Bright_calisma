@@ -3,18 +3,61 @@
     ViewBag.Title = "Iletisim";
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
-
-<div class="iletisim">
-    <div class="opI">
-        <img src="~/image/ÇBK Logo 2 (1).png" />
-    </div> 
+<div class="opI">
+    <img src="~/image/ÇBK Logo 2 (1).png" />
+</div>
+<div class="container">
     <div class="Iresim">
         <img src="~/image/kayit-ol-1.jpg" />
-    </div>
-    <div class="yaz">
         <p>
             Bilgilerinizi Bize Bırkın Biz Sizi Arayalım
         </p>
+        <table>
+            <tr>
+                <th>Adres: </th>
+                <th><textarea rows="5" cols="48">Adresiniz:</textarea></th>
+            </tr>
+            <tr> </tr>
+            <tr>
+                <th>Ad: </th>
+                <th><input type="text" name="Ad" size="50" maxlength="20" placeholder="Adınızı giriniz" required /></th>
+            </tr>
+            <tr> </tr>
+            <tr>
+                <th>Soyad: </th>
+                <th><input type="text" name="soyad" size="50" maxlength="20" placeholder="Soyadınızı giriniz" required /></th>
+            </tr>
+            <tr> </tr>
+            <tr>
+                <th>Öğrenci Sınıf: </th>
+                <th><input type="text" name="yas" size="50" maxlength="20" placeholder="Öğrenci sınıfı girin" required /></th>
+            </tr>
+            <tr> </tr>
+            <tr>
+                <th> Öğrenci cinsiyeti: </th>
+                <th><input type="radio" name="bilgi">Erkek</input></th>
+                <th><input type="radio" name="bilgi">Kadın</input></th>
+            </tr>
+            <tr> </tr>
+            <tr>
+                <th>Yaşadıgınız ilçe: </th>
+                <th>
+                    <select>
+                        <option>Çatalca</option>
+                        <option>Büyükçekmece</option>
+                        <option>Avcılar</option>
+                        <option>Beylikdüzü</option>
+                        <option>Tekirdag</option>
+                    </select>
+                </th>
+            </tr>
+            
+            <tr>
+                <th><input type="submit" class="dugme1" /></th>
+                <th><input type="reset" class="dugme2" /></th>
+            </tr>
+            <tr> </tr>
+        </table>
     </div>
 </div>
 
