@@ -64,33 +64,6 @@ namespace modalfirst_ornek
         private void button4_Click(object sender, EventArgs e)
         {
             
-            if (radioButton1.Checked)
-            {
-                var studentToUpdate = conn.plotSet.FirstOrDefault(s => s.plotID == Convert.ToInt32(textBox1.Tag));
-                plot std = new plot();
-                std.plotName = textBox1.Text;
-                std.plotAdres = textBox2.Text;
-                std.plotPrice = int.Parse(textBox3.Text);
-                std.plotM2 = int.Parse(textBox5.Text);
-                std.customer_customerID = Convert.ToInt32(comboBox1.Text);
-
-                conn.plotSet.Add(std);
-                conn.SaveChanges();
-                dataGridView1.DataSource = conn.plotSet.ToList();
-            }
-            else if (radioButton2.Checked)
-            {
-                home std1 = new home();
-                std1.homeName = textBox1.Text;
-                std1.homeAdres = textBox2.Text;
-                std1.homePrice = int.Parse(textBox3.Text);
-                std1.homeM2 = int.Parse(textBox5.Text);
-                std1.customer_customerID = Convert.ToInt32(comboBox1.Text);
-
-                conn.homeSet.Add(std1);
-                conn.SaveChanges();
-                dataGridView1.DataSource = conn.plotSet.ToList();
-            }
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -147,6 +120,11 @@ namespace modalfirst_ornek
         private void button7_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = conn.customerSet.Where(x => x.customerID == Form1.deger).ToList();
+        }
+
+        private void customerPage_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

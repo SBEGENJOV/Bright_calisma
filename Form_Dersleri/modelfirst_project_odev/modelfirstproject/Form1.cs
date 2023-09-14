@@ -41,11 +41,11 @@ namespace modelfirstproject
             var student = container.studentSet.FirstOrDefault(s => s.studentID ==sid);
             if (student!=null)
             {
-                std.studentNameSurname = textBox1.Text;
-                std.studentAge = int.Parse(textBox2.Text);
-                std.studentPhone = textBox3.Text;
-                std.studentAdres = textBox4.Text;
-                std.teacherID = Convert.ToInt32(comboBox1.Text);
+                student.studentNameSurname = textBox1.Text;
+                student.studentAge = int.Parse(textBox2.Text);
+                student.studentPhone = textBox3.Text;
+                student.studentAdres = textBox4.Text;
+                student.teacherID = Convert.ToInt32(comboBox1.Text);
                 container.SaveChanges();
                 dataGridView1.DataSource = container.studentSet.ToList();
             }

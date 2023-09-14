@@ -32,3 +32,4 @@ C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\Form_Dersleri\modalfirst_orn
 C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\Form_Dersleri\modalfirst_ornek_kullanım\modalfirst_ornek\obj\Debug\modalfirst_ornek.csproj.CopyComplete
 C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\Form_Dersleri\modalfirst_ornek_kullanım\modalfirst_ornek\obj\Debug\modalfirst_ornek.exe
 C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\Form_Dersleri\modalfirst_ornek_kullanım\modalfirst_ornek\obj\Debug\modalfirst_ornek.pdb
+C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\Form_Dersleri\modalfirst_ornek_kullanım\modalfirst_ornek\obj\Debug\modalfirst_ornek.personel.resources
