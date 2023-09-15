@@ -5,9 +5,10 @@
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+@*<p>
+    @Html.ActionLink("Yeni Personel", "Yeni", null, new { @class = "btn btn-danger" })
+</p>*@
+
 <table class="table">
     <tr>
         <th>
@@ -25,26 +26,26 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.AdSoyad)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Yas)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Telefon)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Adres)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.PersonelNo }) |
-            @Html.ActionLink("Details", "Details", new { id=item.PersonelNo }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.PersonelNo })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdSoyad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Yas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adres)
+            </td>
+            <td>
+                @Html.ActionLink("Düzenle", "Edit", new { id = item.PersonelNo }, new {@class="btn btn-warning"}) |
+                @Html.ActionLink("Sil", "Delete", new { id = item.PersonelNo }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
 
 </table>
