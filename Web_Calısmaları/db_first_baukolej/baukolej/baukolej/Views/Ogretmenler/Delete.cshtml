@@ -1,0 +1,56 @@
+﻿@model baukolej.Models.Ogretmenler
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h3>Silmek İstedigine Emin Misin ?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.adSoyad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.adSoyad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.brans)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.brans)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.maas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.maas)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+<div class="form-actions no-color">
+
+    <input type="submit" value="Delete" class="btn btn-primary" style="margin-left: 47%; margin-top: 10px;" />
+
+    @Html.ActionLink("Listeye Geri Dön", "Index", null, new { @style = "margin-left:44%; margin-top:10px;", @class = "btn btn-primary" })
+</div>
+    }
+</div>

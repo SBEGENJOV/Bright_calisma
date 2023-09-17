@@ -1,0 +1,51 @@
+﻿@model baukolej.Models.Ogretmenler
+
+@{
+    ViewBag.Title = "Detay";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Detay</h2>
+
+<div>
+    <h4>Ogretmenler</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.adSoyad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.adSoyad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.brans)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.brans)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.maas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.maas)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Düzenle", "Edit", new { id = Model.ogretmenNo }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,40 @@
+﻿
+
+@model IEnumerable<baukolej.Models.Okul>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<p>
+    @Html.ActionLink("Yeni Okul", "Yeni", null, new { @class = "btn btn-primary" })
+</p>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>Okul No</th>
+            <th>Okul Adı</th>
+            <th>Adres</th>
+            <th>Okul Müdürü</th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var okul in Model)
+        {
+            <tr>
+                <td>@okul.okulNo</td>
+                <td>@okul.Adi</td>
+                <td>@okul.Adres</td>
+                <td>@okul.Mudur</td>
+                <td>
+                    @Html.ActionLink("Düzenle", "Edit", new { id = okul.okulNo }, new { @class = "btn btn-success" }) |
+                    @Html.ActionLink("Sil", "Delete", new { id = okul.okulNo }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

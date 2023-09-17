@@ -1,0 +1,50 @@
+﻿@model IEnumerable<baukolej.Models.Ogretmenler>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<p>
+    @Html.ActionLink("Yeni Öğretmen", "Yeni", null, new {@class="btn btn-primary"})
+</p>
+<table class="table table-dark">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.adSoyad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.brans)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.maas)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.adSoyad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.brans)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.maas)
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "Edit", new { id = item.ogretmenNo }, new { @class = "btn btn-success" }) |
+            @Html.ActionLink("Detay", "Detay", new { id = item.ogretmenNo }, new { @class = "btn btn-success" }) |
+            @Html.ActionLink("Sil", "Delete", new { id = item.ogretmenNo }, new { @class = "btn btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>
