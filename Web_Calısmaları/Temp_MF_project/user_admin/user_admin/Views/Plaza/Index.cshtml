@@ -1,0 +1,42 @@
+﻿@model IEnumerable<user_admin.Models.plaza>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage2.cshtml";
+}
+<p>
+    @Html.ActionLink("Yeni Kaydet", "Kaydet")
+</p>
+<table class="table">
+    <tr style="color:red;">
+        <th style="color:red;">
+            @Html.DisplayNameFor(model => model.plazaAd)
+        </th>
+        <th style="color:red;">
+            @Html.DisplayNameFor(model => model.plazaAdres)
+        </th>
+        <th style="color:red;">
+            @Html.DisplayNameFor(model => model.plazaTel)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td style="color:red;">
+            @Html.DisplayFor(modelItem => item.plazaAd)
+        </td>
+        <td style="color:red;">
+            @Html.DisplayFor(modelItem => item.plazaAdres)
+        </td>
+        <td style="color:red;">
+            @Html.DisplayFor(modelItem => item.plazaTel)
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "Edit", new { id=item.plazaNo }) |
+            @Html.ActionLink("Sil", "Delete", new { id=item.plazaNo })
+        </td>
+    </tr>
+}
+
+</table>

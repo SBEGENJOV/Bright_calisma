@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container">
+    <EntitySetMapping Name="plazaSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.plaza)">
+        <MappingFragment StoreEntitySet="plazaSet">
+          <ScalarProperty Name="plazaNo" ColumnName="plazaNo" />
+          <ScalarProperty Name="plazaAd" ColumnName="plazaAd" />
+          <ScalarProperty Name="plazaAdres" ColumnName="plazaAdres" />
+          <ScalarProperty Name="plazaTel" ColumnName="plazaTel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="firmaSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.firma)">
+        <MappingFragment StoreEntitySet="firmaSet">
+          <ScalarProperty Name="firmaNo" ColumnName="firmaNo" />
+          <ScalarProperty Name="firmaAd" ColumnName="firmaAd" />
+          <ScalarProperty Name="firmaAdres" ColumnName="firmaAdres" />
+          <ScalarProperty Name="firmaTel" ColumnName="firmaTel" />
+          <ScalarProperty Name="plazaNo" ColumnName="plazaNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="depertmanSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.depertman)">
+        <MappingFragment StoreEntitySet="depertmanSet">
+          <ScalarProperty Name="depertmanNo" ColumnName="depertmanNo" />
+          <ScalarProperty Name="depertmanAd" ColumnName="depertmanAd" />
+          <ScalarProperty Name="depertmanAdres" ColumnName="depertmanAdres" />
+          <ScalarProperty Name="depertmanTel" ColumnName="depertmanTel" />
+          <ScalarProperty Name="firmaNo" ColumnName="firmaNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="calisanSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.calisan)">
+        <MappingFragment StoreEntitySet="calisanSet">
+          <ScalarProperty Name="calisanNo" ColumnName="calisanNo" />
+          <ScalarProperty Name="calisanAdSoyad" ColumnName="calisanAdSoyad" />
+          <ScalarProperty Name="calisanAdres" ColumnName="calisanAdres" />
+          <ScalarProperty Name="calisanTel" ColumnName="calisanTel" />
+          <ScalarProperty Name="depertmanNo" ColumnName="depertmanNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

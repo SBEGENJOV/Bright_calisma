@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="plazaSet" EntityType="Model1.plaza" />
+    <EntitySet Name="firmaSet" EntityType="Model1.firma" />
+    <EntitySet Name="depertmanSet" EntityType="Model1.depertman" />
+    <EntitySet Name="calisanSet" EntityType="Model1.calisan" />
+    <AssociationSet Name="plazafirma" Association="Model1.plazafirma">
+      <End Role="plaza" EntitySet="plazaSet" />
+      <End Role="firma" EntitySet="firmaSet" />
+    </AssociationSet>
+    <AssociationSet Name="firmadepertman" Association="Model1.firmadepertman">
+      <End Role="firma" EntitySet="firmaSet" />
+      <End Role="depertman" EntitySet="depertmanSet" />
+    </AssociationSet>
+    <AssociationSet Name="depertmancalisan" Association="Model1.depertmancalisan">
+      <End Role="depertman" EntitySet="depertmanSet" />
+      <End Role="calisan" EntitySet="calisanSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="plaza">
+    <Key>
+      <PropertyRef Name="plazaNo" />
+    </Key>
+    <Property Name="plazaNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="plazaAd" Type="String" Nullable="false" />
+    <Property Name="plazaAdres" Type="String" Nullable="false" />
+    <Property Name="plazaTel" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="firma">
+    <Key>
+      <PropertyRef Name="firmaNo" />
+    </Key>
+    <Property Name="firmaNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="firmaAd" Type="String" Nullable="false" />
+    <Property Name="firmaAdres" Type="String" Nullable="false" />
+    <Property Name="firmaTel" Type="String" Nullable="false" />
+    <Property Name="plazaNo" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="depertman">
+    <Key>
+      <PropertyRef Name="depertmanNo" />
+    </Key>
+    <Property Name="depertmanNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="depertmanAd" Type="String" Nullable="false" />
+    <Property Name="depertmanAdres" Type="String" Nullable="false" />
+    <Property Name="depertmanTel" Type="String" Nullable="false" />
+    <Property Name="firmaNo" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="calisan">
+    <Key>
+      <PropertyRef Name="calisanNo" />
+    </Key>
+    <Property Name="calisanNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="calisanAdSoyad" Type="String" Nullable="false" />
+    <Property Name="calisanAdres" Type="String" Nullable="false" />
+    <Property Name="calisanTel" Type="String" Nullable="false" />
+    <Property Name="depertmanNo" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="plazafirma">
+    <End Type="Model1.plaza" Role="plaza" Multiplicity="1" />
+    <End Type="Model1.firma" Role="firma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="plaza">
+        <PropertyRef Name="plazaNo" />
+      </Principal>
+      <Dependent Role="firma">
+        <PropertyRef Name="plazaNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="firmadepertman">
+    <End Type="Model1.firma" Role="firma" Multiplicity="1" />
+    <End Type="Model1.depertman" Role="depertman" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="firma">
+        <PropertyRef Name="firmaNo" />
+      </Principal>
+      <Dependent Role="depertman">
+        <PropertyRef Name="firmaNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="depertmancalisan">
+    <End Type="Model1.depertman" Role="depertman" Multiplicity="1" />
+    <End Type="Model1.calisan" Role="calisan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="depertman">
+        <PropertyRef Name="depertmanNo" />
+      </Principal>
+      <Dependent Role="calisan">
+        <PropertyRef Name="depertmanNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

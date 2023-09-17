@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="Model1StoreContainer">
+    <EntitySet Name="plazaSet" EntityType="Model1.Store.plazaSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="firmaSet" EntityType="Model1.Store.firmaSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="depertmanSet" EntityType="Model1.Store.depertmanSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="calisanSet" EntityType="Model1.Store.calisanSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="plazafirma" Association="Model1.Store.plazafirma">
+      <End Role="plaza" EntitySet="plazaSet" />
+      <End Role="firma" EntitySet="firmaSet" />
+    </AssociationSet>
+    <AssociationSet Name="firmadepertman" Association="Model1.Store.firmadepertman">
+      <End Role="firma" EntitySet="firmaSet" />
+      <End Role="depertman" EntitySet="depertmanSet" />
+    </AssociationSet>
+    <AssociationSet Name="depertmancalisan" Association="Model1.Store.depertmancalisan">
+      <End Role="depertman" EntitySet="depertmanSet" />
+      <End Role="calisan" EntitySet="calisanSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="plazaSet">
+    <Key>
+      <PropertyRef Name="plazaNo" />
+    </Key>
+    <Property Name="plazaNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="plazaAd" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="plazaAdres" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="plazaTel" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="firmaSet">
+    <Key>
+      <PropertyRef Name="firmaNo" />
+    </Key>
+    <Property Name="firmaNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="firmaAd" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="firmaAdres" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="firmaTel" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="plazaNo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="depertmanSet">
+    <Key>
+      <PropertyRef Name="depertmanNo" />
+    </Key>
+    <Property Name="depertmanNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="depertmanAd" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="depertmanAdres" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="depertmanTel" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="firmaNo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="calisanSet">
+    <Key>
+      <PropertyRef Name="calisanNo" />
+    </Key>
+    <Property Name="calisanNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="calisanAdSoyad" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="calisanAdres" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="calisanTel" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="depertmanNo" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="plazafirma">
+    <End Role="plaza" Type="Model1.Store.plazaSet" Multiplicity="1" />
+    <End Role="firma" Type="Model1.Store.firmaSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="plaza">
+        <PropertyRef Name="plazaNo" />
+      </Principal>
+      <Dependent Role="firma">
+        <PropertyRef Name="plazaNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="firmadepertman">
+    <End Role="firma" Type="Model1.Store.firmaSet" Multiplicity="1" />
+    <End Role="depertman" Type="Model1.Store.depertmanSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="firma">
+        <PropertyRef Name="firmaNo" />
+      </Principal>
+      <Dependent Role="depertman">
+        <PropertyRef Name="firmaNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="depertmancalisan">
+    <End Role="depertman" Type="Model1.Store.depertmanSet" Multiplicity="1" />
+    <End Role="calisan" Type="Model1.Store.calisanSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="depertman">
+        <PropertyRef Name="depertmanNo" />
+      </Principal>
+      <Dependent Role="calisan">
+        <PropertyRef Name="depertmanNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

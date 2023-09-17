@@ -1,0 +1,51 @@
+﻿@model IEnumerable<user_admin.Models.calisan>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage2.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Yeni ", "Yeni")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.calisanAdSoyad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.calisanAdres)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.calisanTel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.depertmanNo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.calisanAdSoyad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.calisanAdres)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.calisanTel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.depertmanNo)
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "Duzenle", new { id=item.calisanNo }) |
+            @Html.ActionLink("Sil", "Sil", new { id=item.calisanNo })
+        </td>
+    </tr>
+}
+
+</table>

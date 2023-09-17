@@ -1,0 +1,57 @@
+﻿@model user_admin.Models.firma
+
+@{
+    ViewBag.Title = "Sil";
+    Layout = "~/Views/Shared/_LayoutPage2.cshtml";
+}
+
+<h2>Sil</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>firma</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.firmaAd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.firmaAd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.firmaAdres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.firmaAdres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.firmaTel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.firmaTel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.plazaNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.plazaNo)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
