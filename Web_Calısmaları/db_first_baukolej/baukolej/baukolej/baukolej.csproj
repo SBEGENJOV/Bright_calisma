@@ -134,6 +134,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\OgrencilerController.cs" />
     <Compile Include="Controllers\OgretmenlerController.cs" />
     <Compile Include="Controllers\OkulController.cs" />
     <Compile Include="Global.asax.cs">
@@ -213,6 +214,10 @@
     <Content Include="Views\Okul\Yeni.cshtml" />
     <Content Include="Views\Okul\Edit.cshtml" />
     <Content Include="Views\Okul\Delete.cshtml" />
+    <Content Include="Views\Ogrenciler\Index.cshtml" />
+    <Content Include="Views\Ogrenciler\Yeni.cshtml" />
+    <Content Include="Views\Ogrenciler\Edit.cshtml" />
+    <Content Include="Views\Ogrenciler\Delete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

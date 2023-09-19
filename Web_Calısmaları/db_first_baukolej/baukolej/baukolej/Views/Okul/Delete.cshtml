@@ -10,9 +10,7 @@
 @using (Html.BeginForm())
 {
 
-    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
     @Html.HiddenFor(model => model.okulNo)
-
 
     <div class="form-horizontal">
         <div class="form-group">

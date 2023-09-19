@@ -1,0 +1,31 @@
+﻿@model baukolej.Models.Ogrenciler
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+
+
+<dl class="dl-horizontal">
+    @Html.HiddenFor(m => m.ogrenciNo)
+
+
+    @Html.DisplayNameFor(m => m.AdSoyad)
+    @Html.DisplayFor(m => m.AdSoyad)
+    @Html.DisplayNameFor(m => m.DogumTarih)
+    @Html.DisplayFor(m => m.DogumTarih)
+    @Html.DisplayNameFor(m => m.BursDurumu)
+    @Html.DisplayFor(m => m.BursDurumu)
+    @Html.DisplayNameFor(m => m.Adres)
+    @Html.DisplayFor(m => m.Adres)
+    @Html.DisplayNameFor(m => m.Telefon)
+    @Html.DisplayFor(m => m.Telefon)
+    @Html.DisplayNameFor(m => m.okulNo)
+    @Html.DisplayFor(m => m.okulNo)
+    </dl>
+    @using (Html.BeginForm())
+    {
+        <input type="submit" value="Sil" class="btn btn-primary" style="margin-top:10px;" />
+        @Html.ActionLink("Listeye Geri Dön", "Index", null, new { @style = "margin-top:10px;", @class = "btn btn-primary" })
+    }
+

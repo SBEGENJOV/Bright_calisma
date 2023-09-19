@@ -1,0 +1,35 @@
+﻿@model baukolej.Models.Ogrenciler
+@{
+    ViewBag.Title = "Yeni";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(m => m.AdSoyad)
+    <br />
+    @Html.EditorFor(m => m.AdSoyad)
+    <br />
+    @Html.LabelFor(m => m.DogumTarih)
+    <br />
+    @Html.EditorFor(m => m.DogumTarih)
+    <br />
+    @Html.LabelFor(m => m.BursDurumu)
+    <br />
+    @Html.EditorFor(m => m.BursDurumu)
+    <br />
+    @Html.LabelFor(m => m.Adres)
+    <br />
+    @Html.EditorFor(m => m.Adres)
+    <br />
+    @Html.LabelFor(m => m.Telefon)
+    <br />
+    @Html.EditorFor(m => m.Telefon)
+    <br />
+    @Html.LabelFor(m => m.okulNo)
+    <br />
+    @Html.EditorFor(m => m.okulNo)
+    <br />
+
+    <input type="submit" value="Oluştur" class="btn btn-primary" style="margin-top:10px;" />
+    @Html.ActionLink("Listeye Geri Dön", "Index", null, new { @style = "margin-top:10px;", @class = "btn btn-primary" })
+}

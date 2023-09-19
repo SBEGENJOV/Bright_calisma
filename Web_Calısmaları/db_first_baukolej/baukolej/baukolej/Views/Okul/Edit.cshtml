@@ -4,13 +4,10 @@
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
 
-<h2>Okul u Düzenle</h2>
-
 @using (Html.BeginForm())
 {
 
-    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-    @Html.HiddenFor(model => model.okulNo)
+    @Html.HiddenFor(m => m.okulNo)
 
 
     <div class="form-horizontal">
