@@ -26,12 +26,16 @@
                 <td>@ogrenci.DogumTarih</td>
                 <td>@ogrenci.BursDurumu</td>
                 <td>@ogrenci.Adres</td>
-                <td>@ogrenci.Telefon</td>
+                <td>@ogrenci.Cinsiyet</td>
                 <td>@ogrenci.okulNo</td>
                 <td>
+                    @ogrenci.Okul.Adi
+                </td>
+                <td>
                     @Html.ActionLink("Düzenle", "Edit", new { id = ogrenci.ogrenciNo }, new { @class = "btn btn-success" }) |
-                                @Html.ActionLink("Sil", "Delete", new { id = ogrenci.ogrenciNo }, new { @class = "btn btn-danger" })
-                            </td>
+                    @Html.ActionLink("Sil", "Delete", new { id = ogrenci.ogrenciNo }, new { @class = "btn btn-danger" })
+                </td>
+
             </tr>
         }
     </tbody>

@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="kutuphaneModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Calisanlar">
+    <Key>
+      <PropertyRef Name="calisanID" />
+    </Key>
+    <Property Name="calisanID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="calisanAdSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="calisanSifre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="calisanAdres" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="calisanGorev" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="kutuphaneID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Kutuphane" Relationship="Self.FK_Calisanlar_Kutuphane" FromRole="Calisanlar" ToRole="Kutuphane" />
+  </EntityType>
+  <EntityType Name="Calisma">
+    <Key>
+      <PropertyRef Name="masaID" />
+    </Key>
+    <Property Name="masaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kutuphaneID" Type="Int32" Nullable="false" />
+    <Property Name="masaAd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Kutuphane" Relationship="Self.FK_Calisma_Kutuphane" FromRole="Calisma" ToRole="Kutuphane" />
+    <NavigationProperty Name="Ogrenciler" Relationship="Self.FK_Ogrenciler_Calisma" FromRole="Calisma" ToRole="Ogrenciler" />
+  </EntityType>
+  <EntityType Name="Kitap">
+    <Key>
+      <PropertyRef Name="kitapID" />
+    </Key>
+    <Property Name="kitapID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kitapAd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="kitapYazar" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="kitapBasin" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="kitapSayfa" Type="Int32" />
+    <Property Name="kitapDurum" Type="Boolean" />
+    <Property Name="kutuphaneID" Type="Int32" />
+    <NavigationProperty Name="Kutuphane" Relationship="Self.FK_Kitap_Kutuphane" FromRole="Kitap" ToRole="Kutuphane" />
+  </EntityType>
+  <EntityType Name="Kutuphane">
+    <Key>
+      <PropertyRef Name="kutuphaneID" />
+    </Key>
+    <Property Name="kutuphaneID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="kutuphaneAdi" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="kutuphaneYonetici" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="kutuphaneCalKap" Type="Int32" />
+    <Property Name="kutuphaneBilKap" Type="Int32" />
+    <Property Name="subeID" Type="Int32" />
+    <NavigationProperty Name="Calisanlar" Relationship="Self.FK_Calisanlar_Kutuphane" FromRole="Kutuphane" ToRole="Calisanlar" />
+    <NavigationProperty Name="Calisma" Relationship="Self.FK_Calisma_Kutuphane" FromRole="Kutuphane" ToRole="Calisma" />
+    <NavigationProperty Name="Kitap" Relationship="Self.FK_Kitap_Kutuphane" FromRole="Kutuphane" ToRole="Kitap" />
+    <NavigationProperty Name="Sube" Relationship="Self.FK_Kutuphane_Sube" FromRole="Kutuphane" ToRole="Sube" />
+    <NavigationProperty Name="Ogrenciler" Relationship="Self.FK_Ogrenciler_Kutuphane" FromRole="Kutuphane" ToRole="Ogrenciler" />
+  </EntityType>
+  <EntityType Name="Ogrenciler">
+    <Key>
+      <PropertyRef Name="ogrenciID" />
+    </Key>
+    <Property Name="ogrenciID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ogrenciAdSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ogrenciYas" Type="DateTime" Precision="0" />
+    <Property Name="ogrenciDurum" Type="Boolean" />
+    <Property Name="kutuphaneID" Type="Int32" />
+    <Property Name="masaID" Type="Int32" />
+    <NavigationProperty Name="Calisma" Relationship="Self.FK_Ogrenciler_Calisma" FromRole="Ogrenciler" ToRole="Calisma" />
+    <NavigationProperty Name="Kutuphane" Relationship="Self.FK_Ogrenciler_Kutuphane" FromRole="Ogrenciler" ToRole="Kutuphane" />
+  </EntityType>
+  <EntityType Name="Sube">
+    <Key>
+      <PropertyRef Name="subeID" />
+    </Key>
+    <Property Name="subeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="subeAd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="subeYonetici" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="subeAdres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Kutuphane" Relationship="Self.FK_Kutuphane_Sube" FromRole="Sube" ToRole="Kutuphane" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_Calisanlar_Kutuphane">
+    <End Role="Kutuphane" Type="Self.Kutuphane" Multiplicity="1" />
+    <End Role="Calisanlar" Type="Self.Calisanlar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kutuphane">
+        <PropertyRef Name="kutuphaneID" />
+      </Principal>
+      <Dependent Role="Calisanlar">
+        <PropertyRef Name="kutuphaneID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Calisma_Kutuphane">
+    <End Role="Kutuphane" Type="Self.Kutuphane" Multiplicity="1" />
+    <End Role="Calisma" Type="Self.Calisma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kutuphane">
+        <PropertyRef Name="kutuphaneID" />
+      </Principal>
+      <Dependent Role="Calisma">
+        <PropertyRef Name="kutuphaneID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ogrenciler_Calisma">
+    <End Role="Calisma" Type="Self.Calisma" Multiplicity="0..1" />
+    <End Role="Ogrenciler" Type="Self.Ogrenciler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Calisma">
+        <PropertyRef Name="masaID" />
+      </Principal>
+      <Dependent Role="Ogrenciler">
+        <PropertyRef Name="masaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Kitap_Kutuphane">
+    <End Role="Kutuphane" Type="Self.Kutuphane" Multiplicity="0..1" />
+    <End Role="Kitap" Type="Self.Kitap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kutuphane">
+        <PropertyRef Name="kutuphaneID" />
+      </Principal>
+      <Dependent Role="Kitap">
+        <PropertyRef Name="kutuphaneID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Kutuphane_Sube">
+    <End Role="Sube" Type="Self.Sube" Multiplicity="0..1" />
+    <End Role="Kutuphane" Type="Self.Kutuphane" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sube">
+        <PropertyRef Name="subeID" />
+      </Principal>
+      <Dependent Role="Kutuphane">
+        <PropertyRef Name="subeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ogrenciler_Kutuphane">
+    <End Role="Kutuphane" Type="Self.Kutuphane" Multiplicity="0..1" />
+    <End Role="Ogrenciler" Type="Self.Ogrenciler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kutuphane">
+        <PropertyRef Name="kutuphaneID" />
+      </Principal>
+      <Dependent Role="Ogrenciler">
+        <PropertyRef Name="kutuphaneID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="kutuphaneEntities" annotation:LazyLoadingEnabled="false">
+    <EntitySet Name="Calisanlar" EntityType="Self.Calisanlar" />
+    <EntitySet Name="Calisma" EntityType="Self.Calisma" />
+    <EntitySet Name="Kitap" EntityType="Self.Kitap" />
+    <EntitySet Name="Kutuphane" EntityType="Self.Kutuphane" />
+    <EntitySet Name="Ogrenciler" EntityType="Self.Ogrenciler" />
+    <EntitySet Name="Sube" EntityType="Self.Sube" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <AssociationSet Name="FK_Calisanlar_Kutuphane" Association="Self.FK_Calisanlar_Kutuphane">
+      <End Role="Kutuphane" EntitySet="Kutuphane" />
+      <End Role="Calisanlar" EntitySet="Calisanlar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Calisma_Kutuphane" Association="Self.FK_Calisma_Kutuphane">
+      <End Role="Kutuphane" EntitySet="Kutuphane" />
+      <End Role="Calisma" EntitySet="Calisma" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ogrenciler_Calisma" Association="Self.FK_Ogrenciler_Calisma">
+      <End Role="Calisma" EntitySet="Calisma" />
+      <End Role="Ogrenciler" EntitySet="Ogrenciler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Kitap_Kutuphane" Association="Self.FK_Kitap_Kutuphane">
+      <End Role="Kutuphane" EntitySet="Kutuphane" />
+      <End Role="Kitap" EntitySet="Kitap" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Kutuphane_Sube" Association="Self.FK_Kutuphane_Sube">
+      <End Role="Sube" EntitySet="Sube" />
+      <End Role="Kutuphane" EntitySet="Kutuphane" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ogrenciler_Kutuphane" Association="Self.FK_Ogrenciler_Kutuphane">
+      <End Role="Kutuphane" EntitySet="Kutuphane" />
+      <End Role="Ogrenciler" EntitySet="Ogrenciler" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

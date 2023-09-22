@@ -1,0 +1,29 @@
+﻿@model WebApplication1.Models.Sube
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Models/Shared/_LayoutPage2.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+
+    @Html.HiddenFor(m => m.subeID)
+
+    @Html.LabelFor(m => m.subeAd);
+    <br />
+    @Html.EditorFor(m => m.subeAd);
+    <br />
+    @Html.LabelFor(m => m.subeAdres);
+    <br />
+    @Html.EditorFor(m => m.subeAdres);
+    <br />
+    @Html.LabelFor(m => m.subeYonetici);
+    <br />
+    @Html.EditorFor(m => m.subeYonetici);
+    <br />
+    <input type="submit" value="Değiştir" class="btn btn-primary" style="margin-top:10px;" />
+    @Html.ActionLink("Listeye Geri Dön", "Index", null, new { @style = "margin-top:10px;", @class = "btn btn-primary" })
+
+}
+

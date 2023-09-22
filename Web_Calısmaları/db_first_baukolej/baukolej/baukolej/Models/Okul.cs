@@ -14,9 +14,18 @@ namespace baukolej.Models
     
     public partial class Okul
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Okul()
+        {
+            this.Ogrenciler = new HashSet<Ogrenciler>();
+        }
+    
         public int okulNo { get; set; }
         public string Adi { get; set; }
         public string Adres { get; set; }
         public string Mudur { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Ogrenciler> Ogrenciler { get; set; }
     }
 }

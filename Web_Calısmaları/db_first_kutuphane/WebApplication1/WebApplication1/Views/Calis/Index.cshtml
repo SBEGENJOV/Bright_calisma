@@ -1,0 +1,38 @@
+﻿@model IEnumerable<WebApplication1.Models.Calisanlar>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Models/Shared/_LayoutPage2.cshtml";
+}
+@Html.ActionLink("Yeni Çalışan","Yeni",null, new { @class = "btn btn-primary" })
+<table style="text-align:center">
+    <thead>
+        <tr>
+            
+            <th style="border:solid;"> @Html.Label("Çalışan ID")</th>
+            <th style="border:solid;"> @Html.Label("Çalışan Adı")</th>
+            <th style="border:solid;">@Html.Label("Çalışan Şifre")</th>
+            <th style="border:solid;">@Html.Label("Çalışan Adres")</th>
+            <th style="border:solid;">@Html.Label("Çalışan Görev")</th>
+            <th style="border:solid;">@Html.Label("Kütüphane Adı")</th>
+            <th style="border:solid;"> @Html.Label("İşlemler")</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var calisan in Model)
+        {
+            <tr>
+                <td style="border:solid;">@calisan.calisanID</td>
+                <td style="border:solid;">@calisan.calisanAdSoyad</td>
+                <td style="border:solid;">@calisan.calisanSifre</td>
+                <td style="border:solid;">@calisan.calisanAdres</td>
+                <td style="border:solid;">@calisan.calisanGorev</td>
+                <td style="border:solid;">@calisan.Kutuphane.kutuphaneAdi</td>
+                <td style="border:solid;">
+                    @Html.ActionLink("Düzenle", "Edit", new { id = calisan.calisanID }, new { @class = "btn btn-success" }) |
+                    @Html.ActionLink("Sil", "Delete", new { id = calisan.calisanID }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+            }
+        </tbody>
+</table>
+

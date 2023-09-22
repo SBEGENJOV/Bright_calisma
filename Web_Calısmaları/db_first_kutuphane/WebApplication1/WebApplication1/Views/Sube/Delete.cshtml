@@ -1,0 +1,31 @@
+﻿@model WebApplication1.Models.Sube
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Models/Shared/_LayoutPage2.cshtml";
+}
+
+
+@using (Html.BeginForm())
+{<div style="padding-top:10%; text-align:center; font-size:150%">
+    @Html.HiddenFor(x => x.subeID)
+
+    @Html.DisplayNameFor(x => x.subeAd)
+    <br />
+    @Html.DisplayFor(x => x.subeAd)
+    <br />
+    @Html.DisplayNameFor(x => x.subeAdres)
+    <br />
+    @Html.DisplayFor(x => x.subeAdres)
+    <br />
+    @Html.DisplayNameFor(x => x.subeYonetici)
+    <br />
+    @Html.DisplayFor(x => x.subeYonetici)
+    <br />
+</div>
+    <div style="margin-left:40%; margin-top:2%;">
+        <input type="submit" value="Sil" class="btn btn-primary" />
+        @Html.ActionLink("Listeye Geri Dön", "Index", null, new { @class = "btn btn-primary" })
+    </div>
+}
+

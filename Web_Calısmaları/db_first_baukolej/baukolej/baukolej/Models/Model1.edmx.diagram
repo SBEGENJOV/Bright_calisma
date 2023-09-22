@@ -6,11 +6,11 @@
     <edmx:Diagrams>
       <Diagram DiagramId="d1595beba1dd4fba8259c6b33a8219ae" Name="Diagram1">
         <EntityTypeShape EntityType="bauKolejModel.Kullanicilar" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="bauKolejModel.Ogrenciler" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="bauKolejModel.Ogretmenler" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="bauKolejModel.Okul" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="bauKolejModel.sysdiagrams" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
-        <AssociationConnector Association="bauKolejModel.FK_Ogrenciler_Okul" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="bauKolejModel.Okul" Width="1.5" PointX="0.75" PointY="1.25" />
+        <EntityTypeShape EntityType="bauKolejModel.Ogrenciler" Width="1.5" PointX="3" PointY="1" />
+        <AssociationConnector Association="bauKolejModel.FK_Ogrenciler_Okul" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

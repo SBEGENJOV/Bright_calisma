@@ -1,0 +1,35 @@
+﻿@model WebApplication1.Models.Kutuphane
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Models/Shared/_LayoutPage2.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(x => x.kutuphaneID)
+
+    @Html.LabelFor(x => x.kutuphaneAdi)
+    <br />
+    @Html.EditorFor(x => x.kutuphaneAdi)
+    <br />
+    @Html.LabelFor(x => x.kutuphaneYonetici)
+    <br />
+    @Html.EditorFor(x => x.kutuphaneYonetici)
+    <br />
+    @Html.LabelFor(x => x.kutuphaneCalKap)
+    <br />
+    @Html.EditorFor(x => x.kutuphaneCalKap)
+    <br />
+    @Html.LabelFor(x => x.kutuphaneBilKap)
+    <br />
+    @Html.EditorFor(x => x.kutuphaneBilKap)
+    <br />
+    @Html.LabelFor(x => x.subeID)
+    <br />
+    @Html.DropDownListFor(x => x.subeID, (List<SelectListItem>)ViewBag.veri)
+    <br />
+    <input type="submit" value="Degiştir" class="btn btn-primary" style="margin-top:10px;" /> <br />
+    @Html.ActionLink("Listeye Geri Dön", "Index", null, new { @style = "margin-top:10px;", @class = "btn btn-primary" })
+}
+

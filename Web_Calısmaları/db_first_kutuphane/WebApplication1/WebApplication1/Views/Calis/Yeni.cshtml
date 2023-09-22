@@ -1,0 +1,37 @@
+﻿@model WebApplication1.Models.Calisanlar
+@{
+    ViewBag.Title = "Yeni";
+    Layout = "~/Models/Shared/_LayoutPage2.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.Label("Çalışan İsmi")
+    <br />
+    @Html.EditorFor(m => m.calisanAdSoyad)
+    <br />
+    @Html.Label("Çalışan Şifre")
+    <br />
+    @Html.EditorFor(m => m.calisanSifre)
+    <br />
+    @Html.Label("Çalışan Adres")
+    <br />
+    @Html.EditorFor(m => m.calisanAdres)
+    <br />
+    @Html.Label("Çalışan Görev")
+    <br />
+    @Html.RadioButtonFor(m => m.calisanGorev, "Müdür ") @Html.Label(" Müdür ")
+    @Html.RadioButtonFor(m => m.calisanGorev, "Kütüphaneci ") @Html.Label(" Kütüphaneci ")
+    @Html.RadioButtonFor(m => m.calisanGorev, "Güvenlik ") @Html.Label(" Güvenlik ")
+    @Html.RadioButtonFor(m => m.calisanGorev, "Görevli ") @Html.Label(" Görevli ")
+    <br />
+    @Html.Label("Kütüphane Seç")
+    <br />
+    @Html.DropDownListFor(m => m.kutuphaneID, (List<SelectListItem>)ViewBag.veri)
+    <br />
+    <input value="Kaydet" type="submit" class="btn btn-primary mt-1" />
+    <p>
+        @Html.ActionLink("Listeye Geri Dön", "Index", null, new { @style = "margin-top:10px;", @class = "btn btn-primary" })
+    </p>
+}
+

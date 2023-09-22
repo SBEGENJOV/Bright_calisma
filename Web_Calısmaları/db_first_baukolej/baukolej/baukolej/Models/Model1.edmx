@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="bauKolejModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="bauKolejModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Kullanicilar">
           <Key>
             <PropertyRef Name="kullaniciNo" />
@@ -23,7 +23,7 @@
           <Property Name="DogumTarih" Type="smalldatetime" />
           <Property Name="BursDurumu" Type="bit" />
           <Property Name="Adres" Type="varchar" MaxLength="50" />
-          <Property Name="Telefon" Type="varchar" MaxLength="50" />
+          <Property Name="Cinsiyet" Type="bit" Nullable="false" />
           <Property Name="okulNo" Type="int" />
         </EntityType>
         <EntityType Name="Ogretmenler">
@@ -78,8 +78,7 @@
             <End Role="Ogrenciler" EntitySet="Ogrenciler" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="bauKolejModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -92,18 +91,6 @@
           <Property Name="sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="role" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityType Name="Ogrenciler">
-          <Key>
-            <PropertyRef Name="ogrenciNo" />
-          </Key>
-          <Property Name="ogrenciNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="AdSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="DogumTarih" Type="DateTime" Precision="0" />
-          <Property Name="BursDurumu" Type="Boolean" />
-          <Property Name="Adres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Telefon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="okulNo" Type="Int32" />
-        </EntityType>
         <EntityType Name="Ogretmenler">
           <Key>
             <PropertyRef Name="ogretmenNo" />
@@ -113,15 +100,6 @@
           <Property Name="brans" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="mail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="maas" Type="Decimal" Precision="19" Scale="4" />
-        </EntityType>
-        <EntityType Name="Okul">
-          <Key>
-            <PropertyRef Name="okulNo" />
-          </Key>
-          <Property Name="okulNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Adi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Adres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Mudur" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -133,9 +111,43 @@
           <Property Name="version" Type="Int32" />
           <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
+        <EntityContainer Name="bauKolejEntities1" annotation:LazyLoadingEnabled="false">
+          <EntitySet Name="Kullanicilar" EntityType="Self.Kullanicilar" />
+          <EntitySet Name="Ogretmenler" EntityType="Self.Ogretmenler" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="Okul" EntityType="bauKolejModel.Okul" />
+          <EntitySet Name="Ogrenciler" EntityType="bauKolejModel.Ogrenciler" />
+          <AssociationSet Name="FK_Ogrenciler_Okul" Association="bauKolejModel.FK_Ogrenciler_Okul">
+            <End Role="Okul" EntitySet="Okul" />
+            <End Role="Ogrenciler" EntitySet="Ogrenciler" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Okul">
+          <Key>
+            <PropertyRef Name="okulNo" />
+          </Key>
+          <Property Name="okulNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Adi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Adres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Mudur" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Ogrenciler" Relationship="bauKolejModel.FK_Ogrenciler_Okul" FromRole="Okul" ToRole="Ogrenciler" />
+        </EntityType>
+        <EntityType Name="Ogrenciler">
+          <Key>
+            <PropertyRef Name="ogrenciNo" />
+          </Key>
+          <Property Name="ogrenciNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AdSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DogumTarih" Type="DateTime" Precision="0" />
+          <Property Name="BursDurumu" Type="Boolean" />
+          <Property Name="Adres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Cinsiyet" Type="Boolean" Nullable="false" />
+          <Property Name="okulNo" Type="Int32" />
+          <NavigationProperty Name="Okul" Relationship="bauKolejModel.FK_Ogrenciler_Okul" FromRole="Ogrenciler" ToRole="Okul" />
+        </EntityType>
         <Association Name="FK_Ogrenciler_Okul">
-          <End Role="Okul" Type="Self.Okul" Multiplicity="0..1" />
-          <End Role="Ogrenciler" Type="Self.Ogrenciler" Multiplicity="*" />
+          <End Type="bauKolejModel.Okul" Role="Okul" Multiplicity="0..1" />
+          <End Type="bauKolejModel.Ogrenciler" Role="Ogrenciler" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Okul">
               <PropertyRef Name="okulNo" />
@@ -145,17 +157,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="bauKolejEntities1" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Kullanicilar" EntityType="Self.Kullanicilar" />
-          <EntitySet Name="Ogrenciler" EntityType="Self.Ogrenciler" />
-          <EntitySet Name="Ogretmenler" EntityType="Self.Ogretmenler" />
-          <EntitySet Name="Okul" EntityType="Self.Okul" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
-          <AssociationSet Name="FK_Ogrenciler_Okul" Association="Self.FK_Ogrenciler_Okul">
-            <End Role="Okul" EntitySet="Okul" />
-            <End Role="Ogrenciler" EntitySet="Ogrenciler" />
-          </AssociationSet>
-        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -172,19 +173,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Ogrenciler">
-            <EntityTypeMapping TypeName="bauKolejModel.Ogrenciler">
-              <MappingFragment StoreEntitySet="Ogrenciler">
-                <ScalarProperty Name="ogrenciNo" ColumnName="ogrenciNo" />
-                <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
-                <ScalarProperty Name="DogumTarih" ColumnName="DogumTarih" />
-                <ScalarProperty Name="BursDurumu" ColumnName="BursDurumu" />
-                <ScalarProperty Name="Adres" ColumnName="Adres" />
-                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
-                <ScalarProperty Name="okulNo" ColumnName="okulNo" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Ogretmenler">
             <EntityTypeMapping TypeName="bauKolejModel.Ogretmenler">
               <MappingFragment StoreEntitySet="Ogretmenler">
@@ -196,16 +184,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Okul">
-            <EntityTypeMapping TypeName="bauKolejModel.Okul">
-              <MappingFragment StoreEntitySet="Okul">
-                <ScalarProperty Name="okulNo" ColumnName="okulNo" />
-                <ScalarProperty Name="Adi" ColumnName="Adi" />
-                <ScalarProperty Name="Adres" ColumnName="Adres" />
-                <ScalarProperty Name="Mudur" ColumnName="Mudur" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
             <EntityTypeMapping TypeName="bauKolejModel.sysdiagrams">
               <MappingFragment StoreEntitySet="sysdiagrams">
@@ -214,6 +192,29 @@
                 <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
                 <ScalarProperty Name="version" ColumnName="version" />
                 <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Okul">
+            <EntityTypeMapping TypeName="bauKolejModel.Okul">
+              <MappingFragment StoreEntitySet="Okul">
+                <ScalarProperty Name="Mudur" ColumnName="Mudur" />
+                <ScalarProperty Name="Adres" ColumnName="Adres" />
+                <ScalarProperty Name="Adi" ColumnName="Adi" />
+                <ScalarProperty Name="okulNo" ColumnName="okulNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ogrenciler">
+            <EntityTypeMapping TypeName="bauKolejModel.Ogrenciler">
+              <MappingFragment StoreEntitySet="Ogrenciler">
+                <ScalarProperty Name="okulNo" ColumnName="okulNo" />
+                <ScalarProperty Name="Cinsiyet" ColumnName="Cinsiyet" />
+                <ScalarProperty Name="Adres" ColumnName="Adres" />
+                <ScalarProperty Name="BursDurumu" ColumnName="BursDurumu" />
+                <ScalarProperty Name="DogumTarih" ColumnName="DogumTarih" />
+                <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+                <ScalarProperty Name="ogrenciNo" ColumnName="ogrenciNo" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

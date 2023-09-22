@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
 @using (Html.BeginForm())
-{
+{ 
     @Html.LabelFor(m => m.AdSoyad)
     <br />
     @Html.EditorFor(m => m.AdSoyad)
@@ -15,19 +15,36 @@
     <br />
     @Html.LabelFor(m => m.BursDurumu)
     <br />
-    @Html.EditorFor(m => m.BursDurumu)
+
+    <div class="radio">
+        <label>
+            @Html.RadioButtonFor(m => m.BursDurumu, true) Burslu
+        </label>
+        <label>
+            @Html.RadioButtonFor(m => m.BursDurumu, false) Bursuz
+        </label>
+    </div>
+    @*@Html.EditorFor(m => m.BursDurumu)*@
     <br />
     @Html.LabelFor(m => m.Adres)
     <br />
     @Html.EditorFor(m => m.Adres)
     <br />
-    @Html.LabelFor(m => m.Telefon)
-    <br />
-    @Html.EditorFor(m => m.Telefon)
+    <div class="check">
+        <label>
+            @Html.CheckBoxFor(m => m.Cinsiyet, new { id = "kadin" }) Kadin
+        </label>
+        <label>
+            @Html.CheckBoxFor(m => m.Cinsiyet, new { id = "erkek" }) Erkek
+        </label>
+
+
+    </div>
+
     <br />
     @Html.LabelFor(m => m.okulNo)
     <br />
-    @Html.EditorFor(m => m.okulNo)
+    @Html.DropDownListFor(m => m.okulNo, (List<SelectListItem>)ViewBag.datalar)
     <br />
 
     <input type="submit" value="Oluştur" class="btn btn-primary" style="margin-top:10px;" />

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a91805554e2547ff9847ff0c3f4a7814" Name="Diagram1" ZoomLevel="97">
+        <EntityTypeShape EntityType="kutuphaneModel.Calisanlar" Width="1.5" PointX="5.25" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="kutuphaneModel.Calisma" Width="1.5" PointX="5.25" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="kutuphaneModel.Kitap" Width="1.5" PointX="5.25" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="kutuphaneModel.Kutuphane" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="kutuphaneModel.Ogrenciler" Width="1.5" PointX="7.5" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="kutuphaneModel.Sube" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="kutuphaneModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="kutuphaneModel.FK_Calisanlar_Kutuphane" ManuallyRouted="false" />
+        <AssociationConnector Association="kutuphaneModel.FK_Calisma_Kutuphane" ManuallyRouted="false" />
+        <AssociationConnector Association="kutuphaneModel.FK_Ogrenciler_Calisma" ManuallyRouted="false" />
+        <AssociationConnector Association="kutuphaneModel.FK_Kitap_Kutuphane" ManuallyRouted="false" />
+        <AssociationConnector Association="kutuphaneModel.FK_Kutuphane_Sube" ManuallyRouted="false" />
+        <AssociationConnector Association="kutuphaneModel.FK_Ogrenciler_Kutuphane" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

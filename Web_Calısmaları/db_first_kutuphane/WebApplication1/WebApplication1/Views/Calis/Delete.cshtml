@@ -1,0 +1,39 @@
+﻿@model WebApplication1.Models.Calisanlar
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Models/Shared/_LayoutPage2.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(x => x.calisanID)
+    @Html.Label("Çalışan Adı")
+    <br />
+    @Html.DisplayFor(m => m.calisanAdSoyad)
+    <br />
+
+    @Html.Label("Çalışan Şifre")
+    <br />
+    @Html.DisplayFor(m => m.calisanSifre)
+    <br />
+
+    @Html.Label("Çalışan Adres")
+    <br />
+    @Html.DisplayFor(m => m.calisanAdres)
+    <br />
+
+    @Html.Label("Çalışan Görev")
+    <br />
+    @Html.DisplayFor(m => m.calisanGorev)
+    <br />
+
+    @Html.Label("Çalıştıgı Kütüphane")
+    <br />
+    @Html.DisplayFor(m => m.kutuphaneID)
+    <br />
+    <p>
+        <input value="Sil" type="submit" class="btn btn-primary" />
+    </p>
+        @Html.ActionLink("Geri Dön", "Index", null, new {@class="btn btn-primary"})
+}
+

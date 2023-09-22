@@ -1,0 +1,36 @@
+﻿@model IEnumerable<WebApplication1.Models.Sube>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Models/Shared/_LayoutPage2.cshtml";
+}
+<p>
+        @Html.ActionLink("Yeni Şube", "Yeni", null, new { @class = "btn btn-primary" })
+</p>
+<table style="text-align:center">
+    <thead>
+        <tr>
+            <th>Sube No</th>
+            <th>Sube Ad</th>
+            <th>Sube Yönetici</th>
+            <th>Sube Adres</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var sube in Model)
+        {
+            <tr style="border:solid">
+                <td style="border:solid">@sube.subeID</td>
+                <td style="border:solid">@sube.subeAd</td>
+                <td style="border:solid">@sube.subeAdres</td>
+                <td style="border:solid">@sube.subeYonetici</td>
+                <td style="border:solid">
+                    @Html.ActionLink("Düzenle", "Edit", new { id = sube.subeID }, new { @class = "btn btn-success" }) |
+                    @Html.ActionLink("Sil", "Delete", new { id = sube.subeID }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

@@ -11,19 +11,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Ogrenciler">
-      <EntityTypeMapping TypeName="bauKolejModel.Ogrenciler">
-        <MappingFragment StoreEntitySet="Ogrenciler">
-          <ScalarProperty Name="ogrenciNo" ColumnName="ogrenciNo" />
-          <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
-          <ScalarProperty Name="DogumTarih" ColumnName="DogumTarih" />
-          <ScalarProperty Name="BursDurumu" ColumnName="BursDurumu" />
-          <ScalarProperty Name="Adres" ColumnName="Adres" />
-          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
-          <ScalarProperty Name="okulNo" ColumnName="okulNo" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Ogretmenler">
       <EntityTypeMapping TypeName="bauKolejModel.Ogretmenler">
         <MappingFragment StoreEntitySet="Ogretmenler">
@@ -35,16 +22,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Okul">
-      <EntityTypeMapping TypeName="bauKolejModel.Okul">
-        <MappingFragment StoreEntitySet="Okul">
-          <ScalarProperty Name="okulNo" ColumnName="okulNo" />
-          <ScalarProperty Name="Adi" ColumnName="Adi" />
-          <ScalarProperty Name="Adres" ColumnName="Adres" />
-          <ScalarProperty Name="Mudur" ColumnName="Mudur" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="sysdiagrams">
       <EntityTypeMapping TypeName="bauKolejModel.sysdiagrams">
         <MappingFragment StoreEntitySet="sysdiagrams">
@@ -53,6 +30,29 @@
           <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
           <ScalarProperty Name="version" ColumnName="version" />
           <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Okul">
+      <EntityTypeMapping TypeName="bauKolejModel.Okul">
+        <MappingFragment StoreEntitySet="Okul">
+          <ScalarProperty Name="Mudur" ColumnName="Mudur" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="Adi" ColumnName="Adi" />
+          <ScalarProperty Name="okulNo" ColumnName="okulNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ogrenciler">
+      <EntityTypeMapping TypeName="bauKolejModel.Ogrenciler">
+        <MappingFragment StoreEntitySet="Ogrenciler">
+          <ScalarProperty Name="okulNo" ColumnName="okulNo" />
+          <ScalarProperty Name="Cinsiyet" ColumnName="Cinsiyet" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="BursDurumu" ColumnName="BursDurumu" />
+          <ScalarProperty Name="DogumTarih" ColumnName="DogumTarih" />
+          <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+          <ScalarProperty Name="ogrenciNo" ColumnName="ogrenciNo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

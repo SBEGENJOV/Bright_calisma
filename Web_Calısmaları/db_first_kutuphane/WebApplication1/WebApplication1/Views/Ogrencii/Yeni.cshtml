@@ -1,0 +1,37 @@
+﻿@model WebApplication1.Models.Ogrenciler
+@{
+    ViewBag.Title = "Yeni";
+    Layout = "~/Models/Shared/_LayoutPage2.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.Label("Öğrenci Ad Soyad")
+    <br />
+    @Html.EditorFor(x => x.ogrenciAdSoyad)
+    <br />
+    @Html.Label("Öğrenci Yaş")
+    <br />
+    @Html.DisplayFor(x => x.ogrenciYas)
+    <br />
+    @Html.Label("Öğrenci Durum")
+    <br />
+    <label>
+        @Html.RadioButtonFor(x => x.ogrenciDurum, true) Aktif
+    </label>
+    <label>
+        @Html.RadioButtonFor(x => x.ogrenciDurum, false) Pasif
+    </label>
+    <br />
+    @Html.Label("Kütüphane İsim")
+    <br />
+    @Html.DropDownListFor(x => x.kutuphaneID, (List<SelectListItem>)ViewBag.kutup)
+    <br />
+    @Html.Label("Masa İsim")
+<br />
+    @Html.DropDownListFor(x => x.masaID, (List<SelectListItem>)ViewBag.masa)
+    <br />
+    <input value="Kaydet" type="submit" class="btn btn-success mt-2"/> <br />
+    @Html.ActionLink("Listeye Geri Dön","Index",null, new {@class="btn btn-danger"})
+}
+

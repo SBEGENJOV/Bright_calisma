@@ -18,6 +18,7 @@ namespace baukolej.Models
         public bauKolejEntities1()
             : base("name=bauKolejEntities1")
         {
+            this.Configuration.LazyLoadingEnabled = false;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -26,9 +27,9 @@ namespace baukolej.Models
         }
     
         public virtual DbSet<Kullanicilar> Kullanicilar { get; set; }
-        public virtual DbSet<Ogrenciler> Ogrenciler { get; set; }
         public virtual DbSet<Ogretmenler> Ogretmenler { get; set; }
-        public virtual DbSet<Okul> Okul { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<Okul> Okul { get; set; }
+        public virtual DbSet<Ogrenciler> Ogrenciler { get; set; }
     }
 }

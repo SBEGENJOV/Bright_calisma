@@ -19,7 +19,9 @@ namespace baukolej.Models
         public Nullable<System.DateTime> DogumTarih { get; set; }
         public Nullable<bool> BursDurumu { get; set; }
         public string Adres { get; set; }
-        public string Telefon { get; set; }
+        public bool Cinsiyet { get; set; }
         public Nullable<int> okulNo { get; set; }
+    
+        public virtual Okul Okul { get; set; }
     }
 }

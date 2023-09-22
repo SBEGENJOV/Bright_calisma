@@ -1,0 +1,37 @@
+﻿@model WebApplication1.Models.Kutuphane
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Models/Shared/_LayoutPage2.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(x => x.subeID)
+<div style="padding-top:10%; text-align:center; font-size:150%">
+    @Html.DisplayNameFor(x => x.kutuphaneAdi)
+    <br />
+    @Html.DisplayFor(x => x.kutuphaneAdi)
+    <br />
+    @Html.DisplayNameFor(x => x.kutuphaneYonetici)
+    <br />
+    @Html.DisplayFor(x => x.kutuphaneYonetici)
+    <br />
+    @Html.DisplayNameFor(x => x.kutuphaneCalKap)
+    <br />
+    @Html.DisplayFor(x => x.kutuphaneCalKap)
+    <br />
+    @Html.DisplayNameFor(x => x.kutuphaneBilKap)
+    <br />
+    @Html.DisplayFor(x => x.kutuphaneBilKap)
+    <br />
+    @Html.DisplayNameFor(x => x.subeID)
+    <br />
+    @Html.DisplayFor(x => x.subeID)
+    <br />
+</div>
+<div style="margin-left:40%; margin-top:2%;">
+    <input type="submit" value="Sil" class="btn btn-primary" />
+    @Html.ActionLink("Listeye Geri Dön", "Index", null, new { @class = "btn btn-primary" })
+</div>
+}
+

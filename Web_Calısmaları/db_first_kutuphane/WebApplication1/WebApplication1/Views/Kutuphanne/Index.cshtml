@@ -1,0 +1,41 @@
+﻿@model IEnumerable<WebApplication1.Models.Kutuphane>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Models/Shared/_LayoutPage2.cshtml";
+}
+
+<p>
+    @Html.ActionLink("Yeni Kütüphane", "Yeni", null, new { @class = "btn btn-primary" })
+</p>
+<table style="text-align:center">
+    <thead>
+        <tr>
+            <th>Kütüphane No</th>
+            <th>Kütüphane Adi</th>
+            <th>Kütüphane Yönetici</th>
+            <th>Masa Sayısı</th>
+            <th>Bilgisayar Sayısı</th>
+            <th>Kütüphane Sube</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var kut in Model)
+        {
+            <tr style="border:solid">
+                <td style="border:solid"> @kut.kutuphaneID </td>
+                <td style="border:solid"> @kut.kutuphaneAdi </td>
+                <td style="border:solid"> @kut.kutuphaneYonetici </td>
+                <td style="border:solid"> @kut.kutuphaneCalKap </td>
+                <td style="border:solid"> @kut.kutuphaneBilKap </td>
+                <td style="border:solid"> @kut.Sube.subeAd </td>
+                <td style="border:solid">
+                    @Html.ActionLink("Düzenle", "Edit", new { id = kut.kutuphaneID }, new { @class = "btn btn-success" })
+                    @Html.ActionLink("Sil", "Delete", new { id = kut.kutuphaneID }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+

@@ -1,0 +1,39 @@
+﻿@model WebApplication1.Models.Calisanlar
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Models/Shared/_LayoutPage2.cshtml";
+}
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(x => x.calisanID)
+    @Html.Label("Çalışan Adı")
+    <br />
+    @Html.EditorFor(m => m.calisanAdSoyad)
+    <br />
+
+    @Html.Label("Çalışan Şifre")
+    <br />
+    @Html.EditorFor(m => m.calisanSifre)
+    <br />
+
+    @Html.Label("Çalışan Adres")
+    <br />
+    @Html.EditorFor(m => m.calisanAdres)
+    <br />
+
+    @Html.Label("Çalışan Görev")
+    <br />
+    @Html.EditorFor(m => m.calisanGorev)
+    <br />
+
+    @Html.Label("Çalıştıgı Kütüphane")
+    <br />
+    @Html.DropDownListFor(m => m.kutuphaneID, (List<SelectListItem>)ViewBag.veri)
+    <br />
+    <input type="submit" value="Kaydet" class="btn btn-primary mt-1" />
+    <p>
+        
+        @Html.ActionLink("Listeye Geri Dön", "Index", null, new { @class = "btn btn-primary mt-1" })
+    </p>
+}
+

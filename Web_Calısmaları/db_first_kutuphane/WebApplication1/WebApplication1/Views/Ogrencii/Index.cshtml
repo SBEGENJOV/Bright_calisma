@@ -1,0 +1,50 @@
+﻿@model IEnumerable<WebApplication1.Models.Ogrenciler>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Models/Shared/_LayoutPage2.cshtml";
+}
+@Html.ActionLink("Yeni Öğrenci", "Yeni",null, new {@class="btn btn-success"})
+@using (Html.BeginForm())
+            {
+        <table style="text-align:center">
+
+
+        <thead style="border:solid">
+            <tr style="border:solid">
+                <th>Öğrenci Ad Soyad</th>
+                <th>Öğrenci Yaş</th>
+                <th>Öğrenci Durum</th>
+                <th>Kutuphane</th>
+                <th>Masa No</th>
+            </tr>
+        </thead>
+
+        <tbody style="border:solid">
+            @foreach (var ogrenci in Model)
+            {
+                <tr>
+                    <td style="border:solid">@ogrenci.ogrenciAdSoyad</td>
+                    <td style="border:solid">@ogrenci.ogrenciYas.ToString().Substring(0,10)</td>
+
+                    <td style="border:solid">
+                        @if (ogrenci.ogrenciDurum == true)
+                        {
+                            <span>Aktif</span>
+                        }
+                        else
+                        {
+                            <span>Pasif</span>
+                        }
+                    </td>
+                    <td style="border:solid">@ogrenci.Kutuphane.kutuphaneAdi</td>
+                    <td style="border:solid">@ogrenci.Calisma.masaAd</td>
+                    <td style="border:solid">
+                        @Html.ActionLink("Düzenle", "Edit", ogrenci.ogrenciID, new {@class="btn btn-warning"}) |
+                        @Html.ActionLink("Sil", "Delte", ogrenci.ogrenciID, new { @class = "btn btn-danger" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+

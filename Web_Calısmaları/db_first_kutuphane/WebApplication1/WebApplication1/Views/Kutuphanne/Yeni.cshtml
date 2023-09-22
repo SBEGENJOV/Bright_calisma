@@ -1,0 +1,33 @@
+﻿@model WebApplication1.Models.Kutuphane
+@{
+    ViewBag.Title = "Yeni";
+    Layout = "~/Models/Shared/_LayoutPage2.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(m => m.kutuphaneAdi)
+    <br />
+    @Html.EditorFor(m => m.kutuphaneAdi)
+    <br />
+    @Html.LabelFor(m => m.kutuphaneYonetici)
+    <br />
+    @Html.EditorFor(m => m.kutuphaneYonetici)
+    <br />
+    @Html.LabelFor(m => m.kutuphaneCalKap)
+    <br />
+    @Html.EditorFor(m => m.kutuphaneCalKap)
+    <br />
+    @Html.LabelFor(m => m.kutuphaneBilKap)
+    <br />
+    @Html.EditorFor(m => m.kutuphaneBilKap)
+    <br />
+    @Html.LabelFor(m => m.subeID)
+    <br />
+    @Html.DropDownListFor(m => m.subeID, (List<SelectListItem>)ViewBag.veri)
+    <br />
+
+    <input type="submit" value="Oluştur" class="btn btn-primary" style="margin-top:10px;" />
+    @Html.ActionLink("Listeye Geri Dön", "Index", null, new { @style = "margin-top:10px;", @class = "btn btn-primary" })
+}
+

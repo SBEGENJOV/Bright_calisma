@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Data.Entity;
 
 namespace baukolej.Controllers
 {
@@ -13,11 +14,21 @@ namespace baukolej.Controllers
         // GET: Ogrenciler
         public ActionResult Index()
         {
-            return View(db.Ogrenciler.ToList());
+            //var result=db.Ogrenciler.ToList();
+            var result=db.Ogrenciler.Include(n => n.Okul).ToList();
+            return View(result);
         }
 
         public ActionResult Yeni()
         {
+            List<SelectListItem> datalar =(from x in db.Okul.ToList() 
+            select new SelectListItem
+            {
+                Text=x.Adi,
+                Value=x.okulNo.ToString(),
+            }).ToList();
+            ViewBag.datalar = datalar;
+            //contreller den veri viev e veri aktarmak için kullanılır.
             return View();
         }
         [HttpPost]
