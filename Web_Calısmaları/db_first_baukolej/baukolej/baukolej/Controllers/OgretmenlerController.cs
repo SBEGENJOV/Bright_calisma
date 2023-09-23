@@ -7,6 +7,7 @@ using baukolej.Models;
 
 namespace baukolej.Controllers
 {
+    [Authorize(Roles = "A")]
     public class OgretmenlerController : Controller
     {
         // GET: Ogretmenler

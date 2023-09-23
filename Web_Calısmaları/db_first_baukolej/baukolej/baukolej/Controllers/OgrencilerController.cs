@@ -8,6 +8,7 @@ using System.Data.Entity;
 
 namespace baukolej.Controllers
 {
+    [Authorize(Roles ="A,U")]
     public class OgrencilerController : Controller
     {
         bauKolejEntities1 db=new bauKolejEntities1();

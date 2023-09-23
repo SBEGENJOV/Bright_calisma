@@ -20,21 +20,34 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="@Url.Action("Index","Ogretmenler")">Ögretmenler<span class="sr-only"></span></a>
-                </li>
+                    @if (User.IsInRole("A"))
+                    {
+
+                    <li>
+                        <a class="nav-link" href="@Url.Action("Index","Ogretmenler")">Ögretmenler<span class="sr-only"></span></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index","Okul")">Okul</a>
+                    </li>
+
+                     }
+                    </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="@Url.Action("Index","Ogrenciler")">Öğrenciler</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="@Url.Action("Index","Okul")">Okul</a>
+                    @Html.ActionLink("Çıkış Yap", "LoginOut", "Security")
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
+                
             </ul>
         </div>
     </nav>
     <div>
+        <h1 style="text-align:center">
+            Hoş Geldiniz @HttpContext.Current.User.Identity.Name
+        </h1> 
         @RenderBody()
     </div>
 </body>

@@ -7,13 +7,21 @@ using System.Web.Mvc;
 
 namespace baukolej.Controllers
 {
+    [Authorize(Roles ="A")]
     public class OkulController : Controller
     {
         bauKolejEntities1 db = new bauKolejEntities1();
         // GET: Okul
-        public ActionResult Index()
+       
+
+        public ActionResult Index(string x)
         {
-            return View(db.Okul.ToList());
+            var search = from p in db.Okul select p;
+            if (x != null)
+            {
+                search = search.Where(m => m.Adi.Contains(x));
+            }
+            return View(search.ToList());
         }
 
         public ActionResult Yeni()

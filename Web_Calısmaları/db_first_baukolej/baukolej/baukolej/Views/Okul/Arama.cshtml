@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Arama";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+@using (Html.BeginForm())
+            {
+                <p>Aranak degeri gir:</p><br />
+                @Html.TextBox("x")
+                <input type="submit" value="Arama" />
+            }
+

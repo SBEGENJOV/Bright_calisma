@@ -239,6 +239,7 @@
     <Compile Include="Controllers\DepartmanTBController.cs" />
     <Compile Include="Controllers\FirmaTBController.cs" />
     <Compile Include="Controllers\PlazaController.cs" />
+    <Compile Include="Controllers\SecurityController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -497,6 +498,7 @@
     <Content Include="Views\Calisan\Index.cshtml" />
     <Content Include="Views\Calisan\Yeni.cshtml" />
     <Content Include="Views\Calisan\Duzenle.cshtml" />
+    <Content Include="Views\Security\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
