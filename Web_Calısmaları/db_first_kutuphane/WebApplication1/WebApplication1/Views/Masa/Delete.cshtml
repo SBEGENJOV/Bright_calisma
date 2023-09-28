@@ -1,0 +1,20 @@
+﻿@model WebApplication1.Models.Calisma
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Models/Shared/_LayoutPage2.cshtml";
+}
+<div style="text-align:center; font-size:150%">
+    @using (Html.BeginForm())
+    {
+        @Html.Label("Masa ID")<br />
+        @Html.DisplayFor(x => x.masaID)<br />
+        @Html.Label("Kütüphane Adı")<br />
+        @Html.DisplayFor(x => x.kutuphaneID)<br />
+        @Html.Label("Masa Ad")<br />
+        @Html.DisplayFor(x => x.masaAd)<br />
+        <input type="submit" value="Sil" class="btn btn-danger mt-2" /><br />
+        @Html.ActionLink("Geri Git", "Index", null, new { @class = "btn btn-success" })
+    }
+</div>
+
+

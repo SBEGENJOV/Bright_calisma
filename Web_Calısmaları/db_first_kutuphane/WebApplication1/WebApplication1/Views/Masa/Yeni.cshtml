@@ -1,0 +1,17 @@
+﻿@model WebApplication1.Models.Calisma
+@{
+    ViewBag.Title = "Yeni";
+    Layout = "~/Models/Shared/_LayoutPage2.cshtml";
+}
+
+@using (Html.BeginForm())
+            {
+                @Html.Label("Kütüphane Seç")<br />
+                @Html.DropDownListFor(x => x.kutuphaneID,(List<SelectListItem>)ViewBag.kut)<br />
+                @Html.Label("Masa Adı")<br />
+                @Html.TextBoxFor(x => x.masaAd)<br />
+                <input  type="submit" value="Kaydet" class="btn btn-success mt-1"/><br />
+                @Html.ActionLink("Geri Git","Index",null,new {@class= "btn btn-primary" })
+
+            }
+

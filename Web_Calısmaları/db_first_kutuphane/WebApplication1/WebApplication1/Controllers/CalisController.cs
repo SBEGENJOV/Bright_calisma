@@ -8,14 +8,21 @@ using System.Data.Entity;
 
 namespace WebApplication1.Controllers
 {
+    [Authorize(Roles = "Kütüphaneci")]
     public class CalisController : Controller
     {
         kutuphaneEntities db = new kutuphaneEntities();
         // GET: Calis
-        public ActionResult Index()
+        public ActionResult Index(string x)
         {
+            var search = from m in db.Calisanlar select m;
+            if (x != null)
+            {
+                search = search.Where(m => m.calisanAdSoyad.Contains(x));
+            }
+
             var result = db.Calisanlar.Include(m => m.Kutuphane).ToList();
-            return View(result);
+            return View(search);
         }
         public ActionResult Yeni()
         {

@@ -1,0 +1,29 @@
+﻿@model WebApplication1.Models.Calisanlar
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Giriş Sayfa</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    @ViewBag.mesaj
+    <h1 style="text-align:center; font-size:200%">Kullanıcı Giriş Sayfası</h1>
+    @using (Html.BeginForm("Login", "Security", FormMethod.Post))
+    {
+<div class="form-control" style="text-align:center">
+    @Html.Label("Kullanıcı Adı")<br />
+    @Html.TextBoxFor(x => x.calisanAdSoyad, new { placeholder = "Kullanıcı Adı", @style = "text-align:center; width:40%; border-radius:10px" })<br />
+    @Html.Label("Şifre")<br />
+    @Html.PasswordFor(x => x.calisanSifre, new { placeholder = "Şifre", @style = "text-align:center; width:40%; border-radius:10px" })<br />
+    <button type="submit" class="btn btn-success mt-2 mb-2" style="width:20% "> Giriş </button>
+    @Html.ActionLink("Geri", "Index", "Home", null, new { @class = "btn btn-primary", @style = "width:20%" })
+</div>
+    }
+</body>
+</html>

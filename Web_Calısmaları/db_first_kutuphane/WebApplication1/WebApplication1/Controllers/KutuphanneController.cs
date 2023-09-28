@@ -12,10 +12,17 @@ namespace WebApplication1.Controllers
     {
         kutuphaneEntities db = new kutuphaneEntities();
         // GET: Kutuphanne
-        public ActionResult Index()
+        
+        public ActionResult Index(string x)
         {
-            var result = db.Kutuphane.Include(x => x.Sube).ToList();
-            return View(result);
+            var search = from m in db.Kutuphane select m;
+            if (x != null)
+            {
+                search = search.Where(m => m.kutuphaneAdi.Contains(x));
+            }
+
+            var result = db.Kutuphane.Include(c => c.Sube).ToList();
+            return View(search) ;
         }
         public ActionResult Yeni()
         {
@@ -66,5 +73,7 @@ namespace WebApplication1.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+
     }
 }

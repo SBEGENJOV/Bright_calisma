@@ -1,0 +1,44 @@
+﻿@model WebApplication1.Models.Kitap
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Models/Shared/_LayoutPage2.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    <div style="text-align:center; font-size:150%">
+
+    </div>
+    @Html.HiddenFor(x => x.kitapID)
+    @Html.Label("Kitap ID")
+    <br />
+    @Html.DisplayFor(x => x.kitapID)
+    <br />
+    @Html.Label("Kitap Adı")
+    <br />
+    @Html.DisplayFor(x => x.kitapAd)
+    <br />
+    @Html.Label("Kitap Yazar")
+    <br />
+    @Html.DisplayFor(x => x.kitapYazar)
+    <br />
+    @Html.Label("Kitap Basın")
+    <br />
+    @Html.DisplayFor(x => x.kitapBasin)
+    <br />
+    @Html.Label("Kitap Sayfa")
+    <br />
+    @Html.DisplayFor(x => x.kitapSayfa)
+    <br />
+    @Html.Label("Kitap Durum")
+    <br />
+    @Html.DisplayFor(x => x.kitapDurum)
+    <br />
+    @Html.Label("Kütüphane")
+    <br />
+    @Html.DisplayFor(x => x.kitapID)
+    <br />
+    <input type="submit" value="Sil" class="btn btn-danger mt-2"/>
+    @Html.ActionLink("Geri Git","Index",null,new {@class= "btn btn-succes mt-2" })
+}
+

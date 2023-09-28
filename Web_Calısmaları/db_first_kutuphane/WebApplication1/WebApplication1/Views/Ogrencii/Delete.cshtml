@@ -1,0 +1,28 @@
+﻿@model WebApplication1.Models.Ogrenciler
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Models/Shared/_LayoutPage2.cshtml";
+}
+
+@using (Html.BeginForm())
+            {
+    @Html.HiddenFor(x => x.ogrenciID)
+<div class="form-control" style="text-align:center; margin-right:auto">
+
+    @Html.Label("Öğrenci Adı")<br />
+    @Html.DisplayFor(x => x.ogrenciAdSoyad)<br />
+    @Html.Label("Kayıt Tarih")<br />
+    @Html.DisplayFor(x => x.ogrenciYas)<br />
+    @Html.Label("Öğrenci Durum")<br />
+    @Html.DisplayFor(x => x.ogrenciDurum)<br />
+    @Html.Label("Kütüphane Adı")<br />
+    @Html.DisplayFor(x => x.kutuphaneID)<br />
+    @Html.Label("Masa Adı")<br />
+    @Html.DisplayFor(x => x.masaID)<br />
+
+    <input type="submit" value="Sil" class="btn btn-danger"/>
+    @Html.ActionLink("Geri Git","Index",null, new {@class= "btn btn-success" })
+
+</div>
+            }
+

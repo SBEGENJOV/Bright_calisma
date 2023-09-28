@@ -12,7 +12,7 @@
     <br />
     @Html.Label("Öğrenci Yaş")
     <br />
-    @Html.DisplayFor(x => x.ogrenciYas)
+    @Html.EditorFor(model => model.ogrenciYas, new { htmlattributes = new { @class = "form-control", type = "date" } })
     <br />
     @Html.Label("Öğrenci Durum")
     <br />
@@ -28,10 +28,11 @@
     @Html.DropDownListFor(x => x.kutuphaneID, (List<SelectListItem>)ViewBag.kutup)
     <br />
     @Html.Label("Masa İsim")
-<br />
+    <br />
     @Html.DropDownListFor(x => x.masaID, (List<SelectListItem>)ViewBag.masa)
     <br />
-    <input value="Kaydet" type="submit" class="btn btn-success mt-2"/> <br />
-    @Html.ActionLink("Listeye Geri Dön","Index",null, new {@class="btn btn-danger"})
+    <input value="Kaydet" type="submit" class="btn btn-success mt-2" />
+    <br />
+    @Html.ActionLink("Listeye Geri Dön", "Index", null, new { @class = "btn btn-danger" })
 }
 

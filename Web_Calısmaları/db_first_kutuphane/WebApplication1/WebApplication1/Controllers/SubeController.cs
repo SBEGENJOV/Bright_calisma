@@ -8,14 +8,21 @@ using System.Data.Entity;
 
 namespace WebApplication1.Controllers
 {
-
+    [Authorize(Roles = "Kütüphaneci")]
     public class SubeController : Controller
     {
+        
         kutuphaneEntities db = new kutuphaneEntities();
         // GET: Sube
-        public ActionResult Index()
+        public ActionResult Index(string x)
         {
-            return View(db.Sube.ToList());
+            var search = from m in db.Sube select m;
+            if (x != null)
+            {
+                search = search.Where(m => m.subeAd.Contains(x));
+            }
+            db.Sube.ToList();
+            return View(search);
         }
         public ActionResult Yeni()
         {

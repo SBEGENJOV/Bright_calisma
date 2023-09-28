@@ -1,0 +1,43 @@
+﻿@model IEnumerable<WebApplication1.Models.Calisma>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Models/Shared/_LayoutPage2.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+
+        <div style="text-align:center">
+            <p style="font-family:Papyrus; font-size:150%; color:black">Aranacak Masa gir:</p>
+            @Html.TextBox("x", null, new { @style = "border-radius:10px" })<br />
+            <input type="submit" value="Arama" style="border-radius:10px; margin-top:10px" class="btn btn-success" />
+        </div>
+
+    @Html.ActionLink("Yeni Masa", "Yeni", null, new { @class = "btn btn-primary" })
+    <table style="text-align:center;">
+        <thead>
+            <tr>
+
+                <th style="border: solid">Masa ID</th>
+                <th style="border: solid">Kutuphane ID</th>
+                <th style="border: solid">Masa Ad</th>
+                <th style="border: solid">İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var mas in Model)
+            {
+                <tr>
+                    <td style="border: solid">@mas.masaID</td>
+                    <td style="border: solid">@mas.Kutuphane.kutuphaneAdi</td>
+                    <td style="border: solid">@mas.masaAd</td>
+                    <td style="border: solid">
+                        @Html.ActionLink("Düzenle", "Edit", new { id = mas.masaID }, new { @class = "btn btn-warning" }) |
+                    @Html.ActionLink("Sil", "Delete", new { id = mas.masaID }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+

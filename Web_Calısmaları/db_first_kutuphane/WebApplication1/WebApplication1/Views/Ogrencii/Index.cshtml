@@ -3,10 +3,18 @@
     ViewBag.Title = "Index";
     Layout = "~/Models/Shared/_LayoutPage2.cshtml";
 }
-@Html.ActionLink("Yeni Öğrenci", "Yeni",null, new {@class="btn btn-success"})
+
 @using (Html.BeginForm())
-            {
-        <table style="text-align:center">
+{
+
+        <div style="text-align:center">
+            <p style="font-family:Papyrus; font-size:150%; color:black">Aranacak Öğrenciyi gir:</p>
+            @Html.TextBox("x", null, new { @style = "border-radius:10px" })<br />
+            <input type="submit" value="Arama" style="border-radius:10px; margin-top:10px" class="btn btn-success" />
+        </div>
+
+    @Html.ActionLink("Yeni Öğrenci", "Yeni", null, new { @class = "btn btn-success" })
+    <table style="text-align:center">
 
 
         <thead style="border:solid">
@@ -24,7 +32,7 @@
             {
                 <tr>
                     <td style="border:solid">@ogrenci.ogrenciAdSoyad</td>
-                    <td style="border:solid">@ogrenci.ogrenciYas.ToString().Substring(0,10)</td>
+                    <td style="border:solid">@ogrenci.ogrenciYas.ToString().Substring(0, 10)</td>
 
                     <td style="border:solid">
                         @if (ogrenci.ogrenciDurum == true)
@@ -39,8 +47,8 @@
                     <td style="border:solid">@ogrenci.Kutuphane.kutuphaneAdi</td>
                     <td style="border:solid">@ogrenci.Calisma.masaAd</td>
                     <td style="border:solid">
-                        @Html.ActionLink("Düzenle", "Edit", ogrenci.ogrenciID, new {@class="btn btn-warning"}) |
-                        @Html.ActionLink("Sil", "Delte", ogrenci.ogrenciID, new { @class = "btn btn-danger" })
+                        @Html.ActionLink("Düzenle", "Edit", new { id = ogrenci.ogrenciID }, new { @class = "btn btn-warning" }) |
+                        @Html.ActionLink("Sil", "Delete", new { id = ogrenci.ogrenciID }, new { @class = "btn btn-danger" })
                     </td>
                 </tr>
             }

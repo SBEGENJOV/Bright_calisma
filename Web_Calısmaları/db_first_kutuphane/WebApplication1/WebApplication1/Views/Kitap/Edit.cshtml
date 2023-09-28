@@ -1,0 +1,39 @@
+﻿@model WebApplication1.Models.Kitap
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Models/Shared/_LayoutPage2.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+
+    @Html.HiddenFor(x => x.kitapID)
+    @Html.Label("Kitap Adı");
+    <br />
+    @Html.TextBoxFor(x => x.kitapAd)
+    <br />
+    @Html.Label("Kitap Yazar");
+    <br />
+    @Html.TextBoxFor(x => x.kitapYazar)
+    <br />
+    @Html.Label("Kitap Basın");
+    <br />
+    @Html.TextBoxFor(x => x.kitapBasin)
+    <br />
+    @Html.Label("Kitap Sayfa");
+    <br />
+    @Html.TextBoxFor(x => x.kitapSayfa)
+    <br />
+    @Html.Label("Kitap Durum");
+    <br />
+    <div>
+    @Html.RadioButtonFor(x=>x.kitapDurum,true) Kullanılabilir
+    @Html.RadioButtonFor(x=>x.kitapDurum,false) Kullanılamaz
+    </div>
+    @Html.Label("Kütüphane");
+    <br />
+    @Html.DropDownListFor(x=>x.kutuphaneID,(List<SelectListItem>)ViewBag.kit)<br />
+    <input type="submit" value="Değiştir" class="btn btn-primary mt-2"/>
+    @Html.ActionLink("Geri Git","Index",null,new {@class= "btn btn-success mt-2" })
+}
+

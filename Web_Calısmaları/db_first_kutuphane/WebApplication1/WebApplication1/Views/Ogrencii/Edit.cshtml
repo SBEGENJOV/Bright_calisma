@@ -1,0 +1,37 @@
+﻿@model WebApplication1.Models.Ogrenciler
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Models/Shared/_LayoutPage2.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(m => m.ogrenciID)
+
+    @Html.Label("Öğrenci Adı")
+    <br />
+    @Html.EditorFor(m => m.ogrenciAdSoyad)
+    <br />
+    @Html.Label("Kayıt tarih")
+    <br />
+    @Html.EditorFor(m => m.ogrenciYas, new { htmlattributes = new { @class = "form-control", type = "date" } })
+    <br />
+    @Html.Label("Öğrenci Durum")
+    <br />
+    <div class="form-control">
+        @Html.RadioButtonFor(x => x.ogrenciDurum, true) Aktif
+        @Html.RadioButtonFor(x => x.ogrenciDurum, false) Pasif
+    </div>
+    <br />
+    @Html.Label("Kütüphane İsim")
+    <br />
+    @Html.DropDownListFor(x =>x.kutuphaneID,(List<SelectListItem>)ViewBag.klis)
+    <br />
+    @Html.Label("Masa İsim")
+    <br />
+    @Html.DropDownListFor(x=>x.masaID,(List<SelectListItem>)ViewBag.mlist)
+    <br />
+    <input type="submit" value="Değiştir" class="btn btn-danger mt-1" /><br />
+    @Html.ActionLink("Geri Git","Index",null, new {@class="btn btn-success"})
+}
+
