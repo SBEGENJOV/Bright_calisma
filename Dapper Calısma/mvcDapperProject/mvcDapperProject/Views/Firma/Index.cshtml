@@ -3,11 +3,8 @@
 @{
     ViewBag.Title = "Index";
 }
-
-<h2>Index</h2>
-
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Yeni Ekle", "EY")
 </p>
 <table class="table">
     <tr>
@@ -41,9 +38,8 @@
             @Html.DisplayFor(modelItem => item.Tel)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Düzenle", "EY", new { id=item.FirmaNo }) |  
+            @Html.ActionLink("Sil", "Delete", new { id = item.FirmaNo })
         </td>
     </tr>
 }

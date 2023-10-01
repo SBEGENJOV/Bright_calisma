@@ -17,8 +17,7 @@ namespace mvcDapperProject.Models
             using(SqlConnection db = new SqlConnection(connectinonString))
             {
                 db.Open();
-                db.Execute
-                (procadi, param, commandType: CommandType.StoredProcedure);
+                db.Execute(procadi, param, commandType: CommandType.StoredProcedure);
             }
         }
 

@@ -7,7 +7,7 @@ namespace mvcDapperProject.Models
 {
     public class FirmaModel
     {
-        public int Firma { get; set; }
+        public int FirmaNo { get; set; }
         public string FirmaAd  { get; set; }
         public decimal FirmaCiro { get; set; }
         public string Adres { get; set; }
