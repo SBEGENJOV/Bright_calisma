@@ -1,0 +1,76 @@
+﻿@model IEnumerable<mvcProject.Models.mvcDavaModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+ @Html.ActionLink(" ", "EY",null,new {@class="bi bi-file-earmark-plus"})
+    
+
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DavaAdi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DosyaNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tutar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aciklama)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AdliyeAdi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AdliyeAdres)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DavaTipi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Durum)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DavaAdi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DosyaNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tutar)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aciklama)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdliyeAdi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdliyeAdres)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DavaTipi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Durum)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EY", new { id=item.DavaNo }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.DavaNo })
+        </td>
+    </tr>
+}
+
+</table>

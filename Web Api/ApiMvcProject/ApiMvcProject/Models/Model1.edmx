@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="sbHukukModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Davalar">
+          <Key>
+            <PropertyRef Name="DavaNo" />
+          </Key>
+          <Property Name="DavaNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DavaAdi" Type="varchar" MaxLength="50" />
+          <Property Name="DosyaNo" Type="char" MaxLength="10" />
+          <Property Name="Tutar" Type="money" />
+          <Property Name="Aciklama" Type="varchar" MaxLength="50" />
+          <Property Name="AdliyeAdi" Type="varchar" MaxLength="50" />
+          <Property Name="AdliyeAdres" Type="varchar" MaxLength="50" />
+          <Property Name="DavaTipi" Type="varchar" MaxLength="50" />
+          <Property Name="Durum" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="sbHukukModelStoreContainer">
+          <EntitySet Name="Davalar" EntityType="Self.Davalar" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="sbHukukModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Davalar">
+          <Key>
+            <PropertyRef Name="DavaNo" />
+          </Key>
+          <Property Name="DavaNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DavaAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DosyaNo" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Tutar" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Aciklama" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AdliyeAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AdliyeAdres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DavaTipi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Durum" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="sbHukukEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Davalars" EntityType="Self.Davalar" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="sbHukukModelStoreContainer" CdmEntityContainer="sbHukukEntities1">
+          <EntitySetMapping Name="Davalars">
+            <EntityTypeMapping TypeName="sbHukukModel.Davalar">
+              <MappingFragment StoreEntitySet="Davalar">
+                <ScalarProperty Name="DavaNo" ColumnName="DavaNo" />
+                <ScalarProperty Name="DavaAdi" ColumnName="DavaAdi" />
+                <ScalarProperty Name="DosyaNo" ColumnName="DosyaNo" />
+                <ScalarProperty Name="Tutar" ColumnName="Tutar" />
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="AdliyeAdi" ColumnName="AdliyeAdi" />
+                <ScalarProperty Name="AdliyeAdres" ColumnName="AdliyeAdres" />
+                <ScalarProperty Name="DavaTipi" ColumnName="DavaTipi" />
+                <ScalarProperty Name="Durum" ColumnName="Durum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

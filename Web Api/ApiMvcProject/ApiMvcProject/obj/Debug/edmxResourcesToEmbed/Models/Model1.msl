@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="sbHukukModelStoreContainer" CdmEntityContainer="sbHukukEntities1">
+    <EntitySetMapping Name="Davalars">
+      <EntityTypeMapping TypeName="sbHukukModel.Davalar">
+        <MappingFragment StoreEntitySet="Davalar">
+          <ScalarProperty Name="DavaNo" ColumnName="DavaNo" />
+          <ScalarProperty Name="DavaAdi" ColumnName="DavaAdi" />
+          <ScalarProperty Name="DosyaNo" ColumnName="DosyaNo" />
+          <ScalarProperty Name="Tutar" ColumnName="Tutar" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="AdliyeAdi" ColumnName="AdliyeAdi" />
+          <ScalarProperty Name="AdliyeAdres" ColumnName="AdliyeAdres" />
+          <ScalarProperty Name="DavaTipi" ColumnName="DavaTipi" />
+          <ScalarProperty Name="Durum" ColumnName="Durum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
