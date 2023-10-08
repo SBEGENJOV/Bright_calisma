@@ -1,0 +1,55 @@
+﻿@model IEnumerable<mvc_Project.Models.mvcSubeModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<p>
+    @Html.ActionLink("Yeni", "EY")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SubeNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubeAd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubeSehir)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubeCalisanSayi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubeResim)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubeNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubeAd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubeSehir)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubeCalisanSayi)
+            </td>
+            <td>
+                <img src="@Html.DisplayFor(x=>item.SubeResim)" alt="Örnek" width="60" height="60">
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "EY", new { id = item.SubeNo }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.SubeNo })
+            </td>
+        </tr>
+    }
+
+</table>

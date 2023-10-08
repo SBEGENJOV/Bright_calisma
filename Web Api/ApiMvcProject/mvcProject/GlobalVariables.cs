@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Net.Http;
 using System.Net.Http.Handlers;
+using System.Net.Http.Headers;
 
 namespace mvcProject
 {
@@ -15,7 +16,7 @@ namespace mvcProject
         {
             webapiclient.BaseAddress = new Uri("https://localhost:44366/api/");
             webapiclient.DefaultRequestHeaders.Clear();
-            webapiclient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+            webapiclient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
     }
 }

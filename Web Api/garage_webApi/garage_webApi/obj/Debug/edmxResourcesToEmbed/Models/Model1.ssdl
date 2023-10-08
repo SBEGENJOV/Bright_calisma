@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GarageModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Araclar">
+    <Key>
+      <PropertyRef Name="AracNo" />
+    </Key>
+    <Property Name="AracNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AracAd" Type="varchar" MaxLength="50" />
+    <Property Name="AracModel" Type="varchar" MaxLength="50" />
+    <Property Name="AracPlaka" Type="varchar" MaxLength="50" />
+    <Property Name="AracYil" Type="int" />
+    <Property Name="SubeNo" Type="int" />
+  </EntityType>
+  <EntityType Name="Calisan">
+    <Key>
+      <PropertyRef Name="CalisanNo" />
+    </Key>
+    <Property Name="CalisanNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CalisanAdSoyad" Type="varchar" MaxLength="50" />
+    <Property Name="CalisanYas" Type="int" />
+    <Property Name="CalisanUnvan" Type="char" MaxLength="1" />
+    <Property Name="SubeNo" Type="int" />
+  </EntityType>
+  <EntityType Name="Musteri">
+    <Key>
+      <PropertyRef Name="MusteriNo" />
+    </Key>
+    <Property Name="MusteriNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MusteriAd" Type="varchar" MaxLength="50" />
+    <Property Name="MusteriYas" Type="int" />
+    <Property Name="MusteriSehir" Type="varchar" MaxLength="50" />
+    <Property Name="AracNo" Type="int" />
+  </EntityType>
+  <EntityType Name="Sube">
+    <Key>
+      <PropertyRef Name="SubeNo" />
+    </Key>
+    <Property Name="SubeNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubeAd" Type="varchar" MaxLength="50" />
+    <Property Name="SubeSehir" Type="varchar" MaxLength="50" />
+    <Property Name="SubeCalisanSayi" Type="int" />
+    <Property Name="SubeResim" Type="varchar(max)" />
+  </EntityType>
+  <Association Name="FK_Araclar_Sube">
+    <End Role="Sube" Type="Self.Sube" Multiplicity="0..1" />
+    <End Role="Araclar" Type="Self.Araclar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sube">
+        <PropertyRef Name="SubeNo" />
+      </Principal>
+      <Dependent Role="Araclar">
+        <PropertyRef Name="SubeNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Calisan_Sube">
+    <End Role="Sube" Type="Self.Sube" Multiplicity="0..1" />
+    <End Role="Calisan" Type="Self.Calisan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sube">
+        <PropertyRef Name="SubeNo" />
+      </Principal>
+      <Dependent Role="Calisan">
+        <PropertyRef Name="SubeNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Musteri_Araclar">
+    <End Role="Araclar" Type="Self.Araclar" Multiplicity="0..1" />
+    <End Role="Musteri" Type="Self.Musteri" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Araclar">
+        <PropertyRef Name="AracNo" />
+      </Principal>
+      <Dependent Role="Musteri">
+        <PropertyRef Name="AracNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="GarageModelStoreContainer">
+    <EntitySet Name="Araclar" EntityType="Self.Araclar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Calisan" EntityType="Self.Calisan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Musteri" EntityType="Self.Musteri" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sube" EntityType="Self.Sube" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Araclar_Sube" Association="Self.FK_Araclar_Sube">
+      <End Role="Sube" EntitySet="Sube" />
+      <End Role="Araclar" EntitySet="Araclar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Calisan_Sube" Association="Self.FK_Calisan_Sube">
+      <End Role="Sube" EntitySet="Sube" />
+      <End Role="Calisan" EntitySet="Calisan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Musteri_Araclar" Association="Self.FK_Musteri_Araclar">
+      <End Role="Araclar" EntitySet="Araclar" />
+      <End Role="Musteri" EntitySet="Musteri" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GarageModelStoreContainer" CdmEntityContainer="GarageEntities1">
+    <EntitySetMapping Name="Araclars">
+      <EntityTypeMapping TypeName="GarageModel.Araclar">
+        <MappingFragment StoreEntitySet="Araclar">
+          <ScalarProperty Name="AracNo" ColumnName="AracNo" />
+          <ScalarProperty Name="AracAd" ColumnName="AracAd" />
+          <ScalarProperty Name="AracModel" ColumnName="AracModel" />
+          <ScalarProperty Name="AracPlaka" ColumnName="AracPlaka" />
+          <ScalarProperty Name="AracYil" ColumnName="AracYil" />
+          <ScalarProperty Name="SubeNo" ColumnName="SubeNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Calisans">
+      <EntityTypeMapping TypeName="GarageModel.Calisan">
+        <MappingFragment StoreEntitySet="Calisan">
+          <ScalarProperty Name="CalisanNo" ColumnName="CalisanNo" />
+          <ScalarProperty Name="CalisanAdSoyad" ColumnName="CalisanAdSoyad" />
+          <ScalarProperty Name="CalisanYas" ColumnName="CalisanYas" />
+          <ScalarProperty Name="CalisanUnvan" ColumnName="CalisanUnvan" />
+          <ScalarProperty Name="SubeNo" ColumnName="SubeNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Musteris">
+      <EntityTypeMapping TypeName="GarageModel.Musteri">
+        <MappingFragment StoreEntitySet="Musteri">
+          <ScalarProperty Name="MusteriNo" ColumnName="MusteriNo" />
+          <ScalarProperty Name="MusteriAd" ColumnName="MusteriAd" />
+          <ScalarProperty Name="MusteriYas" ColumnName="MusteriYas" />
+          <ScalarProperty Name="MusteriSehir" ColumnName="MusteriSehir" />
+          <ScalarProperty Name="AracNo" ColumnName="AracNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Subes">
+      <EntityTypeMapping TypeName="GarageModel.Sube">
+        <MappingFragment StoreEntitySet="Sube">
+          <ScalarProperty Name="SubeNo" ColumnName="SubeNo" />
+          <ScalarProperty Name="SubeAd" ColumnName="SubeAd" />
+          <ScalarProperty Name="SubeSehir" ColumnName="SubeSehir" />
+          <ScalarProperty Name="SubeCalisanSayi" ColumnName="SubeCalisanSayi" />
+          <ScalarProperty Name="SubeResim" ColumnName="SubeResim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
