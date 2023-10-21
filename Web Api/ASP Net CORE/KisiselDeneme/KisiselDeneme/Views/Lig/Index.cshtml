@@ -1,0 +1,65 @@
+﻿@model IEnumerable<EntityLayer.Models.Lig1>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UlkeAd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LigAd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LigResim)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LigDeger)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LigIzleyciSay)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LigTakimSay)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UlkeAd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LigAd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LigResim)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LigDeger)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LigIzleyciSay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LigTakimSay)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.LigID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.LigID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.LigID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

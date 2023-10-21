@@ -1,0 +1,52 @@
+﻿@model IEnumerable<CoreModelLayer.ViewModel.ListView>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+@using (Html.BeginForm("Index", "Birim"))
+{
+    @Html.TextBox("a")
+    <input type="submit" value="Arama" />
+}
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                BirimAd
+            </th>
+            <th>
+                BirimCalisanSayisi
+            </th>
+            <th>
+                Gorev
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.BirimAd
+                </td>
+                <td>
+                    @item.BirimCalisanSayisi
+                </td>
+                <td>
+                    @item.GorevNO
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.BirimNO">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.BirimNO">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.BirimNO">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

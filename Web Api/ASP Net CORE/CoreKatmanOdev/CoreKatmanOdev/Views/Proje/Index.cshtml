@@ -1,0 +1,59 @@
+﻿@model IEnumerable<CoreModelLayer.ViewModel.ListView>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjeAd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BaslamaTarih)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BitisTarih)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GorevNO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GorevAd)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjeAd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BaslamaTarih)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BitisTarih)
+            </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GorevNO)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GorevAd)
+                </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ProjeNO">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ProjeNO">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ProjeNO">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

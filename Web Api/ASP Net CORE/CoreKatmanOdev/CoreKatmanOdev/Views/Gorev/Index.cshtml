@@ -1,0 +1,63 @@
+﻿@model IEnumerable<CoreModelLayer.ViewModel.ListView>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+@using (Html.BeginForm("BrimIndex", "Brim"))
+{
+    @Html.TextBox("x")
+    <input type="submit" value="Arama" />
+}
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.GorevTanimi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GorevAd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GorevPuan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjeNO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjeAd)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @item.GorevTanimi
+            </td>
+            <td>
+                @item.GorevAd
+            </td>
+            <td>
+                @item.GorevPuan
+            </td>
+                <td>
+                    @item.ProjeNO
+                </td>
+                <td>
+                    @item.ProjeAd
+                </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.GorevNO">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.GorevNO">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.GorevNO">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

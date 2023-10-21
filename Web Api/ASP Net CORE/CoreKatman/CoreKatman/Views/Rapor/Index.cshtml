@@ -1,0 +1,28 @@
+﻿@model IEnumerable<CoreModel.ViewModel.ListView>
+
+
+    <div class="form">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th> Ad Soyad</th>
+                    <th> Maas</th>
+                    <th> DersAd</th>
+                    <th> DersId</th>
+                </tr>
+            </thead>
+        <tbody>
+            
+                    @foreach (var item in Model)
+                {
+                   <tr>
+                    <td>@item.AdSoyad</td>
+                    <td>@item.Maas</td>
+                    <td>@item.DersID</td>
+                    <td>@item.DersAd</td>
+                   </tr>
+                }
+            
+            </tbody>
+        </table>
+    </div>

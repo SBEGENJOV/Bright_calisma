@@ -26,7 +26,7 @@ namespace baukolej.Controllers
             select new SelectListItem
             {
                 Text=x.Adi,
-                Value=x.okulNo.ToString(),
+                Value=x.okulNo.ToString(),  
             }).ToList();
             ViewBag.datalar = datalar;
             //contreller den veri viev e veri aktarmak için kullanılır.

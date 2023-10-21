@@ -1,0 +1,56 @@
+﻿@model Ulke_Core.Model.Blog
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Admin_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="BlogTitle" class="control-label"></label>
+                <input asp-for="BlogTitle" class="form-control" />
+                <span asp-validation-for="BlogTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BlogContent" class="control-label"></label>
+                <input asp-for="BlogContent" class="form-control" />
+                <span asp-validation-for="BlogContent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BlogThumNailImage" class="control-label"></label>
+                <input asp-for="BlogThumNailImage" class="form-control" />
+                <span asp-validation-for="BlogThumNailImage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BlogImage" class="control-label"></label>
+                <input asp-for="BlogImage" class="form-control" />
+                <span asp-validation-for="BlogImage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BlogCreateDate" class="control-label"></label>
+                <input asp-for="BlogCreateDate" class="form-control" />
+                <span asp-validation-for="BlogCreateDate" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="BlogStatus" /> @Html.DisplayNameFor(model => model.BlogStatus)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="KategoriID" class="control-label"></label>
+                <select asp-for="KategoriID" class ="form-control" asp-items="ViewBag.KategoriID"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

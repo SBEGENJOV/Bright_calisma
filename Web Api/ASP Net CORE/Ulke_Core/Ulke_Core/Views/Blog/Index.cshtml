@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Ulke_Core.Model.Blog>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Admin_Layout.cshtml";
+}
+
+<p>
+    <a class="btn btn-primary" asp-action="Create">YENİ EKLE</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BlogTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BlogContent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BlogThumNailImage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BlogImage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BlogCreateDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BlogStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kategori)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BlogTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BlogContent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BlogThumNailImage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BlogImage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BlogCreateDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BlogStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kategori.KategoriName)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.BlogId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.BlogId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.BlogId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Ulke_Core.Model.Comment>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Admin_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CommentUserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CommentUserTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CommentContent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CommentDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CommentStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Blog)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CommentUserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CommentUserTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CommentContent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CommentDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CommentStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Blog.BlogId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CommentID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.CommentID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.CommentID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Ulke_Core.props" />
+</Project>
