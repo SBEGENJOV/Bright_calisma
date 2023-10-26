@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <!--replacechild (eleman yer değiştirme yerine koyma)-->
+
+    <ul id="liste">
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+    </ul>
+
+    <script>
+        var textnode = document.createTextNode("deneme");
+        var oge = document.getElementById("liste").childNodes[3];
+        oge.replaceChild(textnode, oge.childNodes[0]);
+    </script>
+</body>
+</html>

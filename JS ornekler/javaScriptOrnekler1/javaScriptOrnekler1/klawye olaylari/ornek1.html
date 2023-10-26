@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <!--tışa basınca çaılşan olay-->
+    <!--<input type="text" onkeydown="olay()" />-->
+    <!--tuşa basılı tutulunca olayı calıstırın-->
+    <!--<input type="text" onkeypress="olay()" />-->
+    <!--tuşa bastıktan sonra olayı calıstırın-->
+    <!--<input type="text" onkeyup="olay()" />-->
+    <!--tuşa bastıktan sonra olayı calıstırın-->
+    <input type="text" onkeypress="olay(event)" />
+
+    <script>
+        function olay(event) {
+            console.log(event.charCode);
+        }
+    </script>
+</body>
+</html>

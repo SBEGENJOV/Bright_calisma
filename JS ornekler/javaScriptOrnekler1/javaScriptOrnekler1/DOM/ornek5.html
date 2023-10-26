@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <!--yeni bir eleman ekleme oluşturma(createelement)
+    yeni bir html etiketi oluşturmak için kullanılır-->
+
+    <div id="ornek">dssjofnsjopf </div>
+    <script>
+        var ekleme = document.createElement("ornek");
+        ekleme.innerHTML = " iyi akşamlar";
+        // document.body.appendChild(ekleme);
+        document.getElementById("ornek").appendChild(ekleme);
+    </script>
+</body>
+</html>

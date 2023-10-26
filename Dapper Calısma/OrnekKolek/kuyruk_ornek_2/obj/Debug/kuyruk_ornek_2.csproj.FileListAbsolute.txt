@@ -1,8 +1,0 @@
-C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\Dapper Calısma\OrnekKolek\kuyruk_ornek_2\bin\Debug\kuyruk_ornek_2.exe.config
-C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\Dapper Calısma\OrnekKolek\kuyruk_ornek_2\bin\Debug\kuyruk_ornek_2.exe
-C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\Dapper Calısma\OrnekKolek\kuyruk_ornek_2\bin\Debug\kuyruk_ornek_2.pdb
-C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\Dapper Calısma\OrnekKolek\kuyruk_ornek_2\obj\Debug\kuyruk_ornek_2.csproj.AssemblyReference.cache
-C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\Dapper Calısma\OrnekKolek\kuyruk_ornek_2\obj\Debug\kuyruk_ornek_2.csproj.SuggestedBindingRedirects.cache
-C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\Dapper Calısma\OrnekKolek\kuyruk_ornek_2\obj\Debug\kuyruk_ornek_2.csproj.CoreCompileInputs.cache
-C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\Dapper Calısma\OrnekKolek\kuyruk_ornek_2\obj\Debug\kuyruk_ornek_2.exe
-C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\Dapper Calısma\OrnekKolek\kuyruk_ornek_2\obj\Debug\kuyruk_ornek_2.pdb

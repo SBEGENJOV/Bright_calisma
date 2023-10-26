@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+
+    <!--elemanları niteligini değiştirme(setAttribute)
+    html etiketinin niteligini değiştirmek için ilk olarak elemente ulaşmak gerekmekte. Elemente ulaştıktan sonra setattribute kullanarak yaptıgı işlemi belirleyebiliriz.-->
+    <a href="https://www.google.com/" class="site">google git</a>
+    <script>
+        var a = document.getElementsByClassName("site");
+        a[0].setAttribute("href", "https://www.galatasaray.org/anasayfa");
+    </script>
+
+</body>
+</html>

@@ -1,8 +1,0 @@
-C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\Dapper Calısma\OrnekKolek\List_ornek_2\bin\Debug\List_ornek_2.exe.config
-C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\Dapper Calısma\OrnekKolek\List_ornek_2\bin\Debug\List_ornek_2.exe
-C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\Dapper Calısma\OrnekKolek\List_ornek_2\bin\Debug\List_ornek_2.pdb
-C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\Dapper Calısma\OrnekKolek\List_ornek_2\obj\Debug\generic_uygulama.csproj.AssemblyReference.cache
-C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\Dapper Calısma\OrnekKolek\List_ornek_2\obj\Debug\generic_uygulama.csproj.SuggestedBindingRedirects.cache
-C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\Dapper Calısma\OrnekKolek\List_ornek_2\obj\Debug\generic_uygulama.csproj.CoreCompileInputs.cache
-C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\Dapper Calısma\OrnekKolek\List_ornek_2\obj\Debug\List_ornek_2.exe
-C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\Dapper Calısma\OrnekKolek\List_ornek_2\obj\Debug\List_ornek_2.pdb

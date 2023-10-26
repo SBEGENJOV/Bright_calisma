@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        /*dizi elemanlarını tek seferde yazdırma join işlemleri*/
+        var liste = ["fb", "gs", "bjk"];
+        var liste1 = ["ts", "ss", "es"];
+
+
+        liste.shift()//ilk elemanı siler
+        liste.pop()//son elemanı siler
+        liste.push()//sona eleman ekleme
+        liste.unshift()//başa eleman ekleme
+        liste.reverse()//elemanları tersine çevirme
+        liste.splice(1,0,"bjk")//belirlenen elemandan başlaıp silinecek eleman sayısını belirtip eklenecek degeri getir.
+
+        alert(liste)
+        //console.log(liste.join());
+
+    </script>
+</body>
+</html>

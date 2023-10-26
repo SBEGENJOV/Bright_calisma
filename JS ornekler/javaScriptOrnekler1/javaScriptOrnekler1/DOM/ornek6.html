@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <!--eleman silme (removechild)
+    eleman silme için removechild kullanılmaktadır.-->
+    <!--<div>cdlscösdl</div>
+    <div id="ornek">deneme</div>
+    <div>sfdgdg</div>
+    <script>
+        var liste = document.getElementById("ornek");
+        liste.parentNode.removeChild(liste);
+    </script>-->
+
+    <ul id="liste">
+        <li>ornek 1</li>
+        <li>ornek 2</li>
+        <li>ornek 3</li>
+        <li>ornek 4</li>
+    </ul>
+
+    <script>
+        var liste1 = document.getElementById("liste")
+        liste1.removeChild(liste.childNodes[5])
+    </script>
+</body>
+</html>

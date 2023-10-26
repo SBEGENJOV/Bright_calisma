@@ -29,6 +29,8 @@ namespace user_admin.Controllers
             else
             {
                 ViewBag.mesaj = "Kullanıcı adı ve ya Şifre yalnış";
+                //kullanıcı ad:Seyit
+                //çalişan tel:555 0 555
                 return View();
             }
         }

@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <!--Dom nedir
+    document object module
+    hmtl dökümanları içerisinde bulunan nesnelere kolalıkla erişim sağlamak adına kullanılan bir mödüldür.
+    dom ile html sayfamızda bulunan elemanlara erişim sağlayabaliriz.-->
+
+    <!--ıd ye erişmek için sadece getelementbyıd kullanılır-->
+    <div id="ornek"> ahmet <b>Seyit</b> güven</div>
+    <script>
+        var element1 = document.getElementById("ornek").innerText;
+       // var element = document.getElementById("ornek").innerHTML;
+        console.log(element1);
+    </script>
+</body>
+</html>
