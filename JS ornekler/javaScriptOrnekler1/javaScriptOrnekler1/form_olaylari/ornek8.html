@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <input type="number" id="deger"/>
+    <button onclick="muk()">Göster</button>
+    <div id="sonuc">
+    </div>
+
+    <script>
+        function muk() {
+            var sayi = document.getElementById("deger").value;
+            var sonuc1 = document.getElementById("sonuc");
+            var toplam = 0;
+            for (var i = 1; i < sayi; i++) {
+                if (sayi % i == 0) {
+                    toplam+=i
+                }
+            }
+            alert("toplam sonucu: " + toplam)
+            if (toplam == sayi) {
+                sonuc1.innerHTML = '<div style="color:red"> Bu sayı BULENT gibi bir sayı </div>'
+            }
+            else {
+                sonuc1.innerHTML = '<div style="color:red"> Bu sayı BULENT gibi bir değil</div>'
+            }
+        }
+        
+    </script>
+</body>
+</html>

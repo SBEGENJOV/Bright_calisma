@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <!--asal sayı kntrolu yapan js kodu-->
+    <input type="text" id="giris"/>
+    <button onclick="hesapla()"> Hesapla </button>
+    <div class="sonuc"></div>
+
+    <script>
+        function hesapla() {
+            var sayac = 0;
+            var sayi = document.getElementById("giris").value;
+            for (var i = 2; i < sayi; i++) {
+                if (sayi % i == 0) {
+                    sayac++
+                }
+            }
+            alert(sayac);
+            if (sayac == 0) {
+                document.getElementsByClassName("sonuc")[0].innerHTML = "Asaldır";
+            }
+            else {
+                document.getElementsByClassName("sonuc")[0].innerHTML = "sayı asal değildir" + "<br>" + sayac + " adet böleni bulunmaktadır";
+            }
+        }
+    </script>
+</body>
+</html>

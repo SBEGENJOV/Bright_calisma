@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <!--Alana odaklandıktan sonra çalışan fonksiyon. Form elemanına tıklanma durumunda calışır.-->
+
+    <input type="text" onfocus="kontrol(this)"/>
+    <input type="text" onfocusout="kontrol1(this)"/>
+
+    <script>
+        function kontrol(e) {
+            e.style.background="grey"
+        }
+        function kontrol1(e) {
+            e.style.background = "red"
+        }
+    </script>
+</body>
+</html>

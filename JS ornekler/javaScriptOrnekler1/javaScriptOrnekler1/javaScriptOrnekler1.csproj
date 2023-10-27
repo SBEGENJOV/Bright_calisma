@@ -96,6 +96,14 @@
     <Content Include="DOM\ornek6.html" />
     <Content Include="DOM\ornek7.html" />
     <Content Include="DOM\ornek8.html" />
+    <Content Include="form_olaylari\ornek1.html" />
+    <Content Include="form_olaylari\ornek2.html" />
+    <Content Include="form_olaylari\ornek3.html" />
+    <Content Include="form_olaylari\ornek4.html" />
+    <Content Include="form_olaylari\ornek5.html" />
+    <Content Include="form_olaylari\ornek6.html" />
+    <Content Include="form_olaylari\ornek7.html" />
+    <Content Include="form_olaylari\ornek8.html" />
     <Content Include="Global.asax" />
     <Content Include="klawye olaylari\ornek1.html" />
     <Content Include="MouseOlayları\ornek1.html" />

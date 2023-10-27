@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        var yas = prompt("yaşınızı girin")
+        try {
+            if (yas == "") throw 'boş değer'
+            if (isNaN(yas)) throw "sayı değildir";
+            yas = Number(yas);
+            if (yas < 18) throw "yasşı 18 den küçük";
+            } catch (a) {
+                alert(a);
+            }
+        finally {
+            alert("ben hep çalışacam")
+        }
+    </script>
+</body>
+</html>

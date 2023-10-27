@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        function ortalama() {
+            var metin = "";
+            var vize = Number(document.getElementById("vize").value);
+            var final = Number(document.getElementById("final").value);
+            var ortalamaa = (vize + final) / 2
+            if (ortalamaa >= 50) {
+                metin = "geçti"
+            }
+            else {
+                metin = "kaldı"
+            }
+            document.getElementById("goster").innerHTML = "ortalama: " + ortalamaa + metin
+        }
+    </script>
+
+    <label>Vize</label>
+    <input type="text" id="vize" />
+    <label>Final</label>
+    <input type="text" id="final" />
+    <input type="button" value="Sonuç" id="hesap" onclick="ortalama()"/>
+
+    <div id="goster"></div>
+</body>
+</html>

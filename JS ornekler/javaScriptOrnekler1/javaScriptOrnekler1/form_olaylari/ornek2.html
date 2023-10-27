@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <!--değişiklik yapıldıktan sonraki olay(onchancge)-->
+
+    <select onchange="kontrol()" id="change">
+        <option>Kırmızı</option>
+        <option>mor</option>
+        <option>turuncu</option>
+        <option>yeşil</option>
+    </select>
+    <script>
+        function kontrol() {
+            var yenisecim = document.querySelector("#change").value;
+            alert(yenisecim+" seçim yapıldı")
+        }
+    </script>
+</body>
+</html>

@@ -7,7 +7,25 @@
 <body>
     <!--css özelligini atama style.property
     secilen html etiketine css özeligini atmak için kullanılır. bunun için eleman ulastıktan styla ifadesiyle birlikte eklenecek özelligin eklemesi gerekir.-->
+    <!--<div id="ornek">Merhaba</div>
+    <script>
+        var div = document.getElementById("ornek");
+        div.style["color"] = "red";
+        div.style["fontSize"] = "20px";
+        div.style["padding"] = "200px";
+        div.style["backgroundColor"] = "pink";
+    </script>-->
+    <!--istenilen elemana erişme queryselector istedigimiz bir elementi secmek için id, class ve etiketlere ulaşım saglamak için kullanılır. -->
+    <!--querySelector: ilk tagı seçer
+    querySelectorAll: tüm tag leri etkiler-->
 
-
+    <div id="ornek">Merhaba</div>
+    <script>
+        var div = document.querySelector("div");
+        div.style["color"] = "red";
+        div.style["fontSize"] = "20px";
+        div.style["padding"] = "200px";
+        div.style["backgroundColor"] = "pink";
+    </script>
 </body>
 </html>

@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <!--input alanına giriş yapılınca calışır(oninput). Kullanıcı tarafından form elemanına veri girişi yapılınca çalışır ama kontrol yapılmasını saglayarak calısır-->
+    <!--işlem duruöunu sıfırlama(resetleme için) onreset bir form alanındaki forfmu temizlemek için kullanıcaz-->
+
+    <!--<form onreset="islem()">
+        <input type="text" />
+        <button type="reset">Temizle</button>
+    </form>
+
+    <script>
+        function islem() {
+            alert("form temizlendi")
+        }
+    </script>-->
+
+    <form>
+        <input type="text" oninvalid="console.log('boş kırakılamaz')" required />
+        <input type="text" oninvalid="console.log('boş kırakılamaz')"/>
+        <button>yoolaa</button>
+    </form>
+
+
+</body>
+</html>
