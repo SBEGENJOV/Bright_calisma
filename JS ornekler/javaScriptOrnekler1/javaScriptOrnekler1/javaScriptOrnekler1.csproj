@@ -88,6 +88,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Ders_Pratik\pra1.html" />
     <Content Include="DOM\ornek1.html" />
     <Content Include="DOM\ornek2.html" />
     <Content Include="DOM\ornek3.html" />
@@ -121,6 +122,7 @@
     <Content Include="OrneklerGun1\ornek7.html" />
     <Content Include="OrneklerGun1\ornek8.html" />
     <Content Include="OrneklerGun1\ornek9.html" />
+    <Content Include="OrneklerGun1\pra2.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
