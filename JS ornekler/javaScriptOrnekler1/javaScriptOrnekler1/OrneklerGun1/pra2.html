@@ -7,14 +7,17 @@
 <body>
     <div id="gid">Selam Ben Seyit id</div>
     <div class="gclass">Selam Ben Seyit class</div>
-    <div id="gtag">Selam Ben Seyit tag</div>
+    <p>Selam Ben Seyit tag</p>
 
 
     <script>
 
         var idd = document.getElementById("gid").innerHTML
         alert(idd)
-
+        const clas1 = document.getElementsByClassName("gclass");
+        alert(clas1[0].innerText);//önemli nokta aynı isime sahip birden fazla class olabilecegi için hangi class ı kast ettiginizi söylemek zorundasınız.
+        var tag1 = document.getElementsByTagName("p")
+        alert(tag1[0].innerHTML)//önemli nokta aynı isime sahip birden fazla class olabilecegi için hangi class ı kast ettiginizi söylemek zorundasınız. eger innerHTML demez isek verileri kolleksiyon şekilinde getiriyor.
     </script>
 </body>
 </html>

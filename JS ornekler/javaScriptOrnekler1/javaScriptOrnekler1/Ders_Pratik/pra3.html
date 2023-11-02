@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="ornek">
+        <p>Sen benimsin1</p>
+        <p>Sen benimsin2</p>
+        <p>Sen benimsin3</p>
+        <p>Sen benimsin4</p>
+    </div>
+    
+
+    <script>
+        var satt = document.getElementsByTagName("p")
+        satt[1].setAttribute("style", "color:red")
+        var ce = document.createElement("p")
+        ce.innerHTML = " bende seninim"
+        document.getElementById("ornek").appendChild(ce)
+        var re = document.getElementById("ornek")
+        re.removeChild(ornek.childNodes[2])
+    </script>
+</body>
+</html>

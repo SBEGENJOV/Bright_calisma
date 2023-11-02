@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+   
+    <script>
+        document.write(" <div id='kayma'> Berke Yandı </div>");
+        var kay = 0;
+        var zaman = window.setInterval("ileri()", 10);
+        function ileri() {
+            document.getElementById("kayma").style.left = kay + 'px';
+            if (kay == 1528-60) {
+                dur();  
+            }
+            kay++;
+        }
+        function dur() {
+            window.clearInterval(zaman);
+            var zamandur = window.setInterval("geri()", 10);
+            geri();
+        }
+        function geri() {
+            document.getElementById("kayma").style.left = kay + 'px';
+            if (kay == 0) {
+                var zamandur = window.setInterval("ileri()", 10);
+                ileri();
+            }
+            kay--;
+        }
+    </script>
+    <style>
+        #kayma {
+            width: 60px;
+            height: 60px;
+            background-color: red;
+            position: absolute;
+        }
+    </style>
+</body>
+</html>

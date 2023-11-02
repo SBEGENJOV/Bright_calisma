@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Rastgele sayı</title>
+    <script>
+        function RastgeleUret() {
+            debugger;
+            let metin = "";
+            for (var i = 0; i < 5; i++) {
+                let sayi = Math.random();//0 ile 1 arasında sayılar üretir.
+                if (Math.round(sayi) == 0) {
+                    metin = metin + String.fromCharCode(48 + 9 * Math.random());
+                }
+                else {
+                    if (i==4) {
+                        metin = metin + String.fromCharCode(97 + 25 * Math.random());
+                    }
+                    else {
+                        metin = metin + String.fromCharCode(97 + 25 * Math.random());
+                        metin = metin + String.fromCharCode(65 + 25 * Math.random());
+                        i++;
+                    }
+                }
+                document.getElementById("deger").innerHTML = metin;
+            }
+        }
+    </script>
+    <style>
+        div{
+            background-color:chartreuse;
+        }
+    </style>
+</head>
+<body>
+    <div id="deger" onclick="RastgeleUret()"><br /><input type="button" value="üret" /> </div>
+</body>
+</html>

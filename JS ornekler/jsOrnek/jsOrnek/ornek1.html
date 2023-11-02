@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        let yenipencere;
+        function acma() {
+            let sayi1 = document.getElementById("sayi1").value;
+            let sayi2 = document.getElementById("sayi2").value;
+            let topla = parseInt(sayi1) + parseInt(sayi2);
+            yenipencere = window.open("", "Yeni pencere", "width=500,height=100");
+            yenipencere.document.write("<h2>Toplam Sonuc: " + topla + " </h2>");
+        }
+
+        function kapama() {
+            if (yenipencere != null) {
+                yenipencere.close();
+                document.getElementById("sonuc").innerHTML = "Pencere Kapatıldı";
+                yenipencere = null;
+            }
+            else {
+                document.getElementById("sonuc").innerHTML = "Açık Pencere Bulunamadı"
+            }
+        }
+        function islem() {
+            //pencere yükseklik ve genişligini al
+            let w = window.innerWidth;
+            let h = window.innerHeight;
+            document.getElementById("sonuc2").innerHTML = "Width: " + w + " Heigth: " + h;
+        }
+        function olusturma() {
+            sessionStorage.setItem("ad", "Seyit");
+            sessionStorage.setItem("Soyad", "Begenjov");
+        }
+        
+        function okuyaz()
+        {
+            
+            if (sessionStorage.getItem("ad") == null) {
+                document.getElementById("sonuc4").innerHTML = sessionStorage.getItem("Soyad");
+            }
+            else if (sessionStorage.getItem("Soyad") == null) {
+                document.getElementById("sonuc4").innerHTML = sessionStorage.getItem("ad");
+            }
+            else if (sessionStorage.length == 0)
+            {
+                debugger;
+                document.getElementById("sonuc4").innerHTML = "sessionStorage de veri yok";
+            }
+            else {
+                document.getElementById("sonuc4").innerHTML = sessionStorage.getItem("ad") +" "+ sessionStorage.getItem("Soyad") ;
+            }
+        }
+        function sil() {
+            sessionStorage.removeItem("ad");
+
+        }
+        function hepsinSil() {
+            sessionStorage.clear();
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="sayi1" />
+    <input type="text" id="sayi2" />
+    <button onclick="acma()"> Toplama işlemi yeni pencerede</button>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <button onclick="kapama()"> Acılan pencereyi kapat</button>
+    <br />
+    <div id="sonuc"></div>
+    <br />
+    <button onclick="islem()"> Göster</button>
+    <div id="sonuc2"></div>
+    <br />
+    <button onclick="islem1()"> Göster</button>
+    <div id="sonuc3"></div>
+    <br />
+    <button onclick="olusturma()"> Session oluşturma</button>
+    <button onclick="okuyaz()"> Session içerisini oku yaz</button>
+    <button onclick="sil()"> Session içerisini sil</button>
+    
+    <br />
+    <br />
+    <button onclick="hepsinSil()"> Bütün sessionları sil</button>
+    <div id="sonuc4"></div>
+    <div id="sonuc5"></div>
+    <br />
+</body>
+</html>

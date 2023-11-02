@@ -89,6 +89,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Ders_Pratik\pra1.html" />
+    <Content Include="Ders_Pratik\pra3.html" />
     <Content Include="DOM\ornek1.html" />
     <Content Include="DOM\ornek2.html" />
     <Content Include="DOM\ornek3.html" />
