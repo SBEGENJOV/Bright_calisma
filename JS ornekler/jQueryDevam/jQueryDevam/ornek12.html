@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        //clone kopyalama işlemi yapar
+        $(document).ready(()=> {
+            $("#klon1").clone().insertAfter("#p1");
+            $("#btn").click(() => {
+                $("#txt1").clone().insertAfter("#txt1")
+            })
+            $("#btn2").click(() => {
+                $("h1").replaceWith("<h1> Burası değişecek</h1>")
+            });
+            $("#btn4").click(() => {
+                $("#p2").empty();
+            })
+            $("#btn5").click(() => {
+                $("textarea").empty();
+            });
+            $("#btn6").click(() => {
+                $("#p3").remove();
+            });
+            $("#btn7").click(() => {
+                $("li").remove();
+            });
+        });
+    </script>
+    <style>
+        #klon1 {
+            background-color: blueviolet;
+            color: azure;
+            width: 150px;
+            height: 200px;
+        }
+        #klon2 {
+            background-color: coral;
+            color: azure;
+            width: 150px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="klon1"> Clone 2 kullanım</div> <hr />
+    <div id="klon2"> Clone 2 bakıyoruz</div> <hr />
+    <p id="p1"> BAÜ hoş geldin</p><hr />
+    <input type="text" id="txt1" />
+    <button id="btn"> Yolla </button><hr />
+    <h1>cladfkspfkdpgjdfıvjfo dıjdgıdrjgıodrj rıgdjorpgıdgdpoğrg</h1><br /><br />
+    <button id="btn2"> Replace Width </button><hr />
+    <button id="btn2"> Replace all </button><hr /><hr />
+    <p id="p2">
+        ğadlcksdpgjdrı  dırgdj ıogdrjgıodjgd orj ojd godj do jd o d jpgdrg dg jpdg ıd drı ghd ıpgdrıp dı nrdıg drg ıdr gndıh gndr goıdrg 
+    </p><br /><br />
+    <button id="btn4"> Paragraf empty ilr temizle ama sadece paragrafları </button>
+    <br />
+    <br />
+    <textarea name="txta" cols="85" rows="25">
+skjdfjsfığjsfığsej
+ eıfjsıfğejfısğejf ı
+sefojfspıefjsüfı 
+jepsıfjsğeıfjesı 
+    </textarea>
+    <br />
+    <button id="btn5">Text area empty ile temizle ama sadece text area içini</button>
+    <br />
+    <br />
+    <p id="p3">
+        aşücalğakoüadkawodükadpüwd
+         awdoaküaowdakwüdoakwdoakwdaowpd
+        wdopakdpaoğwdkawpüdawdpoawd
+        wdkpoaüdkawdoawjdpawkdjapwd
+    </p>
+    <ul>
+        <li>html</li>
+        <li>Css3</li>
+        <li>JavaScript</li>
+    </ul>
+    <br />
+    <br />
+    <button id="btn6"> Remove</button>
+    <button id="btn7"> Remove Li</button>
+</body>
+</html>

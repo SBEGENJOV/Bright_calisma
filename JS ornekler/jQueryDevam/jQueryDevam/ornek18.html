@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Scripts/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            $("#btn").click(() => {
+                let genislik = Number($("#genis").val());
+                let yukseklik = Number($("#yuksek").val());
+                $("#kutu").css({ "width": genislik, "height": yukseklik, "border": "2px solid red", "background-color":"red" });
+            })
+        })
+    </script>
+</head>
+<body>
+   Genişlik:   <input type="text" id="genis"/>
+   Yükseklik:  <input type="text" id="yuksek"/><br />
+    <button id="btn1">Geniş</button>
+    <button id="btn2">Yükseklik</button>
+    <br />
+    <br />
+    <div id="kutu"></div>
+    <br />
+</body>
+</html>

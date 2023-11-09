@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Scripts/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(() => {            
+            
+                for (var i = 0; i < 100; i++) {
+                    $("#kutu").fadeTo("slow", 0.1);
+                    $("#kutu").animate({
+                        width: '300px'
+                    })
+                    $("#kutu").animate({
+                        height: '300px',
+                        opacity: "0.5"
+                    })
+                    
+                    $("#kutu").animate({
+                        width: '100px'
+                    })
+
+                    $("#kutu").animate({
+                        height: '100px'
+                    })
+                    $("#kutu").fadeTo("slow", 1);
+                }
+        })
+    </script>
+</head>
+<body>
+    <button id="btn1">Tıkla</button>
+    <br />
+    <br />
+    <div id="kutu" style="width:100px; height:100px; background-color:red"></div>
+</body>
+</html>

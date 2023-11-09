@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <!--children : çocuklar anlamına gelmektedir.-->
+    <!--
+    next: benim seçtigim den sonraki alanı yapılacak işlem
+    nextAll: benim seçtigim den sonraki tüm alanı yapılacak işlem
+    prev: benim seçtigim den önceki alanı yapılacak işlem
+    prevAll: benim seçtigim den önceki tüm alanı yapılacak işlem
+        -->
+    <ul>
+        <li>Liste 1</li>
+        <li>Liste 2</li>
+        <li class="ornek">Liste 3</li>
+        <li>Liste 4</li>
+        <li>
+            <ul>
+                <li> alt liste 1</li>
+                <li> alt liste 2</li>
+                <li> alt liste 3</li>
+            </ul>
+        </li>
+        <li>Liste 5</li>
+        <li>Liste 6</li>
+    </ul>
+    <script>
+        $('li:nth-child(3)').css('color', 'purple');
+        $('li.ornek').next().css('color', 'red  ');
+        $('li.ornek').nextAll().css('color', 'green  ');
+        $('li.ornek').prev().css('color', 'yellow');
+        $('li.ornek').prevAll().css('color', 'aqua');
+    </script>
+</body>
+</html>

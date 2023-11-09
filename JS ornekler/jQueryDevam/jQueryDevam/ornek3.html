@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(() => {
+            $("button").click(() => {
+                $("tr:even").css("background-color", "pink");
+                $("tr:odd").css("background-color", "yellow");
+            });
+        });
+    </script>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Meyveler</th>
+            <th>Fiyat</th>
+        </tr>
+        <tr>
+            <td>Elma</td>
+            <td>75 tl</td>
+        </tr>
+        <tr>
+            <td>Çilek</td>
+            <td>200 tl</td>
+        </tr>
+        <tr>
+            <td>Nar</td>
+            <td>150 tl</td>
+        </tr>
+    </table>
+    <button style="margin-top:10px; " type="button">Kaydet</button>
+</body>
+</html>

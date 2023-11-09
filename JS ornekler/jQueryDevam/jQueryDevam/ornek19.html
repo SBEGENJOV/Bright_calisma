@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Scripts/jquery-3.7.1.min.js"></script>
+    <style>
+        .div{
+            padding:5px;
+            text-align:center;
+            background-color:greenyellow;
+            border:3px solid black;
+        }
+        #test2,#test4,#test6{
+            width:900px;
+            height:500px;
+            background-color:deepskyblue;
+        }
+        #test8, #test10, #test12 {
+            width: 900px;
+            height: 500px;
+            background-color: blueviolet;
+            display:none;
+        }
+       /* slideup: görünen divi kapatır. yukarı kaydırır.
+        slidedown: görünen divi gösterir aşakıg kaydırır.
+        slidetoogle: görünürse kapatır. kapalıysa gösterir*/
+    </style>
+    <script>
+       
+        $(document).ready(() => {
+            let a = true;
+            let b = true;
+            let c = true;
+            $("#test").click(() => {
+                if (a) {
+                    $("#test2").slideUp("fast");
+                    a=false
+                }
+                else {
+                    $("#test2").slideDown("fast");
+                    a=true
+                }
+            })
+            //$("#test3").click(() => {
+            //    $("#test4").slideUp("slow");
+            //})
+            $("#test5").click(() => {
+                if (b) {
+                    $("#test6").slideUp(2000);
+                    b = false
+                }
+                else {
+                    $("#test6").slideDown(2000);
+                    b = true
+                }
+            })
+            //$("#test7").click(() => {
+            //    $("#test8").slideDown("fast");
+            //})
+            //$("#test9").click(() => {
+            //    $("#test10").slideDown("slow");
+            //})
+            //$("#test11").click(() => {
+            //    $("#test12").slideDown(2000);
+            //})
+            $("#test13").click(() => {
+                if (c) {
+                    $("#test14").slideToggle("fast");
+                    c = false
+                }
+                else {
+                    $("#test14").slideDown(2000);
+                    c = true
+                }
+            })
+            //$("#test15").click(() => {
+            //    $("#test16").slideToggle("slow");
+            //})
+            //$("#test17").click(() => {
+            //    $("#test18").slideToggle(2000);
+            //})
+        })
+    </script>
+</head>
+<body>
+    <div id="test" class="div">Slideup Fast testi yapılacak</div>
+    <div id="test2"> Örnekler js devam</div>
+    <hr />
+    <!--<div id="test3" class="div">Slideup Slow testi yapılacak</div>
+    <div id="test4"> Örnekler js devam</div>
+    <hr />-->
+    <div id="test5" class="div">Slideup milisaniye testi yapılacak</div>
+    <div id="test6"> Örnekler js devam</div>
+    <hr />
+    <!--<div id="test7" class="div">Slidedown fast testi yapılacak</div>
+    <div id="test8"> Örnekler js devam</div>
+    <hr />
+    <div id="test9" class="div">Slidedown slow testi yapılacak</div>
+    <div id="test10"> Örnekler js devam</div>
+    <hr />
+    <div id="test11" class="div">Slidedown millisaniye testi yapılacak</div>
+    <div id="test12"> Örnekler js devam</div>
+    <hr />
+    <div id="test11" class="div">Slidedown millisaniye testi yapılacak</div>
+    <div id="test12"> Örnekler js devam</div>
+    <hr />-->
+    <div id="test13" class="div">Slidetoogle fast testi yapılacak</div>
+    <div id="test14"> Örnekler js devam</div>
+    <hr />
+    <!--<div id="test15" class="div">Slidetoogle millisaniye testi yapılacak</div>
+    <div id="test16"> Örnekler js devam</div>
+    <hr />
+    <div id="test17" class="div">Slidetoogle millisaniye testi yapılacak</div>
+    <div id="test18"> Örnekler js devam</div>
+    <hr />-->
+</body>
+</html>

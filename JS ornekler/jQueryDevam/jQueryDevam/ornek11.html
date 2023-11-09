@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(()=> {
+            $("#fm").submit(() => {
+                var a = $("#kAdi").val().length;
+                var b = $("#sifre").val().length;
+                if (a < 6) {
+                    $("#b1").text("Kullanıcı adınızı en az 6 karakter uzunluğunda girmeniz gerekir.");
+                    window.event.preventDefault();
+                }
+
+                if (b < 6) {
+                    $("#b2").text("Şifreniz en az bir büyük harf, bir küçük harf, bir rakam ve bir özel karakter içermelidir.");
+                    window.event.preventDefault();
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <form action="aa.html" id="fm" method="post">
+        Kullanıcı Adı<br />
+        <b id="b1"></b><br />
+        <input type="text" id="kAdi" placeholder="Kullanıcı Adi Girin: " /><br /><br />
+        Şifre<br />
+        <input type="password" id="sifre" placeholder="Şifre Girin: " /><br /><br />
+        <b id="b2"></b><br />
+        <input type="submit" id="btn" value="Giriş Yapın" /><br />
+    </form>
+</body>
+</html>
+

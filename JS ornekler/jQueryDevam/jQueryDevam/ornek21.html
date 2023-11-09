@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .kutu{
+            display:none;
+            background-color:blueviolet;
+            width:100px;
+            height:100px;
+        }
+    </style>
+    <script>
+        $(document).ready(() => {
+            $("#btn1").click(() => {
+                $("#kutu1").fadeIn(3000);
+                $("#kutu2").fadeIn("slow");
+                $("#kutu3").fadeIn("fast");
+            })
+            $("#btn2").click(() => {
+                $("#kutu1").fadeOut(3000);
+                $("#kutu2").fadeOut("slow");
+                $("#kutu3").fadeOut("fast");
+            })
+            $("#btn3").click(() => {
+                $("#kutu1").fadeToggle(3000);
+                $("#kutu2").fadeToggle("slow");
+                $("#kutu3").fadeToggle("fast");
+            })
+            $("#btn4").click(() => {
+                $("#kutu1").fadeTo("fast",0.1);
+                $("#kutu2").fadeTo("slow",0.5);
+                $("#kutu3").fadeTo(3000,1);
+            })
+        })
+    </script>
+</head>
+<body>
+
+    <table border="1">
+        <tr>
+            <td><button id="btn1">FadeIn Methodu</button></td>
+            <td>
+                <div id="kutu1" class="kutu">Kutu1</div>
+                <div id="kutu2" class="kutu">Kutu2</div>
+                <div id="kutu3" class="kutu">Kutu3</div>
+            </td>
+        </tr>
+        <tr>
+            <td><button id="btn2">FadeOut Methodu</button></td>
+        </tr>
+        <tr>
+            <td><button id="btn3">FadeToogle Methodu</button></td>
+        </tr>
+        <tr>
+            <td><button id="btn4">FadeTo Methodu</button></td>
+        </tr>
+    </table>
+
+</body>
+</html>

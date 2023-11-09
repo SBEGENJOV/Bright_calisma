@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <!--closest: alt elemanları seçmek içi kullanırız.-->
+    <!--parents: tüm elemanları seçmek içi kullanırız.-->
+    <ul>
+        <li>Liste 1</li>
+        <li>Liste 2</li>
+        <li>Liste 3</li>
+        <li>Liste 4</li>
+        <li>
+            <ul>
+                <li> alt liste 1</li>
+                <li> alt liste 2</li>
+                <li > alt liste 3</li>
+                <li> alt liste 4</li>
+                <li> alt liste 5</li>
+            </ul>
+            <ul>
+                <li> alt liste 1</li>
+                <li> alt liste 2</li>
+                <li class="ornek"> alt liste 3</li>
+                <li> alt liste 4</li>
+                <li> alt liste 5</li>
+            </ul>
+        </li>
+        <li>Liste 5</li>
+        <li>Liste 6</li>
+    </ul>
+    <script>
+        $('li.ornek').closest('ul').css('color', 'red');
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Hesap Makinesi</title>
+    <link rel="stylesheet" href="Style.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <form>
+                <div class="display">
+                    <input style="width:100%" type="text" name="display" />
+                </div>
+                <div>
+                    <input type="button" value="AC" onclick="display.value=''" class="operator" />
+                    <input type="button" value="DE" onclick="display.value=display.value.toString().slice(0,-1)" class="operator" /> <!--slice bastan 0. indexden baslar sondan 1 e  kadar olan kısmı almazsak son değeri alma diyorum. 0 dan başklatıyorum. js slice fonksiyonu  (metodu) : kendine parametre olarak dizi aralığında bulunan değerleri kopyalar yeni bir dizi oluşturarak geri döndürür. "-->
+                    <input type="button" value="." onclick="display.value += '.'" class=" operator" />
+                    <input type="button" value="/" onclick="display.value += '/'" class=" operator" />
+
+                </div>
+                <div>
+                    <input type="button" value="7" onclick="display.value+='7'" />
+                    <input type="button" value="8" onclick="display.value+='8'" />
+                    <input type="button" value="9" onclick="display.value+='9'" />
+                    <input type="button" value="*" onclick="display.value+='*'" class="operator" />
+                </div>
+                <div>
+                    <input type="button" value="4" onclick="display.value+='4'" />
+                    <input type="button" value="5" onclick="display.value+='5'" />
+                    <input type="button" value="6" onclick="display.value+='6'" />
+                    <input type="button" value="-" onclick="display.value+='-'" class="operator" />
+                </div>
+                <div>
+                    <input type="button" value="1" onclick="display.value+='1'" />
+                    <input type="button" value="2" onclick="display.value+='2'" />
+                    <input type="button" value="3" onclick="display.value+='3'" />
+                    <input type="button" value="+" onclick="display.value+='+'" class="operator" />
+                </div>
+                <div>
+                    <input style="margin-left:30px; margin-right:10px;" type="button" value="00" onclick="display.value+='00'" />
+                    <input style="margin-left:10px; margin-right:10px;" type="button" value="0" onclick="display.value+='0'" />
+                    <input style="margin-left:10px; margin-right:10px;" type="button" value="=" onclick="display.value=eval(display.value)" class="equalOperator" />
+                </div>
+
+                <!--js de eval fonksiyonu ile string ile gelen verileri bir js değişkeni gibi tanımlamamızı ve işlem yapmamızı sağlar  kısaca js bir dize içindeki js kodunu yürütür.-->
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

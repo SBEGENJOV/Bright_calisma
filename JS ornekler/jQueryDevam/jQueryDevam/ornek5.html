@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <ul>
+        <li><a href="#"></a>bjk</li>
+        <li><a href="#"></a>gs</li>
+        <li><a href="#"></a>fb</li>
+        <li><a href="#"></a>ts</li>
+    </ul>
+    <button type="button">Kaydet</button>
+    <script>
+        $(function(){
+            $("button").click(function(){
+                $("a:contains(gs)").css("background-color","green");
+                // $("a:not(':contains(bjk)')").css("background-color","red");
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(() => {
+            $("button").click(() => {
+                $("p:contains(Merhaba)").css("background-color", "green").css("height", "100px").css("width", "200px").css("color", "white");
+                
+            });
+        });
+        
+
+    </script>
+</head>
+<body>
+    <p>Merhaba ALP</p>
+    <button type="button">Kaydet</button>
+</body>
+</html>

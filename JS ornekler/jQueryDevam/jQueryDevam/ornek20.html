@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Scripts/jquery-3.7.1.min.js"></script>
+    <style>
+        .btn{
+            float:left;
+            background-color:blueviolet;
+            margin:4px;
+            text-align:center;
+        }
+        #kutu1{
+            background-color:brown;
+        }
+        #kutu2 {
+            background-color: greenyellow;
+        }
+        #kutu3 {
+            background-color: darkslateblue;
+        }
+        .kutu{
+            width:900px;
+            height:400px;
+            display:none;
+        }
+    </style>
+    <script>
+        $(document).ready(() => {
+            $("#btn1").click(() => {
+                $("#kutu1").fadeIn(3000);
+                $("#kutu2").hide();
+                $("#kutu3").hide();
+                $("#kutu1").animate({
+                    marginLeft: '+=100px'
+                })
+                $("#kutu1").animate({
+                    marginLeft: '-=100px'
+                })
+            })
+            $("#btn2").click(() => {
+                $("#kutu1").hide();
+                $("#kutu2").fadeIn(3000);
+                $("#kutu3").hide();
+                $("#kutu2").animate({
+                    marginLeft: '+=100px'
+                })
+                $("#kutu2").animate({
+                    marginLeft: '-=100px'
+                })
+            })
+            $("#btn3").click(() => {
+                $("#kutu1").hide();
+                $("#kutu2").hide();
+                $("#kutu3").fadeIn(3000);
+                $("#kutu3").animate({
+                    marginLeft: '+=100px'
+                })
+                $("#kutu3").animate({
+                    marginLeft: '-=100px'
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <button id="btn1"> Anasayfa</button>
+    <button id="btn2"> Hakkımızda</button>
+    <button id="btn3"> İletişim</button>
+    <br />
+    <div id="kutu1" class="kutu">
+        <p>
+            <h1>Kutu  1 başlangıç</h1>
+            aelkaepdjadıajdıaejsojsofjgdr  rddu hu shıu sı sısgs yıgs ısıgs ssefeyefegffgsfsefff
+            eoh fsıeffgfısygsfgseuf geualj ajdadadhuıdhawı duahwdıudha wdıgw    a ıdhauıdhawı duhawdu ıahwdu aw dh a
+            audaagıa gaw ydgaydgady agdyaw gdadu
+        </p>
+    </div>
+    <div id="kutu2" class="kutu">
+        <p>
+            <h1>Kutu  2 başlangıç</h1>
+            aelkaepdjadıajdıaejsojsofjgdr  rddu hu shıu sı sısgs yıgs ısıgs ssefeyefegffgsfsefff
+            eoh fsıeffgfısygsfgseuf geualj ajdadadhuıdhawı duahwdıudha wdıgw    a ıdhauıdhawı duhawdu ıahwdu aw dh a
+            audaagıa gaw ydgaydgady agdyaw gdadu
+        </p>
+    </div>
+    <div id="kutu3" class="kutu">
+        <p>
+            <h1>Kutu  3 başlangıç</h1>
+            aelkaepdjadıajdıaejsojsofjgdr  rddu hu shıu sı sısgs yıgs ısıgs ssefeyefegffgsfsefff
+            eoh fsıeffgfısygsfgseuf geualj ajdadadhuıdhawı duahwdıudha wdıgw    a ıdhauıdhawı duhawdu ıahwdu aw dh a
+            audaagıa gaw ydgaydgady agdyaw gdadu
+        </p>
+    </div>
+</body>
+</html>

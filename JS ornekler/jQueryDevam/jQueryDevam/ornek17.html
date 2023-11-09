@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Scripts/jquery-3.7.1.min.js"></script>
+    <style>
+        div{
+            background-color:orangered;
+            color:white;
+        }
+    </style>
+    <script>
+        $(document).ready(() => {
+            let uzunmetin = $("#txt1").attr("maxlength");
+            $("#txt1").on("keyup", () => {
+                var metin = $("#txt1").val().length;
+                $("#div1").html(uzunmetin - metin);
+            })
+        })
+    </script>
+</head>
+<body>
+    <input  type="text" maxlength="15" id="txt1"/>
+    <div id="div1"></div>
+</body>
+</html>

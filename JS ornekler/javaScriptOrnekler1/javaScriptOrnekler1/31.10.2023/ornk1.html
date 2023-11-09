@@ -5,6 +5,14 @@
     <title></title>
 </head>
 <body>
-
+    <script>
+        function isNumberKey(evt) {
+            var charCode = (evt.which) ? evt.which : window.event.keyCode;
+            if ((charCode > 105 || charCode<112) && (charCode > 31 && charCode < 57))
+                return true;
+            return false;
+        }
+    </script>
+    <input type="text" onkeypress="return isNumberKey(window.event)">
 </body>
 </html>

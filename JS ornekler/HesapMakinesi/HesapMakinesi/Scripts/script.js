@@ -9,6 +9,7 @@ function islemSonuc() {
         document.getElementById("metin").value = eval(islem);
     }
 }
+
 //--------------------------------------------------- Buttonlara basıldıgında alana sayı ve işlemlerin gelmesini saglar. -------------------------------------------------
 function bir() {
     var birr = document.getElementById("metin").value += 1;
@@ -48,12 +49,14 @@ function eksi() {
 function temiz() {
     document.getElementById("metin").value = "";
 }
-//------------------------------------------------------ Klavyeden harf ve özel karekter girmesini engeller.-----------------------------------------------------------
+
+//-----------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------- Klavyeden harf ve özel karekter girmesini engeller.---------------------------------------
 function engelle() {
     if (event.keyCode == 8 || (event.keyCode >= 96 && event.keyCode <= 111)) {
         return;
     }
+    // Tuş basımını `preventDefault()` yöntemini çağırarak engelleyin.
     event.preventDefault();
 }
 document.getElementById("metin").addEventListener("keydown", engelle);
-//-----------------------------------------------------------------------------------------------------------------------------------------

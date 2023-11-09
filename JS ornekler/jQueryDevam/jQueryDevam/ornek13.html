@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        #kutu1 {
+            width: 120px;
+            height: 120px;
+            background-color: #ff0000;
+            float: left;
+            margin-left: 5px;
+        }
+        #kutu2 {
+            width: 120px;
+            height: 120px;
+            background-color: violet;
+            float: left;
+            margin-left: 5px;
+        }
+        #kutu2 {
+            width: 120px;
+            height: 120px;
+            background-color: dodgerblue;
+            float: left;
+            margin-left: 5px;
+        }
+        #kutu3 {
+            width: 120px;
+            height: 120px;
+            background-color: chocolate;
+            float: left;
+            margin-left: 5px;
+        }
+        #kutu4 {
+            width: 120px;
+            height: 120px;
+            background-color: sandybrown;
+            float: left;
+            margin-left: 5px;
+        }
+        #kutu5 {
+            width: 120px;
+            height: 120px;
+            background-color: lawngreen;
+            float: left;
+            margin-left: 5px;
+        }
+        #kutu6 {
+            width: 120px;
+            height: 120px;
+            background-color: turquoise;
+            float: left;
+            margin-left: 5px;
+        }
+        #kutu7 {
+            width: 120px;
+            height: 120px;
+            background-color: mediumpurple;
+            float: left;
+            margin-left: 5px;
+        }
+    </style>
+    <script>
+        $(document).ready(() => {
+            $("#kutu1").fadeTo("slow", 0.5);
+            $("#kutu2").fadeTo("slow", 0.5);
+            $("#kutu3").fadeTo("slow", 0.5);
+            $("#kutu4").fadeTo("slow", 0.5);
+            $("#kutu5").fadeTo("slow", 0.5);
+            $("#kutu6").fadeTo("slow", 0.5);
+            $("#kutu7").fadeTo("slow", 0.5);
+
+            $("#btnA").click(() => {
+                $("#kutu1").fadeTo("slow", 0.1);
+                alert("olmadı be kuzum !!!");
+            })
+            $("#btnB").click(() => {
+                $("#kutu2").fadeTo("slow", 0.1);
+                alert("olmadı be kuzum !!!");
+            })
+            $("#btnC").click(() => {
+                $("#kutu3").fadeTo("slow", 0.1);
+                alert("olmadı be kuzum !!!");
+            })
+            $("#btnD").click(() => {
+                $("#kutu4").fadeTo("slow", 0.1);
+                alert("olmadı be kuzum !!!");
+            })
+            $("#btnE").click(() => {
+                $("#kutu5").fadeTo("slow", 0.1);
+                alert("olmadı be kuzum !!!");
+            })
+            $("#btnF").click(() => {
+                $("#kutu6").fadeTo("slow", 0.9);
+                alert("Helal lan sana :)");
+            })
+            $("#btnG").click(() => {
+                $("#kutu7").fadeTo("slow", 0.1);
+                alert("olmadı be kuzum !!!");
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="kutu1"><button id="btnA">A</button></div>
+    <div id="kutu2"><button id="btnB">B</button></div>
+    <div id="kutu3"><button id="btnC">C</button></div>
+    <div id="kutu4"><button id="btnD">D</button></div>
+    <div id="kutu5"><button id="btnE">E</button></div>
+    <div id="kutu6"><button id="btnF">F</button></div>
+    <div id="kutu7"><button id="btnG">G</button></div>
+</body>
+</html>
