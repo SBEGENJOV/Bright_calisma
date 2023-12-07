@@ -1,0 +1,14 @@
+C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\JS ornekler\calismaORM\calismaORMModel\bin\Debug\net6.0\calismaORMModel.deps.json
+C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\JS ornekler\calismaORM\calismaORMModel\bin\Debug\net6.0\calismaORMModel.runtimeconfig.json
+C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\JS ornekler\calismaORM\calismaORMModel\bin\Debug\net6.0\calismaORMModel.dll
+C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\JS ornekler\calismaORM\calismaORMModel\bin\Debug\net6.0\calismaORMModel.pdb
+C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\JS ornekler\calismaORM\calismaORMModel\obj\Debug\net6.0\calismaORMModel.csproj.AssemblyReference.cache
+C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\JS ornekler\calismaORM\calismaORMModel\obj\Debug\net6.0\calismaORMModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\JS ornekler\calismaORM\calismaORMModel\obj\Debug\net6.0\calismaORMModel.AssemblyInfoInputs.cache
+C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\JS ornekler\calismaORM\calismaORMModel\obj\Debug\net6.0\calismaORMModel.AssemblyInfo.cs
+C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\JS ornekler\calismaORM\calismaORMModel\obj\Debug\net6.0\calismaORMModel.csproj.CoreCompileInputs.cache
+C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\JS ornekler\calismaORM\calismaORMModel\obj\Debug\net6.0\calismaORMModel.dll
+C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\JS ornekler\calismaORM\calismaORMModel\obj\Debug\net6.0\refint\calismaORMModel.dll
+C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\JS ornekler\calismaORM\calismaORMModel\obj\Debug\net6.0\calismaORMModel.pdb
+C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\JS ornekler\calismaORM\calismaORMModel\obj\Debug\net6.0\calismaORMModel.genruntimeconfig.cache
+C:\Users\S_BEGENJOV\Documents\GitHub\Bright_calisma\JS ornekler\calismaORM\calismaORMModel\obj\Debug\net6.0\ref\calismaORMModel.dll

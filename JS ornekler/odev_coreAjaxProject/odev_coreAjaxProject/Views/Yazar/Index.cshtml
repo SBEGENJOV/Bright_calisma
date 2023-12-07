@@ -1,0 +1,64 @@
+﻿    @{
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+    <button class="btn btn-sm btn-outline-primary m-2" id="btnAddYazar">Yeni Yazar Ekle</button>
+    <table class="table table-dark rounded">
+        <thead>
+            <tr class="text-center">
+                <th>Yazar Id</th>
+                <th>AdSoyad</th>
+                <th>Yazar Memleket</th>
+                <th>Yazar Yas</th>
+                <th>Yazar Kitap Sayısı</th>
+                <th>İşlemler</th>
+            </tr>
+
+        </thead>
+        <tbody class="text-center" id="table_date">
+        </tbody>
+    </table>
+    <div class="modal fade" id="yazarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="ustModal"></h2>
+                    <button type="button" class="close" onclick="HideModalPopUp()" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form method="post">
+                        <div class="form-group" id="yazarIDdiv">
+                            <label for="recipient-name" class="col-form-label">Yazar ID:</label>
+                            <input type="text" class="form-control" id="yazarID">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Yazar Adı:</label>
+                            <input type="text" class="form-control" id="yazarAd">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Yazar Memleket:</label>
+                            <input type="text" class="form-control" id="yazarMemleket">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Yazar Yaşı:</label>
+                            <input type="text" class="form-control" id="yazarYas">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Yazar Kitap Sayısı:</label>
+                            <input type="text" class="form-control" id="yazarKS">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" onclick="yazarAdd()" id="addBtn">Save</button>
+                    <button class="btn btn-warning" onclick="update()" style="display:none" id="updateBtn">Update</button>
+                    <button class="btn btn-danger btn-default" onclick="HideModalPopUp()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <input type="hidden" id="urlYazarData" value="@Url.Action("YazarList","Yazar")" />
+    </div>
+    

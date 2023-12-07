@@ -1,0 +1,67 @@
+﻿@model IEnumerable<crudRepo.Models.Person>
+
+@{
+    ViewData["Title"] = "GetPersonList";
+}
+
+<h1>GetPersonList</h1>
+
+<div class="container">
+    <div class="row">
+        @if (TempData["personError"] != null)
+        {
+            <div class="alert alert-danger notification text-center">
+                @TempData["personError"]
+            </div>
+        }
+        @if (TempData["personSucces"] != null)
+        {
+            <div class="alert alert-success notification text-center">
+                @TempData["personSucces"]
+            </div>
+        }
+        <div class="col-10 offset-1">
+            <div class="float-end">
+                <a class="btn btn-sm btn-primary p-1 m-1" asp-action="AddPerson" asp-controller="Person">Yeni Ekle</a>
+            </div>
+            <table class="table table-hover table-striped table-bordered">
+                <thead class="text-center table-striped table-bordered">
+                    <tr>
+                        <th>Person No</th>
+                        <th>Person Name</th>
+                        <th>Person Gender</th>
+                        <th>Person Mail</th>
+                        <th>Person PinCode</th>
+                        <th>Person IsActive</th>
+                        <th>Personel İşlemleri</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        @foreach (var item in Model)
+                        {
+                            <td>@item.PersonID</td>
+                            <td>@item.Name</td>
+                            <td>@item.Gender</td>
+                            <td>@item.Email</td>
+                            <td>@item.PinCode</td>
+                            <td>
+                                @if (item.IsActive)
+                                {
+                                 <input type="checkbox" value="@item.IsActive" checked="checked" disabled/>
+                                }
+                                else
+                                {
+                                    <input type="checkbox" value="@item.IsActive" />
+                                }
+                            </td>
+                            <td>
+                                <a class="btn btn-sm btn-primary m-1" asp-controller="Person" asp-action="Edit" asp-route-id="@item.PersonID">Düzenle</a>
+                            </td>
+                        }
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
